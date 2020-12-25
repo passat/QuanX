@@ -82,6 +82,7 @@ DOMAIN,apple.comscoreresearch.com,Apple
 DOMAIN,guzzoni.apple.com,Apple
 
 # > TV
+HOST,np-edge.itunes.apple.com,Apple
 USER-AGENT,AppleTV*,Apple
 USER-AGENT,com.apple.tv*,Apple
 DOMAIN-SUFFIX,tv.apple.com,Apple
@@ -116,4 +117,3 @@ IP-CIDR,144.178.48.0/20,Apple
 IP-CIDR,192.35.50.0/24,Apple
 IP-CIDR,198.183.17.0/24,Apple
 IP-CIDR,205.180.175.0/24,Apple
-
