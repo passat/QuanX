@@ -7,16 +7,6 @@ USER-AGENT,Coinbase*,PROXY
 USER-AGENT,Instagram*,PROXY
 USER-AGENT,Resilio Sync*,PROXY
 USER-AGENT,WhatsApp*,PROXY
-# > Microsoft
-DOMAIN-SUFFIX,aka.ms,PROXY
-DOMAIN-SUFFIX,onedrive.live.com,PROXY
-DOMAIN-SUFFIX,xboxlive.com,PROXY
-USER-AGENT,OneDrive*,PROXY
-DOMAIN-KEYWORD,onedrive,PROXY
-DOMAIN-SUFFIX,skype.com,PROXY
-DOMAIN-SUFFIX,storage.live.com,PROXY
-DOMAIN,az416426.vo.msecnd.net,PROXY
-DOMAIN,az668014.vo.msecnd.net,PROXY
 # > Facebook
 DOMAIN-SUFFIX,cdninstagram.com,PROXY
 DOMAIN-SUFFIX,facebook.com,PROXY
@@ -55,14 +45,18 @@ DOMAIN-SUFFIX,humblebundle.com,PROXY
 DOMAIN-SUFFIX,steamcommunity.com,PROXY
 DOMAIN-SUFFIX,steampowered.com,PROXY
 DOMAIN-SUFFIX,steamstatic.com,PROXY
+# > Amazon
+DOMAIN-SUFFIX,amazon.co.jp,PROXY
+DOMAIN,d3c33hcgiwev3.cloudfront.net,PROXY
+DOMAIN,payments-jp.amazon.com,PROXY
+DOMAIN,s3-ap-northeast-1.amazonaws.com,PROXY
+DOMAIN,s3-ap-southeast-2.amazonaws.com,PROXY
 # > Akamai
 DOMAIN,a248.e.akamai.net,PROXY
 DOMAIN,a771.dscq.akamai.net,PROXY
-# > Amazon CloudFront
-DOMAIN,d3c33hcgiwev3.cloudfront.net,PROXY
 # > Zooba
 USER-AGENT,battleroyale*,PROXY
-# > Other
+# > Others
 DOMAIN-SUFFIX,520cc.cc,PROXY
 DOMAIN-SUFFIX,881903.com,PROXY
 DOMAIN-SUFFIX,4shared.com,PROXY
@@ -1122,7 +1116,7 @@ DOMAIN-SUFFIX,zaobao.com.sg,PROXY
 DOMAIN-SUFFIX,zeutch.com,PROXY
 DOMAIN-SUFFIX,zoom.us,PROXY
 DOMAIN-SUFFIX,zynamics.com,PROXY
-# > Other
+# > Others
 DOMAIN-SUFFIX,bing.com,PROXY
 DOMAIN-SUFFIX,0rz.tw,PROXY
 DOMAIN-SUFFIX,4bluestones.biz,PROXY
