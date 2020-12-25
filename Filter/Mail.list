@@ -1,5 +1,0 @@
-# > Outlook
-DOMAIN,outlook.office365.com,Mail
-DOMAIN,smtp.office365.com,Mail
-DOMAIN,imap-mail.outlook.com,Mail
-DOMAIN,smtp-mail.outlook.com,Mail
