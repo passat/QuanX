@@ -61,6 +61,9 @@ DOMAIN-SUFFIX,aiv-cdn.net,ForeignMedia
 DOMAIN-SUFFIX,aiv-delivery.net,ForeignMedia
 DOMAIN-SUFFIX,amazonvideo.com,ForeignMedia
 DOMAIN-SUFFIX,primevideo.com,ForeignMedia
+DOMAIN-SUFFIX,media-amazon.com,ForeignMedia
+DOMAIN,atv-ps.amazon.com,ForeignMedia
+DOMAIN,fls-na.amazon.com,ForeignMedia
 DOMAIN,avodmp4s3ww-a.akamaihd.net,ForeignMedia
 DOMAIN,d25xi40x97liuc.cloudfront.net,ForeignMedia
 DOMAIN,dmqdd6hw24ucf.cloudfront.net,ForeignMedia
