@@ -1,0 +1,147 @@
+# DomesticMedia
+#
+# (Video)
+# > AcFun
+USER-AGENT,AcFun*,DomesticMedia
+HOST-SUFFIX,acfun.cn,DomesticMedia
+HOST-SUFFIX,acfun.com,DomesticMedia
+HOST-SUFFIX,acfun.tv,DomesticMedia
+HOST-SUFFIX,aixifan.com,DomesticMedia
+# > HunanTV
+DOMAIN-SUFFIX,hitv.com,DomesticMedia
+DOMAIN-SUFFIX,hunantv.com,DomesticMedia
+DOMAIN-SUFFIX,mgtv.com,DomesticMedia
+USER-AGENT, MGTV*, DomesticMedia
+# > iQiyi
+DOMAIN-SUFFIX,iqiyi.com,DomesticMedia
+DOMAIN-SUFFIX,71edge.com,DomesticMedia
+USER-AGENT,QIYI*,DomesticMedia
+USER-AGENT,iQiYi*,DomesticMedia
+USER-AGENT,PPStream*,DomesticMedia
+USER-AGENT,QYPlayer*,DomesticMedia
+HOST-SUFFIX,iqiyipic.com,DomesticMedia
+HOST-SUFFIX,qy.net,DomesticMedia
+HOST-SUFFIX,71.am,DomesticMedia
+HOST-keyword,qiyi,DomesticMedia
+HOST-SUFFIX,71.am.com,DomesticMedia
+IP-CIDR,101.224.0.0/13,DomesticMedia
+IP-CIDR,101.227.0.0/16,DomesticMedia
+IP-CIDR,119.176.0.0/12,DomesticMedia
+# > 爱奇艺检测
+DOMAIN,cache.video.iqiyi.com,DomesticMedia
+# IP-CIDR,101.224.0.0/13,DomesticMedia
+# IP-CIDR,119.176.0.0/12,DomesticMedia
+# > LeTV
+DOMAIN-SUFFIX,le.com,DomesticMedia
+HOST-SUFFIX,api.mob.app.letv.com,DomesticMedia
+# > MGTV
+USER-AGENT,MGTV*,DomesticMedia
+HOST-SUFFIX,hitv.com,DomesticMedia
+HOST-SUFFIX,hunantv.com,DomesticMedia
+HOST-SUFFIX,mgtv.com,DomesticMedia
+# > Migu Video
+DOMAIN-SUFFIX,cmvideo.cn,DomesticMedia
+DOMAIN-SUFFIX,miguvideo.com,DomesticMedia
+USER-AGENT,MiguVideo*,DomesticMedia
+USER-AGENT,%E5%92%AA%E5%92%95%E8%A7%86%E9%A2%91,DomesticMedia
+HOST-SUFFIX,migu.cn,DomesticMedia
+# > PPLive
+DOMAIN-SUFFIX,pplive.cn,DomesticMedia
+DOMAIN-SUFFIX,pptv.com,DomesticMedia
+# > Sohu Video
+DOMAIN-SUFFIX,itc.cn,DomesticMedia
+DOMAIN-SUFFIX,sohu.com,DomesticMedia
+# > Tencent Video
+DOMAIN-SUFFIX,video.qq.com,DomesticMedia
+DOMAIN-SUFFIX,v.qq.com,DomesticMedia
+USER-AGENT,live4iphone*,DomesticMedia
+USER-AGENT,qqlive4iphone*,DomesticMedia
+USER-AGENT,TencentMidasConnect*,DomesticMedia
+# > XiGua
+DOMAIN-SUFFIX,ixigua.com,DomesticMedia
+DOMAIN-SUFFIX,snssdk.com,DomesticMedia
+# > Youku
+DOMAIN-SUFFIX,soku.com,DomesticMedia
+DOMAIN-SUFFIX,youku.com,DomesticMedia
+DOMAIN-SUFFIX,ykimg.com,DomesticMedia
+USER-AGENT, Youku*, DomesticMedia
+USER-AGENT, %E4%BC%98%E9%85%B7*,DomesticMedia
+
+# (Music)
+# > Alibaba
+USER-AGENT,walkman*,DomesticMedia
+USER-AGENT,xiami*,DomesticMedia
+HOST-SUFFIX,xiami.com,DomesticMedia
+HOST-SUFFIX,xiami.net,DomesticMedia
+# > Baidu
+USER-AGENT,baiduyinyue,DomesticMedia
+HOST-SUFFIX,qianqian.com,DomesticMedia
+# > China Music Corp
+DOMAIN-SUFFIX,kuwo.cn,DomesticMedia
+DOMAIN-SUFFIX,kugou.com,DomesticMedia
+# > Kugou and Kuwo
+HOST-SUFFIX,kugou.com,DomesticMedia
+USER-AGENT,%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90*,DomesticMedia
+HOST-SUFFIX,kuwo.cn,DomesticMedia
+HOST-SUFFIX,koowo.com,DomesticMedia
+# > MOOMusic
+USER-AGENT,MOO*,DomesticMedia
+USER-AGENT,TencentMidasConnect*,DomesticMedia
+# > Migu Music
+DOMAIN-SUFFIX,migu.cn,DomesticMedia
+# > Netease
+USER-AGENT,NeteaseMusic*,DomesticMedia
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,DomesticMedia
+DOMAIN-SUFFIX,music.163.com,DomesticMedia
+DOMAIN-SUFFIX,music.126.net,DomesticMedia
+DOMAIN,mam.netease.com,DomesticMedia
+DOMAIN,api.iplay.163.com,DomesticMedia
+IP-CIDR,39.105.63.80/32,DomesticMedia
+IP-CIDR,45.254.48.1/32,DomesticMedia
+IP-CIDR,47.100.127.239/32,DomesticMedia
+IP-CIDR,59.111.160.195/32,DomesticMedia
+IP-CIDR,59.111.160.197/32,DomesticMedia
+IP-CIDR,59.111.181.35/32,DomesticMedia
+IP-CIDR,59.111.181.38/32,DomesticMedia
+IP-CIDR,59.111.181.60/32,DomesticMedia
+IP-CIDR,101.71.154.241/32,DomesticMedia
+IP-CIDR,103.126.92.132/32,DomesticMedia
+IP-CIDR,103.126.92.133/32,DomesticMedia
+IP-CIDR,112.13.119.17/32,DomesticMedia
+IP-CIDR,112.13.122.1/32,DomesticMedia
+IP-CIDR,115.236.118.33/32,DomesticMedia
+IP-CIDR,115.236.121.1/32,DomesticMedia
+IP-CIDR,118.24.63.156/32,DomesticMedia
+IP-CIDR,193.112.159.225/32,DomesticMedia
+IP-CIDR,223.252.199.66/32,DomesticMedia
+IP-CIDR,223.252.199.67/32,DomesticMedia
+# > QQ Music
+DOMAIN-SUFFIX,music.qq.com,DomesticMedia
+DOMAIN-SUFFIX,music.tc.qq.com,DomesticMedia
+DOMAIN-SUFFIX,qqmusic.qq.com,DomesticMedia
+DOMAIN-SUFFIX,tencentmusic.com,DomesticMedia
+DOMAIN-SUFFIX,y.qq.com,DomesticMedia
+DOMAIN,aqqmusic.tc.qq.com,DomesticMedia
+DOMAIN,moo.qq.com,DomesticMedia
+USER-AGENT,MOO%E9%9F%B3%E4%B9%90*,DomesticMedia
+USER-AGENT,QQ%E9%9F%B3%E4%B9%90,DomesticMedia
+HOST,aqqmusic.tc.qq.com,DomesticMedia
+HOST-SUFFIX,*music.qq.com,DomesticMedia
+# > Qianqian Music
+DOMAIN-SUFFIX,qianqian.com,DomesticMedia
+DOMAIN-SUFFIX,taihe.com,DomesticMedia
+# > Sohu
+HOST-SUFFIX,56.com,DomesticMedia
+HOST-SUFFIX,sohu.com,DomesticMedia
+HOST-SUFFIX,sohu.com.cn,DomesticMedia
+HOST-SUFFIX,itc.cn,DomesticMedia
+HOST-SUFFIX,v-56.com,DomesticMedia
+# > Xiami 
+USER-AGENT,walkman*,DomesticMedia
+USER-AGENT,xiami*,DomesticMedia
+HOST-SUFFIX,xiami.com,DomesticMedia
+HOST-SUFFIX,xiami.net,DomesticMedia
+# > Xiaomi
+DOMAIN-SUFFIX,ai.xiaomi.com,DomesticMedia
+DOMAIN-SUFFIX,music.xiaomi.com,DomesticMedia
+DOMAIN-SUFFIX,dmhmusic.com,DomesticMedia

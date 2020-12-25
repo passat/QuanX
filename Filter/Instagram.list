@@ -1,0 +1,7 @@
+# > Instagram
+USER-AGENT,instagram*,Instagram
+HOST-KEYWORD,instagram,Instagram
+HOST-KEYWORD,cdninstagram,Instagram
+HOST-SUFFIX,cdninstagram.com,Instagram
+HOST-SUFFIX,instagram.com,Instagram
+
