@@ -15,6 +15,7 @@ USER-AGENT, MGTV*, DomesticMedia
 # > iQiyi
 DOMAIN-SUFFIX,iqiyi.com,DomesticMedia
 DOMAIN-SUFFIX,71edge.com,DomesticMedia
+DOMAIN,cache.video.iqiyi.com,DomesticMedia
 USER-AGENT,QIYI*,DomesticMedia
 USER-AGENT,iQiYi*,DomesticMedia
 USER-AGENT,PPStream*,DomesticMedia
@@ -27,10 +28,6 @@ HOST-SUFFIX,71.am.com,DomesticMedia
 IP-CIDR,101.224.0.0/13,DomesticMedia
 IP-CIDR,101.227.0.0/16,DomesticMedia
 IP-CIDR,119.176.0.0/12,DomesticMedia
-# > 爱奇艺检测
-DOMAIN,cache.video.iqiyi.com,DomesticMedia
-# IP-CIDR,101.224.0.0/13,DomesticMedia
-# IP-CIDR,119.176.0.0/12,DomesticMedia
 # > LeTV
 DOMAIN-SUFFIX,le.com,DomesticMedia
 HOST-SUFFIX,api.mob.app.letv.com,DomesticMedia
@@ -53,6 +50,7 @@ DOMAIN-SUFFIX,itc.cn,DomesticMedia
 DOMAIN-SUFFIX,sohu.com,DomesticMedia
 # > Tencent Video
 DOMAIN-SUFFIX,video.qq.com,DomesticMedia
+DOMAIN-SUFFIX,i.qq.com,DomesticMedia
 DOMAIN-SUFFIX,v.qq.com,DomesticMedia
 USER-AGENT,live4iphone*,DomesticMedia
 USER-AGENT,qqlive4iphone*,DomesticMedia
