@@ -36,10 +36,6 @@ DOMAIN-KEYWORD,-spotify-com,ForeignMedia
 # > TIDAL
 USER-AGENT,TIDAL*,ForeignMedia
 DOMAIN-SUFFIX,tidal.com,ForeignMedia
-# > YouTubeMusic
-USER-AGENT,com.google.ios.youtubemusic*,ForeignMedia
-USER-AGENT,YouTubeMusic*,ForeignMedia
-
 # (Video)
 # > ABC
 HOST-SUFFIX,edgedatg.com,ForeignMedia
@@ -75,12 +71,6 @@ DOMAIN-KEYWORD,avoddashs,ForeignMedia
 HOST-SUFFIX,amazonaws.co.uk,ForeignMedia
 HOST-SUFFIX,amazonaws.com,ForeignMedia
 HOST-SUFFIX,llnwd.net,ForeignMedia
-# > Apple TV
-DOMAIN-SUFFIX,tv.apple.com,ForeignMedia
-DOMAIN,hls.itunes.apple.com,ForeignMedia
-DOMAIN,hls-amt.itunes.apple.com,ForeignMedia
-DOMAIN,play-edge.itunes.apple.com,ForeignMedia
-HOST,np-edge.itunes.apple.com,ForeignMedia
 # > Bahamut
 USER-AGENT,Anime*,ForeignMedia
 DOMAIN-SUFFIX,bahamut.com.tw,ForeignMedia
@@ -331,9 +321,6 @@ DOMAIN-SUFFIX,twitch.tv,ForeignMedia
 DOMAIN-SUFFIX,twitchcdn.net,ForeignMedia
 DOMAIN-SUFFIX,ttvnw.net,ForeignMedia
 DOMAIN-SUFFIX,jtvnw.net,ForeignMedia
-# > Youtube Music
-USER-AGENT,*YouTubeMusic*,ForeignMedia
-USER-AGENT,*com.google.ios.youtubemusic*,ForeignMedia
 # > ViuTV
 USER-AGENT,Viu*,ForeignMedia
 USER-AGENT,ViuTV*,ForeignMedia
@@ -351,12 +338,3 @@ HOST-SUFFIX,jwpcdn.com,ForeignMedia
 HOST-SUFFIX,jwplayer.com,ForeignMedia
 HOST-SUFFIX,mobileanalytics.us-east-1.amazonaws.com,ForeignMedia
 HOST-SUFFIX,nowe.com,ForeignMedia
-# > YouTube
-USER-AGENT,com.google.ios.youtube*,ForeignMedia
-USER-AGENT,YouTube*,ForeignMedia
-DOMAIN-SUFFIX,googlevideo.com,ForeignMedia
-DOMAIN-SUFFIX,youtube.com,ForeignMedia
-DOMAIN,youtubei.googleapis.com,ForeignMedia
-# > Youtube Music
-USER-AGENT,*YouTubeMusic*,ForeignMedia
-USER-AGENT,*com.google.ios.youtubemusic*,ForeignMedia
