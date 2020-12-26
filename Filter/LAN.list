@@ -1,6 +1,8 @@
 # > Local Area Network
 HOST,localhost,DIRECT
 HOST-SUFFIX,local,DIRECT
+HOST-SUFFIX,localhost,DIRECT
+HOST,router.asus.com,DIRECT
 IP-CIDR,0.0.0.0/8,DIRECT
 IP-CIDR,10.0.0.0/8,DIRECT
 IP-CIDR,17.0.0.0/8,DIRECT
