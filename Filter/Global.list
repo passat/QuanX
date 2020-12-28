@@ -424,7 +424,6 @@ DOMAIN-SUFFIX,zb.com,PROXY
 DOMAIN-SUFFIX,zello.com,PROXY
 DOMAIN-SUFFIX,zeronet.io,PROXY
 DOMAIN-SUFFIX,zoom.us,PROXY
-
 DOMAIN,cc.tvbs.com.tw,PROXY
 DOMAIN,ocsp.int-x3.letsencrypt.org,PROXY
 DOMAIN,payments-jp.amazon.com,PROXY
@@ -1116,8 +1115,8 @@ DOMAIN-SUFFIX,zaobao.com.sg,PROXY
 DOMAIN-SUFFIX,zeutch.com,PROXY
 DOMAIN-SUFFIX,zoom.us,PROXY
 DOMAIN-SUFFIX,zynamics.com,PROXY
+
 # > Others
-DOMAIN-SUFFIX,bing.com,PROXY
 DOMAIN-SUFFIX,0rz.tw,PROXY
 DOMAIN-SUFFIX,4bluestones.biz,PROXY
 DOMAIN-SUFFIX,9bis.net,PROXY
@@ -1245,3 +1244,4 @@ DOMAIN-SUFFIX,waveprotocol.org,PROXY
 DOMAIN-SUFFIX,webmproject.org,PROXY
 DOMAIN-SUFFIX,webrtc.org,PROXY
 DOMAIN-KEYWORD,dlercloud,PROXY
+DOMAIN,international-gfe.download.nvidia.com,PROXY
