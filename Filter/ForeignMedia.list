@@ -36,6 +36,10 @@ DOMAIN-KEYWORD,-spotify-com,ForeignMedia
 # > TIDAL
 USER-AGENT,TIDAL*,ForeignMedia
 DOMAIN-SUFFIX,tidal.com,ForeignMedia
+# > Youtube Music
+USER-AGENT,*YouTubeMusic*,ForeignMedia
+USER-AGENT,*com.google.ios.youtubemusic*,ForeignMedia
+
 # (Video)
 # > ABC
 HOST-SUFFIX,edgedatg.com,ForeignMedia
@@ -291,6 +295,11 @@ HOST-SUFFIX,pandora.com,ForeignMedia
 # > PBS
 USER-AGENT,PBS*,ForeignMedia
 DOMAIN-SUFFIX,pbs.org,ForeignMedia
+# > Pornhub
+DOMAIN-SUFFIX,phncdn.com,ForeignMedia
+DOMAIN-SUFFIX,phprcdn.com,ForeignMedia
+DOMAIN-SUFFIX,pornhub.com,ForeignMedia
+DOMAIN-SUFFIX,pornhubpremium.com,ForeignMedia
 # > Sky GO
 USER-AGENT,skygo*,ForeignMedia
 HOST-SUFFIX,sky.com,ForeignMedia
@@ -349,3 +358,13 @@ HOST-SUFFIX,jwpcdn.com,ForeignMedia
 HOST-SUFFIX,jwplayer.com,ForeignMedia
 HOST-SUFFIX,mobileanalytics.us-east-1.amazonaws.com,ForeignMedia
 HOST-SUFFIX,nowe.com,ForeignMedia
+# > YouTube
+USER-AGENT,com.google.ios.youtube*,ForeignMedia
+USER-AGENT,YouTube*,ForeignMedia
+DOMAIN-SUFFIX,googlevideo.com,ForeignMedia
+DOMAIN-SUFFIX,youtube.com,ForeignMedia
+DOMAIN,youtubei.googleapis.com,ForeignMedia
+USER-AGENT,*youtube*,ForeignMedia
+HOST-KEYWORD,youtube,ForeignMedia
+HOST-SUFFIX,gvt2.com,ForeignMedia
+HOST-SUFFIX,youtu.be,ForeignMedia
