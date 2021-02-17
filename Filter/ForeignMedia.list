@@ -70,10 +70,14 @@ DOMAIN,dmqdd6hw24ucf.cloudfront.net,ForeignMedia
 DOMAIN,dmqdd6hw24ucf.cloudfront.net,ForeignMedia
 DOMAIN,d22qjgkvxw22r6.cloudfront.net,ForeignMedia
 DOMAIN,d1v5ir2lpwr8os.cloudfront.net,ForeignMedia
+DOMAIN,d27xxe7juh1us6.cloudfront.net,ForeignMedia
 DOMAIN-KEYWORD,avoddashs,ForeignMedia
 HOST-SUFFIX,amazonaws.co.uk,ForeignMedia
 HOST-SUFFIX,amazonaws.com,ForeignMedia
 HOST-SUFFIX,llnwd.net,ForeignMedia
+# > Apple TV
+DOMAIN,linear.tv.apple.com,ForeignMedia
+DOMAIN,play-edge.itunes.apple.com,ForeignMedia
 # > Bahamut
 USER-AGENT,Anime*,ForeignMedia
 DOMAIN-SUFFIX,bahamut.com.tw,ForeignMedia
@@ -255,15 +259,20 @@ DOMAIN-SUFFIX,netflixdnstest6.com,ForeignMedia
 DOMAIN-SUFFIX,netflixdnstest7.com,ForeignMedia
 DOMAIN-SUFFIX,netflixdnstest8.com,ForeignMedia
 DOMAIN-SUFFIX,netflixdnstest9.com,ForeignMedia
-IP-CIDR,23.246.0.0/18,ForeignMedia,no-resolve
-IP-CIDR,37.77.184.0/21,ForeignMedia,no-resolve
-IP-CIDR,45.57.0.0/17,ForeignMedia,no-resolve
-IP-CIDR,64.120.128.0/17,ForeignMedia,no-resolve
-IP-CIDR,66.197.128.0/17,ForeignMedia,no-resolve
-IP-CIDR,108.175.32.0/20,ForeignMedia,no-resolve
-IP-CIDR,192.173.64.0/18,ForeignMedia,no-resolve
-IP-CIDR,198.38.96.0/19,ForeignMedia,no-resolve
-IP-CIDR,198.45.48.0/20,ForeignMedia,no-resolve
+DOMAIN-KEYWORD,dualstack.apiproxy-device-prod-nlb-,ForeignMedia
+DOMAIN-KEYWORD,dualstack.ichnaea-web-,ForeignMedia
+IP-CIDR,23.246.0.0/18,ForeignMedia
+IP-CIDR,37.77.184.0/21,ForeignMedia
+IP-CIDR,45.57.0.0/17,ForeignMedia
+IP-CIDR,64.120.128.0/17,ForeignMedia
+IP-CIDR,66.197.128.0/17,ForeignMedia
+IP-CIDR,108.175.32.0/20,ForeignMedia
+IP-CIDR,192.173.64.0/18,ForeignMedia
+IP-CIDR,198.38.96.0/19,ForeignMedia
+IP-CIDR,198.45.48.0/20,ForeignMedia
+IP-CIDR,34.210.42.111/32,ForeignMedia
+IP-CIDR,52.89.124.203/32,ForeignMedia
+IP-CIDR,54.148.37.5/32,ForeignMedia
 # > niconico
 USER-AGENT,Niconico*,ForeignMedia
 DOMAIN-SUFFIX,dmc.nico,ForeignMedia
@@ -272,21 +281,16 @@ DOMAIN-SUFFIX,nimg.jp,ForeignMedia
 DOMAIN-SUFFIX,socdm.com,ForeignMedia
 # > Now E
 USER-AGENT,PCCW*,ForeignMedia
-HOST-KEYWORD,nowe,ForeignMedia
-HOST,bcbolthboa-a.akamaihd.net,ForeignMedia
-HOST-SUFFIX,nowe.com,ForeignMedia
-HOST-SUFFIX,youboranqs01.com,ForeignMedia
+DOMAIN-KEYWORD,nowe,ForeignMedia
+DOMAIN,bcbolthboa-a.akamaihd.net,ForeignMedia
+DOMAIN-SUFFIX,nowe.com,ForeignMedia
+DOMAIN-SUFFIX,youboranqs01.com,ForeignMedia
 DOMAIN-SUFFIX,nowestatic.com,ForeignMedia
 # > Pandora
 HOST-SUFFIX,pandora.com,ForeignMedia
 # > PBS
 USER-AGENT,PBS*,ForeignMedia
 DOMAIN-SUFFIX,pbs.org,ForeignMedia
-# > Pornhub
-DOMAIN-SUFFIX,phncdn.com,ForeignMedia
-DOMAIN-SUFFIX,phprcdn.com,ForeignMedia
-DOMAIN-SUFFIX,pornhub.com,ForeignMedia
-DOMAIN-SUFFIX,pornhubpremium.com,ForeignMedia
 # > Sky GO
 USER-AGENT,skygo*,ForeignMedia
 HOST-SUFFIX,sky.com,ForeignMedia
@@ -317,6 +321,10 @@ DOMAIN-SUFFIX,tiktok.com,ForeignMedia
 DOMAIN-SUFFIX,tiktokcdn.com,ForeignMedia
 DOMAIN-SUFFIX,tiktokv.com,ForeignMedia
 DOMAIN-KEYWORD,-tiktokcdn-com,ForeignMedia
+# > TVer
+USER-AGENT,TVer-Release*,ForeignMedia
+DOMAIN-SUFFIX,tver.jp,ForeignMedia
+DOMAIN,edge.api.brightcove.com,ForeignMedia
 # > Twitch
 DOMAIN-SUFFIX,jtvnw.net,ForeignMedia
 DOMAIN-SUFFIX,ttvnw.net,ForeignMedia
