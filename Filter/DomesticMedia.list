@@ -1,5 +1,4 @@
 # DomesticMedia
-#
 # (Video)
 # > AcFun
 USER-AGENT,AcFun*,DomesticMedia
@@ -7,6 +6,26 @@ HOST-SUFFIX,acfun.cn,DomesticMedia
 HOST-SUFFIX,acfun.com,DomesticMedia
 HOST-SUFFIX,acfun.tv,DomesticMedia
 HOST-SUFFIX,aixifan.com,DomesticMedia
+# > Bilibili
+USER-AGENT,*bili*,DomesticMedia
+USER-AGENT,Bilibili*,DomesticMedia
+DOMAIN,api.bilibili.com,DomesticMedia
+DOMAIN,cache.video.iqiyi.com,DomesticMedia
+DOMAIN,upos-hz-mirrorakam.akamaized.net,DomesticMedia
+DOMAIN-KEYWORD,bilibili,DomesticMedia
+DOMAIN-SUFFIX,bilibili.com,DomesticMedia
+DOMAIN-SUFFIX,biliapi.com,DomesticMedia
+DOMAIN-SUFFIX,biliapi.net,DomesticMedia
+DOMAIN-SUFFIX,bilibili.tv,DomesticMedia
+DOMAIN-SUFFIX,acgvideo.com,DomesticMedia
+DOMAIN-SUFFIX,acg.tv,DomesticMedia
+DOMAIN-SUFFIX,hdslb.com,DomesticMedia
+DOMAIN-SUFFIX,b23.tv,DomesticMedia
+DOMAIN-SUFFIX,biligame.com,DomesticMedia
+DOMAIN-SUFFIX,biligame.net,DomesticMedia
+DOMAIN-SUFFIX,bilivideo.com,DomesticMedia
+DOMAIN-SUFFIX,im9.com,DomesticMedia
+DOMAIN-SUFFIX,smtcdns.net,DomesticMedia
 # > HunanTV
 DOMAIN-SUFFIX,hitv.com,DomesticMedia
 DOMAIN-SUFFIX,hunantv.com,DomesticMedia
