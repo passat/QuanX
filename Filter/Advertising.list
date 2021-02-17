@@ -1,4 +1,4 @@
-# Advertising
+#Advertising
 # > General
 DOMAIN-KEYWORD,adservice,REJECT
 DOMAIN-SUFFIX,1phads.com,REJECT
