@@ -1,4 +1,4 @@
-! Junka
+! Junk
 *://www.baidu.com/*
 *://*.csdn.net/*
 
