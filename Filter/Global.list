@@ -28,8 +28,8 @@ DOMAIN-KEYWORD,cdninstagram,PROXY
 DOMAIN-SUFFIX,cdninstagram.com,PROXY
 DOMAIN-SUFFIX,instagram.com,PROXY
 # > Twitter
-DOMAIN-SUFFIX,periscope.tv,PROXY
 DOMAIN-SUFFIX,pscp.tv,PROXY
+DOMAIN-SUFFIX,periscope.tv,PROXY
 DOMAIN-SUFFIX,t.co,PROXY
 DOMAIN-SUFFIX,twimg.co,PROXY
 DOMAIN-SUFFIX,twimg.com,PROXY
@@ -210,6 +210,7 @@ DOMAIN-SUFFIX,gog.com,PROXY
 DOMAIN-SUFFIX,goo.ne.jp,PROXY
 DOMAIN-SUFFIX,goodreads.com,PROXY
 DOMAIN-SUFFIX,gov.tw,PROXY
+DOMAIN-SUFFIX,gravatar.com,PROXY
 DOMAIN-SUFFIX,greatfire.org,PROXY
 DOMAIN-SUFFIX,gumroad.com,PROXY
 DOMAIN-SUFFIX,hbg.com,PROXY
@@ -539,10 +540,6 @@ IP-CIDR,103.2.30.0/23,PROXY
 IP-CIDR,125.209.208.0/20,PROXY
 IP-CIDR,147.92.128.0/17,PROXY
 IP-CIDR,203.104.144.0/21,PROXY
-# > Others
-DOMAIN-SUFFIX,noxinfluencer.com,PROXY
-DOMAIN-SUFFIX,smartmailcloud.com,PROXY
-DOMAIN-SUFFIX,weebly.com,PROXY
 
 # (The Most Popular Sites)
 # > Microsoft OneDrive
@@ -1134,15 +1131,13 @@ DOMAIN-SUFFIX,zaobao.com.sg,PROXY
 DOMAIN-SUFFIX,zeutch.com,PROXY
 DOMAIN-SUFFIX,zoom.us,PROXY
 DOMAIN-SUFFIX,zynamics.com,PROXY
-
-# > Others
+# >Others
 DOMAIN-SUFFIX,0rz.tw,PROXY
 DOMAIN-SUFFIX,4bluestones.biz,PROXY
 DOMAIN-SUFFIX,9bis.net,PROXY
 DOMAIN-SUFFIX,allconnected.co,PROXY
 DOMAIN-SUFFIX,aol.com,PROXY
 DOMAIN-SUFFIX,bcc.com.tw,PROXY
-DOMAIN-SUFFIX,bit.ly,PROXY
 DOMAIN-SUFFIX,bitshare.com,PROXY
 DOMAIN-SUFFIX,blog.jp,PROXY
 DOMAIN-SUFFIX,blogimg.jp,PROXY
@@ -1201,14 +1196,21 @@ DOMAIN,api.steampowered.com,PROXY
 DOMAIN,store.steampowered.com,PROXY
 
 # (Network Jitter)
-# > Fix download or update is stuck in App Store,and when change the Apple ID region,the payment information can be selected by none.
-DOMAIN-KEYWORD,buy.itunes.apple.com,PROXY
+# > DigiCert
+DOMAIN,cacerts.digicert.com,PROXY
+DOMAIN,crl3.digicert.com,PROXY
+DOMAIN,crl4.digicert.com,PROXY
+DOMAIN,ocsp.digicert.com,PROXY
+# > Others
 DOMAIN-SUFFIX,cloudcone.com.cn,PROXY
-# DOMAIN-SUFFIX,evernote.com,PROXY
 DOMAIN-SUFFIX,inkbunny.net,PROXY
 DOMAIN-SUFFIX,metapix.net,PROXY
 DOMAIN-SUFFIX,s3.amazonaws.com,PROXY
 DOMAIN-SUFFIX,zaobao.com.sg,PROXY
+DOMAIN-SUFFIX,noxinfluencer.com,PROXY
+DOMAIN-SUFFIX,smartmailcloud.com,PROXY
+DOMAIN-SUFFIX,weebly.com,PROXY
+
 # > Force some domains which are fucked by GFW while resolving DNS,or do not respect the system Proxy
 DOMAIN-KEYWORD,appledaily,PROXY
 DOMAIN-KEYWORD,beetalk,PROXY
