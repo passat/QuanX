@@ -60,6 +60,7 @@ DOMAIN-SUFFIX,googleusercontent.com,Google
 
 # > Google Voice
 DOMAIN,voice.telephony.goog,Google
+DOMAIN,lens.l.google.com,Google
 
 # > Google Gmail
 DOMAIN,pop.gmail.com,Google
