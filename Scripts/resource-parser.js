@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-03-11 22:59⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-03-14 13:59⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @Shawn_KOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -38,6 +38,7 @@
   ❖ $emoji1/2 占位符，将节点地区emoji(🇭🇰 🇯🇵 等)作为可操作参数，如
     ∎ 𝐫𝐞𝐧𝐚𝐦𝐞=@「$emoji1」
 ⦿ 𝘀𝘂𝗳𝗳𝗶𝘅=-1/1 将节点类型做为前缀/后缀 添加在节点名中, 如 「𝗌𝗌」 「𝖵𝗆𝖾𝗌𝗌」
+⦿ ptn=1-6, 分别将节点名中的英文替换成花样字 ⇒ 🅰/🄰/𝐀/𝗮/𝔸/𝕒
 ⦿ 𝗱𝗲𝗹𝗿𝗲𝗴, 利用正则表达式来删除 "节点名" 中的字段(⚠️ 慎用)
 ⦿ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲 参数, 正则替换节点中内容, 可用于重命名/更改加密方式等
   ❖ 𝗿𝗲𝗽𝗹𝗮𝗰𝗲=𝗿𝗲𝗴𝗲𝘅1@𝘀𝘁𝗿1+𝗿𝗲𝗴𝗲𝘅2@𝘀𝘁𝗿2
@@ -152,11 +153,21 @@ var pfo = Pout0 ? "out=" + Pout0.join(", ") : ""
 var pfihn = Phin0 ? "inhn=" + Phin0.join(", ") + ",  " : ""
 var pfohn = Phout0 ? "outhn=" + Phout0.join(", ") : ""
 var Pcnt =  para1.indexOf("cnt=") != -1 ? para1.split("cnt=")[1].split("&")[0] : 0;
+var Pcap = para1.indexOf("cap=") != -1 ? para1.split("cap=")[1].split("&")[0] : "";
+var Pptn = para1.indexOf("ptn=") != -1 ? para1.split("ptn=")[1].split("&")[0] : "";
 let [flow, exptime, errornode, total] = "";
 var Pdel = mark0 && para1.indexOf("del=") != -1 ? para1.split("del=")[1].split("&")[0] : 1; //删除重复节点
 var typeU = para1.indexOf("type=") != -1 ? para1.split("type=")[1].split("&")[0] : "";
 
-
+//花漾字 pattern
+var pat=[]
+pat[0] = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","k","r","s","t","u","v","w","x","y","z"]
+pat[1] = ["🅰","🅱","🅲","🅳","🅴","🅵","🅶","🅷","🅸","🅹","🅺","🅻","🅼","🅽","🅾","🅿","🅺","🆁","🆂","🆃","🆄","🆅","🆆","🆇","🆈","🆉"]
+pat[2] = ["🄰","🄱","🄲","🄳","🄴","🄵","🄶","🄷","🄸","🄹","🄺","🄻","🄼","🄽","🄾","🄿","🄺","🅁","🅂","🅃","🅄","🅅","🅆","🅇","🅈","🅉"]
+pat[3] = ["𝐀","𝐁","𝐂","𝐃","𝐄","𝐅","𝐆","𝐇","𝐈","𝐉","𝐊","𝐋","𝐌","𝐍","𝐎","𝐏","𝐊","𝐑","𝐒","𝐓","𝐔","𝐕","𝐖","𝐗","𝐘","𝐙"]
+pat[4] = ["𝗮","𝗯","𝗰","𝗱","𝗲","𝗳","𝗴","𝗵","𝗶","𝗷","𝗸","𝗹","𝗺","𝗻","𝗼","𝗽","𝗸","𝗿","𝘀","𝐭","𝘂","𝘃","𝘄","𝘅","𝘆","𝘇"]
+pat[5] = ["𝔸","𝔹","ℂ","𝔻","𝔼","𝔽","𝔾","ℍ","𝕀","𝕁","𝕂","𝕃","𝕄","ℕ","𝕆","ℙ","𝕂","ℝ","𝕊","𝕋","𝕌","𝕍","𝕎","𝕏","𝕐","ℤ"]
+pat[6] = ["𝕒","𝕓","𝕔","𝕕","𝕖","𝕗","𝕘","𝕙","𝕚","𝕛","𝕜","𝕝","𝕞","𝕟","𝕠","𝕡","𝕜","𝕣","𝕤","𝕥","𝕦","𝕧","𝕨","𝕩","𝕪","𝕫"]
 
 
 var type0=""
@@ -427,6 +438,14 @@ function TagCheck_QX(content) {
             }
             if (ni != 0) { duplist.push(nm) }
             nmlist.push(nm)
+          if (Pcap) { 
+            item = Capitalize(item,Pcap)
+            console.log(item)
+          }
+          if (Pptn) { 
+            item = Pattern(item,Pptn)
+            console.log(item)
+          }
             ni = 0
             if (item) {
             Nlist.push(item)
@@ -448,9 +467,43 @@ function TagCheck_QX(content) {
     return Nlist
 }
 
-function Trim(item) {
-    return item.trim()
+
+function PatternN(cnt, para) {
+  for (var i=0;i<26;i++) {
+    cnt = cnt.toLowerCase()
+    cnt = cnt.replace(new RegExp(pat[0][i], "gmi"),pat[para][i])
+  }
+  console.log(cnt)
+  return cnt
 }
+
+function Pattern(cnt,para) {
+  if (para != "") {
+    cnt = cnt.split("tag=")[0] +"tag="+ PatternN(cnt.split("tag=")[1],para)
+  }
+  return cnt 
+}
+
+
+//大小写
+function Capitalize(cnt,para) {
+  if (para == 1) {
+    cnt = cnt.split("tag=")[0] +"tag="+ cnt.split("tag=")[1].toUpperCase()
+  } else if (para == -1) {
+    cnt = cnt.split("tag=")[0] +"tag="+ cnt.split("tag=")[1].toLowerCase()
+  } else if (para == 0) {
+    cnt =cnt.split("tag=")[0] +"tag="+titleCase(cnt.split("tag=")[1])
+  }
+  return cnt
+}
+
+function titleCase(str) {
+  var newStr = str.split(" ");
+  for(var i = 0; i<newStr.length; i++){
+    newStr[i] = newStr[i].slice(0,1).toUpperCase() + newStr[i].slice(1).toLowerCase();
+  }    return newStr.join(" ");
+}
+
 
 // 类型前缀/后缀
 function type_prefix(item) {
@@ -551,74 +604,80 @@ function URX2QX(subs) {
 
 //script&rewrite 转换成 Quantumult X
 function SCP2QX(subs) {
-    var nrw = []
-    var rw = ""
-    subs = subs.split("\n").map(x => x.trim().replace(/\s+/g," "))
-    for (var i = 0; i < subs.length; i++) {
-        if (subs[i].slice(0, 8) == "hostname") {
-            hn = subs[i].replace(/\%.*\%/g, "")
-            nrw.push(hn)
-        }
-        var SC = ["type=", ".js", "pattern=", "script-path="]
-        var NoteK = ["//", "#", ";"]; //排除注释项
-        const sccheck = (item) => subs[i].indexOf(item) != -1
-        const notecheck = (item) => subs[i].indexOf(item) == 0
-        if (!NoteK.some(notecheck)){
-          if (SC.every(sccheck)) { // surge js 新格式
-            ptn = subs[i].replace(/\s/gi,"").split("pattern=")[1].split(",")[0]
-            js = subs[i].replace(/\s/gi,"").split("script-path=")[1].split(",")[0]
-            type = subs[i].replace(/\s/gi,"").split("type=")[1].split(",")[0].trim()
-            subsi = subs[i].replace(/ /g,"").replace(/\=true/g,"=1")
-            if (type == "http-response" && subsi.indexOf("requires-body=1") != -1) {
-              type = "script-response-body "
-            } else if (type == "http-response" && subsi.indexOf("requires-body=1") == -1) {
-              type = "script-response-header "
-            } else if (type == "http-request" && subsi.indexOf("requires-body=1") != -1) {
-              type = "script-request-body "
-            } else if (type == "http-request" && subsi.indexOf("requires-body=1") == -1) {
-              type = "script-request-header "
-            } else {type = "" }
-            if (type != "") {
-              rw = ptn + " url " + type + js
-              nrw.push(rw)
-            }
-          } else if (subs[i].indexOf(" 302") != -1 || subs[i].indexOf(" 307") != -1) { //rewrite 302&307 复写
-            //tpe = subs[i].indexOf(" 302") != -1? "302":"307"
-            rw = subs[i].split(" ")[0] + " url " + subs[i].split(" ")[2] + " " + subs[i].split(" ")[1].trim()
-            //if(rw.indexOf("307")!=-1) {$notify("XX",subs[i],rw.split(" "))}
-            nrw.push(rw)
-          } else if(subs[i].split(" ")[2] == "header") { // rewrite header 类型
-            var pget = subs[i].split(" ")[0].split(".com")[1]
-            var pgetn = subs[i].split(" ")[1].split(".com")[1]
-            rw = subs[i].split(" ")[0] + " url request-header ^GET " + pget +"(.+\\r\\n)Host:.+(\\r\\n) request-header GET " + pgetn + "$1Host: " + subs[i].split(" ")[1].split("://")[1].split(".com")[0] + ".com$2"
-            nrw.push(rw)
-          } else if(subs[i].indexOf(" - reject") != -1) { // rewrite reject 类型
-            rw = subs[i].split(" ")[0] + " url reject-200"
-            nrw.push(rw)
-          } else if (subs[i].indexOf("script-path") != -1) { //surge js 旧写法
-            type = subs[i].replace(/\s+/g," ").split(" ")[0]
-            js = subs[i].split("script-path")[1].split("=")[1].split(",")[0]
-            ptn = subs[i].replace(/\s+/g," ").split(" ")[1]
-    subsi = subs[i].replace(/ /g,"").replace(/\=true/g,"=1")
-            if (type == "http-response" && subsi.indexOf("requires-body=1") != -1) {
-              type = "script-response-body "
-            } else if (type == "http-response" && subsi.indexOf("requires-body=1") == -1) {
-              type = "script-response-header "
-            } else if (type == "http-request" && subsi.indexOf("requires-body=1") != -1) {
-              type = "script-request-body "
-            } else if (type == "http-request" && subsi.indexOf("requires-body=1") == -1) {
-              type = "script-request-header "
-            } else {type = "" }
-            if (type != "") {
-              rw = ptn + " url " + type + js
-              nrw.push(rw)
-            }
-            
-          }
-        }
-
+  var nrw = []
+  var rw = ""
+  subs = subs.split("\n").map(x => x.trim().replace(/\s+/g," "))
+  for (var i = 0; i < subs.length; i++) {
+    if (subs[i].slice(0, 8) == "hostname") {
+      hn = subs[i].replace(/\%.*\%/g, "")
+      nrw.push(hn)
     }
-    return nrw
+    var SC = ["type=", ".js", "pattern=", "script-path="]
+    var NoteK = ["//", "#", ";"]; //排除注释项
+    const sccheck = (item) => subs[i].indexOf(item) != -1
+    const notecheck = (item) => subs[i].indexOf(item) == 0
+    if (!NoteK.some(notecheck)){
+      if (SC.every(sccheck)) { // surge js 新格式
+        ptn = subs[i].replace(/\s/gi,"").split("pattern=")[1].split(",")[0]
+        js = subs[i].replace(/\s/gi,"").split("script-path=")[1].split(",")[0]
+        type = subs[i].replace(/\s/gi,"").split("type=")[1].split(",")[0].trim()
+        subsi = subs[i].replace(/ /g,"").replace(/\=true/g,"=1")
+        if (type == "http-response" && subsi.indexOf("requires-body=1") != -1) {
+          type = "script-response-body "
+        } else if (type == "http-response" && subsi.indexOf("requires-body=1") == -1) {
+          type = "script-response-header "
+        } else if (type == "http-request" && subsi.indexOf("requires-body=1") != -1) {
+          type = "script-request-body "
+        } else if (type == "http-request" && subsi.indexOf("requires-body=1") == -1) {
+          type = "script-request-header "
+        } else {type = "" }
+        if (type != "") {
+          rw = ptn + " url " + type + js
+          nrw.push(rw)
+        }
+      } else if (subs[i].indexOf(" 302") != -1 || subs[i].indexOf(" 307") != -1) { //rewrite 302&307 复写
+        //tpe = subs[i].indexOf(" 302") != -1? "302":"307"
+        rw = subs[i].split(" ")[0] + " url " + subs[i].split(" ")[2] + " " + subs[i].split(" ")[1].trim()
+        //if(rw.indexOf("307")!=-1) {$notify("XX",subs[i],rw.split(" "))}
+        nrw.push(rw)
+      } else if(subs[i].split(" ")[2] == "header") { // rewrite header 类型
+        var pget = subs[i].split(" ")[0].split(".com")[1]
+        var pgetn = subs[i].split(" ")[1].split(".com")[1]
+        rw = subs[i].split(" ")[0] + " url request-header ^GET " + pget +"(.+\\r\\n)Host:.+(\\r\\n) request-header GET " + pgetn + "$1Host: " + subs[i].split(" ")[1].split("://")[1].split(".com")[0] + ".com$2"
+        nrw.push(rw)
+      } else if(subs[i].split(" ")[1] == "header-replace") { // rewrite header-replace 类型
+        console.log(subs[i])
+        var pget = subs[i].split("header-replace")[1].split(":")[0].trim()
+        var pgetn = subs[i].split("header-replace")[1].trim()
+        rw = subs[i].split(" ")[0] + " url request-header " +"(.+\\r\\n)"+pget+":.+(\\r\\n) request-header " + "$1" + pgetn + "$2"
+        nrw.push(rw)
+      } else if(subs[i].indexOf(" - reject") != -1) { // rewrite reject 类型
+        rw = subs[i].split(" ")[0] + " url reject-200"
+        nrw.push(rw)
+      } else if (subs[i].indexOf("script-path") != -1) { //surge js 旧写法
+        type = subs[i].replace(/\s+/g," ").split(" ")[0]
+        js = subs[i].split("script-path")[1].split("=")[1].split(",")[0]
+        ptn = subs[i].replace(/\s+/g," ").split(" ")[1]
+        subsi = subs[i].replace(/ /g,"").replace(/\=true/g,"=1")
+        if (type == "http-response" && subsi.indexOf("requires-body=1") != -1) {
+          type = "script-response-body "
+        } else if (type == "http-response" && subsi.indexOf("requires-body=1") == -1) {
+          type = "script-response-header "
+        } else if (type == "http-request" && subsi.indexOf("requires-body=1") != -1) {
+          type = "script-request-body "
+        } else if (type == "http-request" && subsi.indexOf("requires-body=1") == -1) {
+          type = "script-request-header "
+        } else {type = "" }
+        if (type != "") {
+          rw = ptn + " url " + type + js
+          nrw.push(rw)
+        }
+        
+      }
+    }
+    
+  }
+  return nrw
 }
 // 如果 URL-Regex 跟 rewrite/script 都需要
 function SGMD2QX(subs) {
@@ -879,13 +938,13 @@ function ReplaceReg(cnt, para) {
 function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
     var list0 = subs.split("\n");
     var QuanXK = ["shadowsocks=", "trojan=", "vmess=", "http="];
-    var SurgeK = ["=ss", "=vmess", "=trojan", "=http", "=custom"];
+    var SurgeK = ["=ss,", "=vmess,", "=trojan,", "=http,", "=custom,"];
     var LoonK = ["=shadowsocks", "=shadowsocksr"]
     var QXlist = [];
     var failedList = [];
     for (var i = 0; i < list0.length; i++) {
         var node = ""
-        if (list0[i].trim().length > 3) {
+        if (list0[i].trim().length > 3 && !/\;|\/|\#/.test(list0[i][0])) {
             var type = list0[i].split("://")[0].trim()
             var listi = list0[i].replace(/ /g, "")
             const NodeCheck = (item) => listi.toLowerCase().indexOf(item) != -1;
@@ -939,7 +998,7 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert, Ptls13) {
         }
     }
     if (failedList.length > 0 && Pntf0 != 0) {
-        $notify(`⚠️ 有 ${failedList.length} 条数据解析出错, 已跳过`, "出错内容", failedList.join("\n"));
+        $notify(`⚠️ 有 ${failedList.length} 条数据解析失败, 已忽略`, "出错内容👇", failedList.join("\n"));
     }
     return QXlist;
 }
