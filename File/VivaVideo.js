@@ -1,5 +1,5 @@
 /*
-Vivavideo unlock vip
+Vivavideo unlock Vip
 Script data comes from @hiepkimcdtk55
 Descriptions
 
