@@ -1,5 +1,5 @@
 /*
-bilibili fan drama open 1080P+
+Bilibili fan drama open 1080P+
 
 From https://github.com/Sunert/Scripts/blob/master/Script/Bilibili/BiliHD.js
 
