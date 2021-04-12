@@ -1,5 +1,5 @@
 /*
-README：https://github.com/yichahucha/surge/tree/master0
+README：https://github.com/yichahucha/surge/tree/master
  */
 
 const path1 = "serverConfig";
