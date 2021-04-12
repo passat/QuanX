@@ -1,4 +1,4 @@
-var body = $response.body;00
+var body = $response.body;
 var url = $request.url;
 
 if (url.indexOf('/ad/getAll') != -1) {
