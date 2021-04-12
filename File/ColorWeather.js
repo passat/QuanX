@@ -1,5 +1,5 @@
 /*
-CaiYun Weather (ColorWeather) unlock Vip
+CaiYun Weather (ColorWeather) Unlock Vip
 
 QX 1.0.0:
 ^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/ColorWeather.js
