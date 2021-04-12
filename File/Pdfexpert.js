@@ -1,5 +1,5 @@
 var obj= {
-  "originalTransactionId": "20000618444996",
+  "originalTransactionId": "20000618444996",00
   "subscriptionState": "trial",
   "isInGracePeriod": false,
   "subscriptionExpirationDate": "13:15 03/11/2099",
