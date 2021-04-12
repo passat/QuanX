@@ -1,5 +1,5 @@
 /*
-国区wps
+国区Wps
 by eHpo1
 
 [Script]
