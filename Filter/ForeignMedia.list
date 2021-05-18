@@ -31,8 +31,8 @@ DOMAIN-SUFFIX,soundcloud.com,ForeignMedia
 USER-AGENT,TIDAL*,ForeignMedia
 DOMAIN-SUFFIX,tidal.com,ForeignMedia
 # > Youtube Music
-USER-AGENT,*YouTubeMusic*,ForeignMedia
-USER-AGENT,*com.google.ios.youtubemusic*,ForeignMedia
+USER-AGENT,com.google.ios.youtubemusic*,ForeignMedia
+USER-AGENT,YouTubeMusic*,ForeignMedia
 
 # (Video)
 # > ABC
@@ -105,17 +105,28 @@ HOST-SUFFIX,chocotv.com.tw,ForeignMedia
 USER-AGENT,DAZN*,ForeignMedia
 DOMAIN-SUFFIX,dazn.com,ForeignMedia
 DOMAIN-SUFFIX,dazn-api.com,ForeignMedia
+DOMAIN-SUFFIX,dazndn.com,ForeignMedia
+DOMAIN-SUFFIX,indazn.com,ForeignMedia
 DOMAIN,d151l6v8er5bdm.cloudfront.net,ForeignMedia
 DOMAIN-KEYWORD,voddazn,ForeignMedia
 HOST-SUFFIX,d151l6v8er5bdm.cloudfront.net,ForeignMedia
 HOST-SUFFIX,dazndn.com,ForeignMedia
 HOST-SUFFIX,indazn.com,ForeignMedia
 HOST-SUFFIX,intercom.io,ForeignMedia
+# > discovery+
+USER-AGENT,DPlus*,ForeignMedia
+USER-AGENT,discovery+*,ForeignMedia
+DOMAIN-SUFFIX,disco-api.com,ForeignMedia
+DOMAIN-SUFFIX,discoveryplus.co.uk,ForeignMedia
+DOMAIN-SUFFIX,discoveryplus.com,ForeignMedia
+DOMAIN-SUFFIX,discoveryplus.in,ForeignMedia
+DOMAIN-SUFFIX,dnitv.com,ForeignMedia
 # > Disney+
 USER-AGENT,Disney+*,ForeignMedia
 DOMAIN-SUFFIX,bamgrid.com,ForeignMedia
-DOMAIN-SUFFIX,disney-plus.net,ForeignMedia
 DOMAIN-SUFFIX,disneyplus.com,ForeignMedia
+DOMAIN-SUFFIX,disney-plus.net,ForeignMedia
+DOMAIN-SUFFIX,disneyForeignMedia.com,ForeignMedia
 DOMAIN-SUFFIX,dssott.com,ForeignMedia
 DOMAIN,cdn.registerdisney.go.com,ForeignMedia
 DOMAIN,global.edge.bamgrid.com,ForeignMedia
@@ -164,23 +175,27 @@ DOMAIN-SUFFIX,hbogo.com,ForeignMedia
 DOMAIN-SUFFIX,hbonow.com,ForeignMedia
 USER-AGENT,HBOMAX*,ForeignMedia
 DOMAIN-SUFFIX,hbomax.com,ForeignMedia
-HOST-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,ForeignMedia
-HOST-SUFFIX,hboasia.com,ForeignMedia
-# > HBO GO HKG
-USER-AGENT,HBO%20GO%20PROD%20HKG*,ForeignMedia
+DOMAIN-SUFFIX,hbomaxcdn.com,ForeignMedia
+# > HBO Asia
+USER-AGENT,HBO%20GO%20PROD*,ForeignMedia
 DOMAIN-SUFFIX,hbogoasia.com,ForeignMedia
 DOMAIN-SUFFIX,hbogoasia.hk,ForeignMedia
-DOMAIN,bcbolthboa-a.akamaihd.net,ForeignMedia
-DOMAIN,players.brightcove.net,ForeignMedia
-DOMAIN,s3-ap-southeast-1.amazonaws.com,ForeignMedia
-DOMAIN,dai3fd1oh325y.cloudfront.net,ForeignMedia
+DOMAIN-KEYWORD,.hbogoasia.,ForeignMedia
 DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,ForeignMedia
+DOMAIN,bcbolthboa-a.akamaihd.net,ForeignMedia
+DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,ForeignMedia
+DOMAIN,dai3fd1oh325y.cloudfront.net,ForeignMedia
 DOMAIN,hboasia1-i.akamaihd.net,ForeignMedia
 DOMAIN,hboasia2-i.akamaihd.net,ForeignMedia
 DOMAIN,hboasia3-i.akamaihd.net,ForeignMedia
 DOMAIN,hboasia4-i.akamaihd.net,ForeignMedia
 DOMAIN,hboasia5-i.akamaihd.net,ForeignMedia
-DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,ForeignMedia
+DOMAIN,hboasialive.akamaized.net,ForeignMedia
+DOMAIN,hbogoprod-vod.akamaized.net,ForeignMedia
+DOMAIN,hbolb.onwardsmg.com,ForeignMedia
+DOMAIN,hbounify-prod.evergent.com,ForeignMedia
+DOMAIN,players.brightcove.net,ForeignMedia
+DOMAIN,s3-ap-southeast-1.amazonaws.com,ForeignMedia
 # > 华文电视
 USER-AGENT,HWTVMobile*,ForeignMedia
 DOMAIN-SUFFIX,5itv.tv,ForeignMedia
@@ -237,21 +252,62 @@ DOMAIN,d349g9zuie06uo.cloudfront.net,ForeignMedia
 USER-AGENT,mytv*,ForeignMedia
 DOMAIN-SUFFIX,mytvsuper.com,ForeignMedia
 DOMAIN-SUFFIX,tvb.com,ForeignMedia
+# > Naver TV
+USER-AGENT,Naver%20TV*,ForeignMedia
+DOMAIN-SUFFIX,naver.com,ForeignMedia
+DOMAIN-SUFFIX,smartmediarep.com,ForeignMedia
+# > Netflix
+USER-AGENT,Argo*,ForeignMedia
+DOMAIN-SUFFIX,netflix.com,ForeignMedia
+DOMAIN-SUFFIX,netflix.net,ForeignMedia
+DOMAIN-SUFFIX,nflxext.com,ForeignMedia
+DOMAIN-SUFFIX,nflximg.com,ForeignMedia
+DOMAIN-SUFFIX,nflximg.net,ForeignMedia
+DOMAIN-SUFFIX,nflxso.net,ForeignMedia
+DOMAIN-SUFFIX,nflxvideo.net,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest0.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest1.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest2.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest3.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest4.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest5.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest6.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest7.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest8.com,ForeignMedia
+DOMAIN-SUFFIX,netflixdnstest9.com,ForeignMedia
+DOMAIN-KEYWORD,dualstack.apiproxy-,ForeignMedia
+DOMAIN-KEYWORD,dualstack.ichnaea-web-,ForeignMedia
+IP-CIDR,23.246.0.0/18,ForeignMedia
+IP-CIDR,37.77.184.0/21,ForeignMedia
+IP-CIDR,45.57.0.0/17,ForeignMedia
+IP-CIDR,64.120.128.0/17,ForeignMedia
+IP-CIDR,66.197.128.0/17,ForeignMedia
+IP-CIDR,108.175.32.0/20,ForeignMedia
+IP-CIDR,192.173.64.0/18,ForeignMedia
+IP-CIDR,198.38.96.0/19,ForeignMedia
+IP-CIDR,198.45.48.0/20,ForeignMedia
+IP-CIDR,34.210.42.111/32,ForeignMedia
+IP-CIDR,52.89.124.203/32,ForeignMedia
+IP-CIDR,54.148.37.5/32,ForeignMedia
 # > Niconico
 USER-AGENT,Niconico*,ForeignMedia
 DOMAIN-SUFFIX,dmc.nico,ForeignMedia
 DOMAIN-SUFFIX,nicovideo.jp,ForeignMedia
 DOMAIN-SUFFIX,nimg.jp,ForeignMedia
-DOMAIN-SUFFIX,socdm.com,ForeignMedia
 # > Nowe
-USER-AGENT,PCCW*,ForeignMedia
-DOMAIN-KEYWORD,nowe,ForeignMedia
-DOMAIN,bcbolthboa-a.akamaihd.net,ForeignMedia
 DOMAIN-SUFFIX,nowe.com,ForeignMedia
-DOMAIN-SUFFIX,youboranqs01.com,ForeignMedia
 DOMAIN-SUFFIX,nowestatic.com,ForeignMedia
-# > Pandora
-HOST-SUFFIX,pandora.com,ForeignMedia
+# > Paramount+
+USER-AGENT,PPlus*,ForeignMedia
+DOMAIN-SUFFIX,cbsi.com,ForeignMedia
+DOMAIN-SUFFIX,cbsaavideo.com,ForeignMedia
+DOMAIN-SUFFIX,cbsivideo.com,ForeignMedia
+DOMAIN-SUFFIX,paramountplus.com,ForeignMedia
+DOMAIN-SUFFIX,pplusstatic.com,ForeignMedia
+DOMAIN,cbsi.live.ott.irdeto.com,ForeignMedia
+DOMAIN,cbsplaylistserver.aws.syncbak.com,ForeignMedia
+DOMAIN,cbsservice.aws.syncbak.com,ForeignMedia
+DOMAIN,link.theplatform.com,ForeignMedia
 # > PBS
 USER-AGENT,PBS*,ForeignMedia
 DOMAIN-SUFFIX,pbs.org,ForeignMedia
@@ -276,10 +332,10 @@ DOMAIN,hamifans.emome.net,ForeignMedia
 USER-AGENT,TikTok*,ForeignMedia
 DOMAIN-SUFFIX,byteoversea.com,ForeignMedia
 DOMAIN-SUFFIX,ibytedtos.com,ForeignMedia
-DOMAIN-SUFFIX,ipstatp.com,ForeignMedia
 DOMAIN-SUFFIX,muscdn.com,ForeignMedia
 DOMAIN-SUFFIX,musical.ly,ForeignMedia
 DOMAIN-SUFFIX,tiktok.com,ForeignMedia
+DOMAIN-SUFFIX,tik-tokapi.com,ForeignMedia
 DOMAIN-SUFFIX,tiktokcdn.com,ForeignMedia
 DOMAIN-SUFFIX,tiktokv.com,ForeignMedia
 DOMAIN-KEYWORD,-tiktokcdn-com,ForeignMedia
@@ -292,11 +348,8 @@ DOMAIN-SUFFIX,jtvnw.net,ForeignMedia
 DOMAIN-SUFFIX,ttvnw.net,ForeignMedia
 DOMAIN-SUFFIX,twitch.tv,ForeignMedia
 DOMAIN-SUFFIX,twitchcdn.net,ForeignMedia
-DOMAIN-SUFFIX,ttvnw.net,ForeignMedia
-DOMAIN-SUFFIX,jtvnw.net,ForeignMedia
 # > ViuTV
 USER-AGENT,Viu*,ForeignMedia
-USER-AGENT,ViuTV*,ForeignMedia
 DOMAIN-SUFFIX,viu.com,ForeignMedia
 DOMAIN-SUFFIX,viu.tv,ForeignMedia
 DOMAIN,api.viu.now.com,ForeignMedia
@@ -316,7 +369,9 @@ USER-AGENT,com.google.ios.youtube*,ForeignMedia
 USER-AGENT,YouTube*,ForeignMedia
 DOMAIN-SUFFIX,googlevideo.com,ForeignMedia
 DOMAIN-SUFFIX,youtube.com,ForeignMedia
+DOMAIN-SUFFIX,ytimg.com,ForeignMedia
 DOMAIN,youtubei.googleapis.com,ForeignMedia
+DOMAIN,yt3.ggpht.com,ForeignMedia
 USER-AGENT,*youtube*,ForeignMedia
 HOST-KEYWORD,youtube,ForeignMedia
 HOST-SUFFIX,gvt2.com,ForeignMedia
