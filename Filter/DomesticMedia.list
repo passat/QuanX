@@ -85,11 +85,6 @@ USER-AGENT, Youku*, DomesticMedia
 USER-AGENT, %E4%BC%98%E9%85%B7*,DomesticMedia
 
 # (Music)
-# > Alibaba
-USER-AGENT,walkman*,DomesticMedia
-USER-AGENT,xiami*,DomesticMedia
-HOST-SUFFIX,xiami.com,DomesticMedia
-HOST-SUFFIX,xiami.net,DomesticMedia
 # > Baidu
 USER-AGENT,baiduyinyue,DomesticMedia
 HOST-SUFFIX,qianqian.com,DomesticMedia
@@ -132,6 +127,9 @@ IP-CIDR,118.24.63.156/32,DomesticMedia
 IP-CIDR,193.112.159.225/32,DomesticMedia
 IP-CIDR,223.252.199.66/32,DomesticMedia
 IP-CIDR,223.252.199.67/32,DomesticMedia
+# > Qianqian Music
+DOMAIN-SUFFIX,qianqian.com,DomesticMedia
+DOMAIN-SUFFIX,taihe.com,DomesticMedia
 # > QQ Music
 DOMAIN-SUFFIX,music.qq.com,DomesticMedia
 DOMAIN-SUFFIX,music.tc.qq.com,DomesticMedia
@@ -144,9 +142,6 @@ USER-AGENT,MOO%E9%9F%B3%E4%B9%90*,DomesticMedia
 USER-AGENT,QQ%E9%9F%B3%E4%B9%90,DomesticMedia
 HOST,aqqmusic.tc.qq.com,DomesticMedia
 HOST-SUFFIX,*music.qq.com,DomesticMedia
-# > Qianqian Music
-DOMAIN-SUFFIX,qianqian.com,DomesticMedia
-DOMAIN-SUFFIX,taihe.com,DomesticMedia
 # > Sohu
 HOST-SUFFIX,56.com,DomesticMedia
 HOST-SUFFIX,sohu.com,DomesticMedia
