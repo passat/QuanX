@@ -1,8 +1,10 @@
 # ForeignMedia
+
 # (Podcast)
 # > Himalaya
 USER-AGENT,Himalaya*,ForeignMedia
 DOMAIN-SUFFIX,himalaya.com,ForeignMedia
+
 # (Music)
 # > Deezer
 USER-AGENT,Deezer*,ForeignMedia
@@ -25,14 +27,6 @@ USER-AGENT,SoundCloud*,ForeignMedia
 DOMAIN-SUFFIX,p-cdn.us,ForeignMedia
 DOMAIN-SUFFIX,sndcdn.com,ForeignMedia
 DOMAIN-SUFFIX,soundcloud.com,ForeignMedia
-# > Spotify
-USER-AGENT,Spotify*,ForeignMedia
-DOMAIN-SUFFIX,pscdn.co,ForeignMedia
-DOMAIN-SUFFIX,scdn.co,ForeignMedia
-DOMAIN-SUFFIX,spotify.com,ForeignMedia
-DOMAIN-SUFFIX,spoti.fi,ForeignMedia
-DOMAIN-KEYWORD,spotify.com,ForeignMedia
-DOMAIN-KEYWORD,-spotify-com,ForeignMedia
 # > TIDAL
 USER-AGENT,TIDAL*,ForeignMedia
 DOMAIN-SUFFIX,tidal.com,ForeignMedia
@@ -274,13 +268,6 @@ HOST-SUFFIX,skygo.co.nz,ForeignMedia
 USER-AGENT,SoundCloud*,ForeignMedia
 DOMAIN-SUFFIX,sndcdn.com,ForeignMedia
 DOMAIN-SUFFIX,soundcloud.com,ForeignMedia
-# > Spotify
-USER-AGENT,*Spotify*,ForeignMedia
-HOST-SUFFIX,pscdn.co,ForeignMedia
-HOST-SUFFIX,scdn.co,ForeignMedia
-HOST-SUFFIX,spoti.fi,ForeignMedia
-HOST-SUFFIX,spotify.com,ForeignMedia
-HOST-SUFFIX,spotifycdn.net,ForeignMedia
 # > TaiwanGoo
 USER-AGENT,TaiwanGood*,ForeignMedia
 DOMAIN-SUFFIX,skyking.com.tw,ForeignMedia
