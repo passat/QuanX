@@ -73,6 +73,7 @@ DOMAIN,streamingaudio.itunes.apple.com,Apple
 DOMAIN,gateway.icloud.com,Apple
 DOMAIN,gspe1-ssl.ls.apple.com,Apple
 DOMAIN-SUFFIX,apple.news,Apple
+DOMAIN,news-assets.apple.com,Apple
 DOMAIN,news-client.apple.com,Apple
 DOMAIN,news-edge.apple.com,Apple
 DOMAIN,news-events.apple.com,Apple
@@ -98,6 +99,9 @@ DOMAIN-SUFFIX,mail.me.com,Apple
 DOMAIN,fmfmobile.icloud.com,Apple
 DOMAIN,fmipmobile.icloud.com,Apple
 DOMAIN,statici.icloud.com,Apple
+
+# > Fitness+
+DOMAIN,hls-svod.itunes.apple.com,Apple
 
 # > Update
 #DOMAIN,supportdownload.apple.com,Apple
