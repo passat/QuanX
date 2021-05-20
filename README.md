@@ -5,3 +5,4 @@
 - [@KOP-XIAO](https://github.com/KOP-XIAO/QuantumultX)
 - [@Blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)
 - [@Koolson](https://github.com/Koolson/Qure)
+- [@yichahucha](https://github.com/yichahucha/surge)
