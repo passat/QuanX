@@ -1,4 +1,4 @@
-/*00
+/*
 
 [rewrite_local]
 # 知乎（部分替换为手机百度 Quark 的 User-Agent）
