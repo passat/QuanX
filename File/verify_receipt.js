@@ -1,4 +1,4 @@
-let body= $response.body;  00
+let body= $response.body;
 var obj = JSON.parse(body);
 if (body.indexOf("expires") !=-1) {
   obj["receipt"]["in_app"][0]["expires_date"] = "2099-10-19 05:14:18 Etc/GMT";
