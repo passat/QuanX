@@ -1,4 +1,4 @@
-/*
+/*00
 VSCO unlock vip
 This script is compatible with new and old versions
 
