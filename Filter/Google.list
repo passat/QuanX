@@ -57,6 +57,7 @@ DOMAIN-SUFFIX,docs.google.com,Google
 DOMAIN-SUFFIX,drive.google.com,Google
 DOMAIN-SUFFIX,googledrive.com,Google
 DOMAIN-SUFFIX,googleusercontent.com,Google
+DOMAIN,www.googleapis.com,Google
 
 # > Google Voice
 DOMAIN,voice.telephony.goog,Google
@@ -67,6 +68,9 @@ DOMAIN,pop.gmail.com,Google
 DOMAIN,imap.gmail.com,Google
 DOMAIN,smtp.gmail.com,Google
 DOMAIN-SUFFIX,gmail.com,Google
+
+# > Chromecast with Google TV
+DOMAIN-KEYWORD,pa.google,Google
 
 # > DNS Cache Pollution Protection
 DOMAIN-SUFFIX,appspot.com,Google
