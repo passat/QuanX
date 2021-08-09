@@ -88,6 +88,7 @@ DOMAIN,az668014.vo.msecnd.net,Microsoft
 USER-AGENT,Microsoft*,Microsoft
 USER-AGENT,OneDrive*,Microsoft
 USER-AGENT,onedriveiosapp*,Microsoft
+DOMAIN,oneclient.sfx.ms,Microsoft
 # > Outlook
 DOMAIN,outlook.office365.com,Microsoft
 DOMAIN,smtp.office365.com,Microsoft
