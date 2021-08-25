@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,joinclubhouse.com,PROXY
 # > Cryptocurrency
 DOMAIN-SUFFIX,aex.com,PROXY
 DOMAIN-SUFFIX,bibox.com,PROXY
+DOMAIN-SUFFIX,binance.cc,PROXY
 DOMAIN-SUFFIX,binance.com,PROXY
 DOMAIN-SUFFIX,bitcointalk.org,PROXY
 DOMAIN-SUFFIX,bitfinex.com,PROXY
@@ -27,8 +28,10 @@ DOMAIN-SUFFIX,bitmex.com,PROXY
 DOMAIN-SUFFIX,gate.io,PROXY
 DOMAIN-SUFFIX,huobi.com,PROXY
 DOMAIN-SUFFIX,okex.com,PROXY
+DOMAIN-SUFFIX,uniswap.org,PROXY
 DOMAIN-SUFFIX,zb.com,PROXY
 # > Discord
+DOMAIN-SUFFIX,discord.com,PROXY
 DOMAIN-SUFFIX,discordapp.com,PROXY
 DOMAIN-SUFFIX,discordapp.net,PROXY
 # > Dropbox
@@ -71,6 +74,15 @@ DOMAIN-SUFFIX,lin.ee,PROXY
 DOMAIN-SUFFIX,line.naver.jp,PROXY
 DOMAIN-SUFFIX,line-cdn.net,PROXY
 DOMAIN-SUFFIX,nhncorp.jp,PROXY
+# > Pinterest
+DOMAIN-SUFFIX,pinterest.at,PROXY
+DOMAIN-SUFFIX,pinterest.ca,PROXY
+DOMAIN-SUFFIX,pinterest.co.uk,PROXY
+DOMAIN-SUFFIX,pinterest.com,PROXY
+DOMAIN-SUFFIX,pinterest.de,PROXY
+DOMAIN-SUFFIX,pinterest.fr,PROXY
+DOMAIN-SUFFIX,pinterest.jp,PROXY
+DOMAIN-SUFFIX,pinterest.se,PROXY
 # > pixiv
 DOMAIN-SUFFIX,pixiv.net,PROXY
 DOMAIN-SUFFIX,pixiv.org,PROXY
@@ -184,8 +196,10 @@ DOMAIN-SUFFIX,crucial.com,PROXY
 DOMAIN-SUFFIX,cts.com.tw,PROXY
 DOMAIN-SUFFIX,cw.com.tw,PROXY
 DOMAIN-SUFFIX,cyberctm.com,PROXY
+DOMAIN-SUFFIX,cyclingnews.com,PROXY
 DOMAIN-SUFFIX,dailymotion.com,PROXY
 DOMAIN-SUFFIX,dailyview.tw,PROXY
+DOMAIN-SUFFIX,dandanzan.com,PROXY
 DOMAIN-SUFFIX,daum.net,PROXY
 DOMAIN-SUFFIX,daumcdn.net,PROXY
 DOMAIN-SUFFIX,dcard.tw,PROXY
@@ -298,6 +312,7 @@ DOMAIN-SUFFIX,mega.nz,PROXY
 DOMAIN-SUFFIX,mergersandinquisitions.com,PROXY
 DOMAIN-SUFFIX,mingpao.com,PROXY
 DOMAIN-SUFFIX,mixi.jp,PROXY
+DOMAIN-SUFFIX,mixlr.com,PROXY
 DOMAIN-SUFFIX,mobile01.com,PROXY
 DOMAIN-SUFFIX,mubi.com,PROXY
 DOMAIN-SUFFIX,myspace.com,PROXY
@@ -380,6 +395,7 @@ DOMAIN-SUFFIX,steemitwallet.com,PROXY
 DOMAIN-SUFFIX,straitstimes.com,PROXY
 DOMAIN-SUFFIX,streamable.com,PROXY
 DOMAIN-SUFFIX,streema.com,PROXY
+DOMAIN-SUFFIX,substack.com,PROXY
 DOMAIN-SUFFIX,t66y.com,PROXY
 DOMAIN-SUFFIX,tapatalk.com,PROXY
 DOMAIN-SUFFIX,teco-hk.org,PROXY
@@ -406,6 +422,7 @@ DOMAIN-SUFFIX,uptodown.com,PROXY
 DOMAIN-SUFFIX,urbandictionary.com,PROXY
 DOMAIN-SUFFIX,ustream.tv,PROXY
 DOMAIN-SUFFIX,uwants.com,PROXY
+DOMAIN-SUFFIX,v2ex.com,PROXY
 DOMAIN-SUFFIX,v2fly.org,PROXY
 DOMAIN-SUFFIX,v2ray.com,PROXY
 DOMAIN-SUFFIX,viber.com,PROXY
@@ -432,6 +449,7 @@ DOMAIN-SUFFIX,xn--90wwvt03e.com,PROXY
 DOMAIN-SUFFIX,xn--i2ru8q2qg.com,PROXY
 DOMAIN-SUFFIX,xnxx.com,PROXY
 DOMAIN-SUFFIX,xvideos.com,PROXY
+DOMAIN-SUFFIX,yadi.sk,PROXY
 DOMAIN-SUFFIX,yahoo.com,PROXY
 DOMAIN-SUFFIX,yandex.ru,PROXY
 DOMAIN-SUFFIX,ycombinator.com,PROXY
@@ -442,6 +460,7 @@ DOMAIN-SUFFIX,you-get.org,PROXY
 DOMAIN-SUFFIX,zaobao.com,PROXY
 DOMAIN-SUFFIX,zello.com,PROXY
 DOMAIN-SUFFIX,zeronet.io,PROXY
+DOMAIN-SUFFIX,z-lib.org,PROXY
 DOMAIN-SUFFIX,zoom.us,PROXY
 DOMAIN,cc.tvbs.com.tw,PROXY
 DOMAIN,ocsp.int-x3.letsencrypt.org,PROXY
