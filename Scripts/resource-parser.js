@@ -1,16 +1,16 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-08-24 11:45⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2021-09-05 22:45⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: @ShawnKOP_bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
-🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM
+🗣 🆃🄷🄰🄽🄺🅂 🆃🄾  @Jamie CHIEN, @M**F**, @c0lada, @Peng-YM, @vinewx, @love4taylor, @shadowdogy 
 
 🤖 主要功能: 
-❶ 将其它格式的服务器订阅解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
+❶ 将其它格式的⟦服务器订阅⟧解析成 𝐐𝐮𝐚𝐧𝐭𝐮𝐦𝐮𝐥𝐭 𝐗 格式
 ☑︎ 支持 𝗩𝗺𝗲𝘀𝘀/𝗦𝗦(𝗥/𝗗)/𝗛𝗧𝗧𝗣(𝗦)/𝗧𝗿𝗼𝗷𝗮𝗻/𝗤𝘂𝗮𝗻𝘁𝘂𝗺𝘂𝗹𝘁(𝗫)/𝗦𝘂𝗿𝗴𝗲/𝐂𝐥𝐚𝐬𝐡/𝐒𝐡𝐚𝐝𝐨𝐰𝐫𝐨𝐜𝐤𝐞𝐭/𝐋𝐨𝐨𝐧 格式
 ☑︎ 提供说明 1⃣️ 中的可选个性化参数(筛选、重命名 等)
 ❷ 𝗿𝗲𝘄𝗿𝗶𝘁𝗲(重写) & 𝗳𝗶𝗹𝘁𝗲𝗿(分流) 的 转换 & 筛选 
-☑︎ 用于禁用远程引用中某(几)项 𝗿𝗲𝘄𝗿𝗶𝘁𝗲/𝗵𝗼𝘀𝘁𝗻𝗮𝗺𝗲/𝗳𝗶𝗹𝘁𝗲𝗿
+☑︎ 用于禁用/修改远程引用中某(几)项 𝗿𝗲𝘄𝗿𝗶𝘁𝗲/𝗵𝗼𝘀𝘁𝗻𝗮𝗺𝗲/𝗳𝗶𝗹𝘁𝗲𝗿
 ☑︎ 𝐒𝐮𝐫𝐠𝐞/𝐂𝐥𝐚𝐬𝐡 类型规则 𝗹𝗶𝘀𝘁 与 模块 𝐦𝐨𝐝𝐮𝐥𝐞 的解析使用
 ----------------------------------------------------------
 0️⃣ ⟦原始链接⟧ 后加 "#" 使用, 不同参数用 "&" 连接: 
@@ -42,7 +42,6 @@
     ∎ rename=@「$emoji1」
   ❖ $tag 占位符，将订阅的 tag 作为可操作参数，如
     ∎ rename=@「$tag」
-
 ⦿ suffix=-1/1 将节点类型做为前缀/后缀 添加在节点名中, 如 「𝗌𝗌」 「𝖵𝗆𝖾𝗌𝗌」
 ⦿ ptn=1-6, 分别将节点名中的英文替换成花样字 ⇒ 🅰/🄰/𝐀/𝗮/𝔸/𝕒
 ⦿ npt=1-6, 分别将节点名中的数字替换成花样数字 ⇒ ①\❶\⓵\𝟙\¹\₁
@@ -93,10 +92,7 @@
 0️⃣ 在QuantumultX 配置文件中[general] 部分，加入 
 resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 ⚠️⚠️如提示"没有自定义解析器"，请长按右下角图标后点击左侧刷新按钮，更新资源，后台退出 app，直到出现解析器说明
-1️⃣ 假设原始订阅连接为: https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt , 
-2️⃣ 假设你想要保留的参数为 in=tls+ss, 想要过滤的参数为 out=http+2, 请注意下面订阅链接后一定要加 ”#“ 符号
-3️⃣ 则填入 Quanx 节点引用的的总链接为  https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.txt#in=tls+ss&out=http+2
-4️⃣ 填入上述链接, 并打开的资源解析器开关
+
 ------------------------------
 */
 
@@ -282,7 +278,7 @@ function ResourceParse() {
   
   //开始处理
   if (flag == 1) { //server 类型统一处理
-    total = total.filter(Boolean)
+    total = isQuanX(total.filter(Boolean).join("\n"))
     if (Pinfo == 1 && ntf_flow == 0) { //假节点类型的流量通知
       flowcheck(total)
     }
@@ -307,14 +303,14 @@ function ResourceParse() {
       total = total.map(Rename);
     }
     if (Psrename) { total = RenameScript(total, Psrename) }
-    if (Psort0) {
-      total = QXSort(total, Psort0);
-    }
     if (total.length > 0){
       if (Psuffix==1 || Psuffix==-1) {total = Psuffix == 1? total.map(type_suffix):total.map(type_prefix)
       }
-      total = total.map(type_handle).map(emoji_prefix_handle).map(tag_handle)
-      total = para1.indexOf("node_index_prefix")!=-1 ?index_handle(total):total
+      total = total.map(type_handle).map(emoji_prefix_handle).map(tag_handle) //各类节点名操作
+      if (Psort0) { //排序操作
+        total = QXSort(total, Psort0);
+      }
+      total = para1.indexOf("node_index_prefix")!=-1 ?index_handle(total):total // 节点序号操作
       total = TagCheck_QX(total).join("\n") //节点名检查
       if (Pcnt == 1) {$notify("解析后最终返回内容" , "节点数量: " +total.split("\n").length, total)}
       total = Base64.encode(total) //强制节点类型 base64 加密后再导入 Quantumult X
@@ -1555,11 +1551,12 @@ function SSD2QX(subs, Pudp, Ptfo) {
 
 // 纠正部分不规范的写法(没有把 tag 写在最后)
 function QXFix(cntf) {
+  //console.log("hh"+cntf)
   var cnti = cntf.replace(/tag\s+\=/,"tag=").replace("chacha20-poly","chacha20-ietf-poly")
   var hd = cnti.split("tag=")[0]
   var tag = "tag="+cnti.split("tag=")[1].split(",")[0]
   var tail = cnti.split(tag+",")
-  cnti = tail.length<=1?  cntf : cntf //String(hd + tail[1] +"," + tag)
+  cnti = tail.length<=1?  cntf : String(hd + tail[1].split("\r")[0] +"," + tag)
   return cnti
 }
 
@@ -1783,6 +1780,7 @@ function get_emoji(emojip, sname) {
     "🇳🇬": ["尼日利亚", "NG", "尼日利亞","拉各斯"],
     "🇨🇿": ["Czechia", "捷克"],
     "🇸🇰": ["斯洛伐克", "SK"],
+    "🇸🇮": ["斯洛文尼亚"],
     "🇷🇸": ["RS", "塞尔维亚"],
     "🇲🇩": ["摩爾多瓦","MD","摩尔多瓦"],
     "🇩🇪": ["DE", "German", "GERMAN", "德国", "德國", "法兰克福","京德","滬德","廣德","沪德","广德"],
@@ -1792,7 +1790,7 @@ function get_emoji(emojip, sname) {
     "🇫🇮": ["Finland", "芬兰","芬蘭","赫尔辛基"],
     "🇫🇷": ["FR", "France", "法国", "法國", "巴黎"],
     "🇬🇧": ["UK", "GB", "England", "United Kingdom", "英国", "伦敦", "英"],
-    "🇲🇴": ["MO", "Macao", "澳门", "澳門", "CTM"],
+    "🇲🇴": ["MO", "Macao", "MAC", "澳门", "澳門", "CTM"],
     "🇰🇿": ["哈萨克斯坦"],
     "🇭🇺": ["匈牙利", "Hungary"],
     "🇱🇹": ["立陶宛"],
@@ -1811,6 +1809,7 @@ function get_emoji(emojip, sname) {
     "🇳🇱": ["NL", "Netherlands", "荷兰", "荷蘭", "尼德蘭", "阿姆斯特丹"],
     "🇵🇭": ["PH", "Philippines", "菲律宾", "菲律賓"],
     "🇷🇴": ["RO", "罗马尼亚"],
+    "🇧🇾": ["BY","白俄罗斯","白俄羅斯"],
     "🇷🇺": ["RU", "Russia", "俄罗斯", "俄国", "俄羅斯", "伯力", "莫斯科", "圣彼得堡", "西伯利亚", "新西伯利亚", "京俄", "杭俄","廣俄","滬俄","广俄","沪俄"],
     "🇸🇦": ["沙特", "迪拜"],
     "🇸🇪": ["SE", "Sweden"],
@@ -1827,14 +1826,12 @@ function get_emoji(emojip, sname) {
     "🇯🇵": ["JP", "Japan","JAPAN", "日本", "东京", "大阪", "埼玉", "沪日", "穗日", "川日", "中日", "泉日", "杭日", "深日", "辽日", "广日"],
     "🇦🇷": ["AR", "阿根廷"],
     "🇳🇴": ["Norway", "挪威", "NO"],
-    "🇨🇳": ["CN", "China", "回国", "中国","中國", "江苏", "北京", "上海", "广州", "深圳", "杭州", "徐州", "青岛", "宁波", "镇江", "back"],
     "🇵🇱": ["PL", "POL", "波兰","波蘭"],
     "🇨🇱": ["智利"],
     "🇳🇿": ["新西蘭","新西兰"],
     "🇬🇷": ["希腊","希臘"],
     "🇪🇬": ["埃及"],
     "🇮🇲": ["马恩岛","馬恩島"],
-    "🇧🇾": ["BY","白俄罗斯"],
     "🇵🇹": ["葡萄牙"],
     "🇲🇳": ["蒙古"],
     "🇵🇪": ["秘鲁","祕魯"],
@@ -1843,7 +1840,11 @@ function get_emoji(emojip, sname) {
     "🇲🇰": ["马其顿","馬其頓"],
     "🇧🇦": ["波黑共和国","波黑"],
     "🇬🇪": ["格魯吉亞","格鲁吉亚"],
-    "🇦🇱": ["阿爾巴尼亞","阿尔巴尼亚"]
+    "🇦🇱": ["阿爾巴尼亞","阿尔巴尼亚"],
+    "🇨🇾": ["CY","塞浦路斯"],
+    "🇨🇷": ["哥斯达黎加"],
+    "🇹🇳": ["突尼斯"],
+    "🇨🇳": ["CN", "China", "回国", "中国","中國", "江苏", "北京", "上海", "广州", "深圳", "杭州", "徐州", "青岛", "宁波", "镇江", "back"],
   }
     str1 = JSON.stringify(Lmoji)
     aa = JSON.parse(str1)
@@ -2185,8 +2186,13 @@ function CSSR2QX(cnt) {
   mtd = "method="+ cnt.cipher
   udp = cnt.udp ? "udp-relay=true" : "udp-relay=false"
   tfo = cnt.tfo ? "fast-open=true" : "fast-open=false"
-  prot = "ssr-protocol=" + cnt.protocol 
-  ppara = "ssr-protocol-param=" + cnt["protocol-param"]
+  prot = "ssr-protocol=" + cnt.protocol
+  if (typeof(cnt["protocol-param"]) == "string") {
+    ppara = "ssr-protocol-param=" + cnt["protocol-param"]
+  } else if (typeof(cnt["protocol-param"]) == "object") {
+    console.log(typeof(cnt["protocol-param"]))
+    ppara = "ssr-protocol-param=" + JSON.stringify(cnt["protocol-param"]).replace(/{|}|\s|"/g,"")
+  }
   obfs = "obfs=" + cnt.obfs
   ohost = "obfs-host=" + cnt["obfs-param"]
   node = "shadowsocks="+[ipt, pwd, mtd, udp, tfo, prot, ppara, obfs, ohost, tag].filter(Boolean).join(", ")
