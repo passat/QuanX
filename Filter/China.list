@@ -195,6 +195,7 @@ DOMAIN-SUFFIX,163yun.com,DIRECT
 DOMAIN-SUFFIX,lofter.com,DIRECT
 DOMAIN-SUFFIX,netease.com,DIRECT
 DOMAIN-SUFFIX,ydstatic.com,DIRECT
+DOMAIN-SUFFIX,youdao.com,DIRECT
 # > Prior
 DOMAIN,client.amplifi.com,DIRECT
 DOMAIN-SUFFIX,alphassl.com,DIRECT
@@ -244,21 +245,12 @@ DOMAIN-SUFFIX,wechat.com,DIRECT
 # >> PUBG Mobile
 DOMAIN-SUFFIX,igamecj.com,DIRECT
 DOMAIN,file-igamecj.akamaized.net,DIRECT
-IP-CIDR,45.40.220.0/22,DIRECT
-IP-CIDR,150.109.124.0/23,DIRECT
+IP-CIDR,182.254.116.0/24,DIRECT
+IP-CIDR,203.205.254.0/23,DIRECT
 # > ulike
 DOMAIN-suffix, byteoversea.com, DIRECT
 DOMAIN-suffix, faceu.mobi, DIRECT
 DOMAIN-suffix, ibytedtos.com, DIRECT
-# > YYeTs
-USER-AGENT,YYeTs*,DIRECT
-DOMAIN-SUFFIX,jstucdn.com,DIRECT
-DOMAIN-SUFFIX,zimuzu.io,DIRECT
-DOMAIN-SUFFIX,zimuzu.tv,DIRECT
-DOMAIN-SUFFIX,zmz2019.com,DIRECT
-DOMAIN-SUFFIX,zmzapi.com,DIRECT
-DOMAIN-SUFFIX,zmzapi.net,DIRECT
-DOMAIN-SUFFIX,zmzfile.com,DIRECT
 # > Content Delivery Network
 DOMAIN-SUFFIX,ccgslb.com,DIRECT
 DOMAIN-SUFFIX,ccgslb.net,DIRECT
