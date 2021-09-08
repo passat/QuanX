@@ -2,13 +2,17 @@
 VSCO unlock vip
 This script is compatible with new and old versions
 
-QX:
-^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ url script-response-body https://raw.githubusercontent.com/passat/QuanX/main/File/vsco.js
+QuantumultX:
+[rewrite_local]
+^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+[mitm]
+hostname = vsco.co, api.revenuecat.com
 
-Surge4：
+Surge4 or Loon: 
+[Script]
 http-response ^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
-
-Surge & QX MITM = vsco.co, api.revenuecat.com
+[MITM]
+hostname = vsco.co, api.revenuecat.com
 */
 
 let obj = JSON.parse($response.body || '{}');
