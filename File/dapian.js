@@ -15,6 +15,7 @@ http-response ^https:\/\/vni\.kwaiying\.com\/api\/v1\/user\/profile requires-bod
 [MITM]
 hostname = vni.kwaiying.com
 
+*/
 
 var obj = JSON.parse($response.body);
 
