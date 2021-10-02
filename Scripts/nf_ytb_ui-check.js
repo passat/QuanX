@@ -44,7 +44,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
     console.log(code)
     
     if (code === 'Not Available') {
-      result['content'] = '----------------------\n\n🛑 未支持 Netflix'
+      result['content'] = '----------------------\n\n 未支持 Netflix'
       //return 
       //console.log(result)
     } else if (code === 'Not Found') {
