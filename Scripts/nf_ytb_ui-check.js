@@ -34,7 +34,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
 
 !(async () => {
   let result = {
-    title: 'Netflix/YouTube 解锁查询',
+    title: '📺 Netflix/YouTube 解锁查询',
     content: '----------------------\n\n检测失败，请重试',
     content1: '检测失败，请重试'
   }
@@ -44,7 +44,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
     console.log(code)
     
     if (code === 'Not Available') {
-      result['content'] = '----------------------\n\n 未支持 Netflix'
+      result['content'] = '----------------------\n\n🛑 未支持 Netflix'
       //return 
       //console.log(result)
     } else if (code === 'Not Found') {
@@ -71,7 +71,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] , [ "AF" , "🇦🇫" ] , [ "AI" , "�
     } else {
       result['content1'] = "✅ 支持 YouTube Premium ➟ ⟦"+flags.get(code.toUpperCase())+code.toUpperCase()+"⟧"
     }
-    $done({"title":result["title"],"message":result["content"]+"\n\n"+result["content1"]})
+    $done({"title":result["title"],"message":result["content"]+"\n\n"+result["content1"]+'\n\n----------------------\n'+$environment.params})
     
   })
 //  )
