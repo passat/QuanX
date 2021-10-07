@@ -1,4 +1,4 @@
- /**
+ /***
   [task_local]
   event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP 查询, img-url=location.fill.viewfinder.system
   
@@ -35,7 +35,7 @@ function json2info(cnt,paras) {
     res = cnt[paras[i]]? res + paran[i] + " : " + cnt[paras[i]] : res
     res = paras[i] == "country_code"? res+" "+flags.get(cnt[paras[i]].toUpperCase())+"\n\n":res+"\n\n"
   }
-  res =res+ "----------------------"
+  res =res+ "----------------------\n"+$environment.params
   return res
 }
 
