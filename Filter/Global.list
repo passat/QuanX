@@ -463,6 +463,7 @@ DOMAIN-SUFFIX,zeronet.io,PROXY
 DOMAIN-SUFFIX,z-lib.org,PROXY
 DOMAIN-SUFFIX,zoom.us,PROXY
 DOMAIN,cc.tvbs.com.tw,PROXY
+DOMAIN,clubhouse.pubnubapi.com,PROXY
 DOMAIN,ocsp.int-x3.letsencrypt.org,PROXY
 DOMAIN,search.avira.com,PROXY
 DOMAIN,us.weibo.com,PROXY
