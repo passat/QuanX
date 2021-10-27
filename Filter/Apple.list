@@ -29,20 +29,21 @@ DOMAIN-SUFFIX,cdn-apple.com,Apple
 DOMAIN-SUFFIX,crashlytics.com,Apple
 DOMAIN-SUFFIX,itunes.com,Apple
 DOMAIN-SUFFIX,me.com,Apple
-DOMAIN,api.smoot.apple.cn,Apple
 DOMAIN-SUFFIX,aaplimg.com,Apple
+DOMAIN-SUFFIX,appsto.re,Apple
+DOMAIN-SUFFIX,ls.apple.com,Apple
+DOMAIN,apple-events.akamaized.net,Apple
+DOMAIN,api.smoot.apple.cn,Apple
 DOMAIN,iosapps.itunes.apple.com,Apple
 DOMAIN,osxapps.itunes.apple.com,Apple
-DOMAIN-SUFFIX,appsto.re,Apple
 DOMAIN,books.itunes.apple.com,Apple
 DOMAIN,api-glb-sea.smoot.apple.com,Apple
 DOMAIN,lookup-api.apple.com,Apple
-DOMAIN-SUFFIX,ls.apple.com,Apple
 DOMAIN,gs-loc-cn.apple.com,Apple
 DOMAIN-KEYWORD,appledaily,Apple
-DOMAIN-SUFFIX,apple-dns.net,Apple
 DOMAIN-KEYWORD,apple.com.akadns.net,Apple
 DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
+DOMAIN-SUFFIX,apple-dns.net,Apple
 DOMAIN-SUFFIX,akadns.net,Apple
 DOMAIN-SUFFIX,apple-livephotoskit.com,Apple
 DOMAIN-SUFFIX,apple-mapkit.com,Apple
@@ -51,6 +52,7 @@ DOMAIN-SUFFIX,apple.com.mwcloudcdn.com,Apple
 DOMAIN-SUFFIX,apple.com.mwcname.com,Apple
 DOMAIN-SUFFIX,digicert.com,Apple
 DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net,Apple
+DOMAIN-SUFFIX,gsp4cn.ls.apple.com.edgekey.net,Apple
 DOMAIN-SUFFIX,itunes.com.edgekey.net,Apple
 DOMAIN-SUFFIX,mzstatic.com,Apple
 DOMAIN-SUFFIX,store.apple.com.edgekey.net,Apple
@@ -73,6 +75,7 @@ DOMAIN,testflight.apple.com,Apple
 
 # > iCloud
 DOMAIN-SUFFIX,apple-cloudkit.com,Apple
+DOMAIN-SUFFIX,icloud.cdnapple.com,Apple
 DOMAIN-SUFFIX,icloud.com,Apple
 DOMAIN-SUFFIX,icloud.com.cn,Apple
 DOMAIN-SUFFIX,icloud-content.com,Apple
@@ -128,6 +131,7 @@ DOMAIN-SUFFIX,wwwicloud.com,Apple
 DOMAIN-SUFFIX,apple-icloud.cn,Apple
 DOMAIN-SUFFIX,appleicloud.cn,Apple
 DOMAIN-SUFFIX,applemx-icloud.com,Apple
+DOMAIN-SUFFIX,applemxicloud.com,Apple
 
 # > Apple Music
 USER-AGENT,Music*,Apple
@@ -188,3 +192,13 @@ IP-CIDR,144.178.48.0/20,Apple
 IP-CIDR,192.35.50.0/24,Apple
 IP-CIDR,198.183.17.0/24,Apple
 IP-CIDR,205.180.175.0/24,Apple
+
+DOMAIN-SUFFIX,cdn.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdn1.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdn2.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdn3.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdn4.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdncn1.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdncn2.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdncn3.applemapkit.com,Apple
+DOMAIN-SUFFIX,cdncn4.applemapkit.com,Apple
