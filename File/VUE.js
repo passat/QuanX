@@ -1,4 +1,4 @@
-/*
+/**
 VUE Vlog app unlocks Pro
 
 QuantumultX:
