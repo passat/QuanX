@@ -1,4 +1,4 @@
-#### 特别感谢（整理自以下git以自用）      
+#### 特别感谢（整理自以下git以自用/所有规则数据都来自互联网）      
 
 - [@NobyDa](https://github.com/NobyDa/Script/tree/master)
 - [@DivineEngine](https://github.com/DivineEngine/Profiles/tree/master)
