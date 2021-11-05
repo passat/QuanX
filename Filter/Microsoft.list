@@ -159,7 +159,6 @@ DOMAIN-SUFFIX,kumo.com,Microsoft
 DOMAIN-SUFFIX,latampartneruniversity.com,Microsoft
 DOMAIN-SUFFIX,live.com,Microsoft
 DOMAIN-SUFFIX,live.net,Microsoft
-DOMAIN-SUFFIX,livefilestore.com,Microsoft
 DOMAIN-SUFFIX,livingyourambition.com,Microsoft
 DOMAIN-SUFFIX,localytics.com,Microsoft
 DOMAIN-SUFFIX,lync.com,Microsoft
@@ -252,8 +251,6 @@ DOMAIN-SUFFIX,officeplus.cn,Microsoft
 DOMAIN-SUFFIX,officeppe.net,Microsoft
 DOMAIN-SUFFIX,omniroot.com,Microsoft
 DOMAIN-SUFFIX,onecollector.cloudapp.aria,Microsoft
-DOMAIN-SUFFIX,onedrive.com,Microsoft
-DOMAIN-SUFFIX,onedrive.live.com,Microsoft
 DOMAIN-SUFFIX,onenote.com,Microsoft
 DOMAIN-SUFFIX,onenote.net,Microsoft
 DOMAIN-SUFFIX,onestore.ms,Microsoft
@@ -296,12 +293,9 @@ DOMAIN-SUFFIX,serverlesslibrary.net,Microsoft
 DOMAIN-SUFFIX,sfbassets.com,Microsoft
 DOMAIN-SUFFIX,sfbassets.net,Microsoft
 DOMAIN-SUFFIX,sfx.ms,Microsoft
-DOMAIN-SUFFIX,sharepoint.com,Microsoft
-DOMAIN-SUFFIX,sharepointonline.com,Microsoft
 DOMAIN-SUFFIX,skype.com,Microsoft
 DOMAIN-SUFFIX,skypeassets.com,Microsoft
 DOMAIN-SUFFIX,skypeforbusiness.com,Microsoft
-DOMAIN-SUFFIX,spoprod-a.akamaihd.net,Microsoft
 DOMAIN-SUFFIX,sprinklesapp.com,Microsoft
 DOMAIN-SUFFIX,sqlserveronlinux.com,Microsoft
 DOMAIN-SUFFIX,staffhub.ms,Microsoft
@@ -309,7 +303,6 @@ DOMAIN-SUFFIX,statics-marketingsites-eas-ms-com.akamaized.net,Microsoft
 DOMAIN-SUFFIX,statics-marketingsites-eus-ms-com.akamaized.net,Microsoft
 DOMAIN-SUFFIX,statics-marketingsites-neu-ms-com.akamaized.net,Microsoft
 DOMAIN-SUFFIX,statics-marketingsites-wcus-ms-com.akamaized.net,Microsoft
-DOMAIN-SUFFIX,storage.live.com,Microsoft
 DOMAIN-SUFFIX,successwithteams.com,Microsoft
 DOMAIN-SUFFIX,surface.com,Microsoft
 DOMAIN-SUFFIX,svc.ms,Microsoft
@@ -369,16 +362,11 @@ DOMAIN-SUFFIX,xboxstudios.com,Microsoft
 DOMAIN-SUFFIX,xbx.lv,Microsoft
 DOMAIN-SUFFIX,yammer.com,Microsoft
 DOMAIN-SUFFIX,yammerusercontent.com,Microsoft
-DOMAIN-KEYWORD,1drv,Microsoft
 DOMAIN-KEYWORD,microsoft,Microsoft
-DOMAIN-KEYWORD,onedrive,Microsoft
-DOMAIN-KEYWORD,skydrive,Microsoft
-USER-AGENT,Microsoft*,Microsoft
-USER-AGENT,OneDrive*,Microsoft
-USER-AGENT,OneDriveiOSApp*,Microsoft
 
 # > Outlook
 DOMAIN,outlook.office365.com,Microsoft
 DOMAIN,smtp.office365.com,Microsoft
 DOMAIN,imap-mail.outlook.com,Microsoft
 DOMAIN,smtp-mail.outlook.com,Microsoft
+
