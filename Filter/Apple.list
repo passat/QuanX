@@ -77,12 +77,13 @@ DOMAIN,testflight.apple.com,Apple
 DOMAIN-KEYWORD,testflight,Apple
 
 # > iCloud
+DOMAIN,www-cdn.icloud.com.akadns.net,Apple
 DOMAIN-SUFFIX,apple-cloudkit.com,Apple
 DOMAIN-SUFFIX,icloud.cdnapple.com,Apple
 DOMAIN-SUFFIX,icloud.com,Apple
 DOMAIN-SUFFIX,icloud.com.cn,Apple
 DOMAIN-SUFFIX,icloud-content.com,Apple
-DOMAIN,www-cdn.icloud.com.akadns.net,Apple
+DOMAIN-SUFFIX,wwwcdn.icloud.com.akadns.net,Apple
 DOMAIN-SUFFIX,icloud.de,Apple
 DOMAIN-SUFFIX,icloud.ee,Apple
 DOMAIN-SUFFIX,icloud.fi,Apple
