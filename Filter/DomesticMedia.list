@@ -244,7 +244,6 @@ HOST-SUFFIX,qianqian.com,DomesticMedia
 DOMAIN-SUFFIX,kuwo.cn,DomesticMedia
 DOMAIN-SUFFIX,kugou.com,DomesticMedia
 # > Kugou and Kuwo
-DOMAIN-AGENT,%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90*,DomesticMedia
 DOMAIN-SUFFIX,2496.cn,DomesticMedia
 DOMAIN-SUFFIX,gouwo.com,DomesticMedia
 DOMAIN-SUFFIX,kgimg.com,DomesticMedia
