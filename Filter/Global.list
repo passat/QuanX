@@ -8,6 +8,8 @@ DOMAIN,s3-ap-southeast-2.amazonaws.com,PROXY
 # > Akamai
 DOMAIN,a248.e.akamai.net,PROXY
 DOMAIN,a771.dscq.akamai.net,PROXY
+# > Apple
+DOMAIN,testflight.apple.com,PROXY
 # > Clubhouse
 DOMAIN-SUFFIX,clubhouseapi.com,PROXY
 DOMAIN-SUFFIX,joinclubhouse.com,PROXY
@@ -507,56 +509,6 @@ DOMAIN,us.weibo.com,PROXY
 DOMAIN-SUFFIX,edu,PROXY
 DOMAIN-SUFFIX,gov,PROXY
 DOMAIN-SUFFIX,mil,PROXY
-
-# (Region-Restricted Access Denied)
-DOMAIN-SUFFIX,apartmentratings.com,PROXY
-DOMAIN-SUFFIX,apartments.com,PROXY
-DOMAIN-SUFFIX,bankmobilevibe.com,PROXY
-DOMAIN-SUFFIX,bing.com,PROXY
-DOMAIN-SUFFIX,booktopia.com.au,PROXY
-DOMAIN-SUFFIX,cccat.io,PROXY
-DOMAIN-SUFFIX,centauro.com.br,PROXY
-DOMAIN-SUFFIX,clearsurance.com,PROXY
-DOMAIN-SUFFIX,costco.com,PROXY
-DOMAIN-SUFFIX,crackle.com,PROXY
-DOMAIN-SUFFIX,depositphotos.cn,PROXY
-DOMAIN-SUFFIX,dish.com,PROXY
-DOMAIN-SUFFIX,dmm.co.jp,PROXY
-DOMAIN-SUFFIX,dmm.com,PROXY
-DOMAIN-SUFFIX,dnvod.tv,PROXY
-DOMAIN-SUFFIX,esurance.com,PROXY
-DOMAIN-SUFFIX,extmatrix.com,PROXY
-DOMAIN-SUFFIX,fastpic.ru,PROXY
-DOMAIN-SUFFIX,flipboard.com,PROXY
-DOMAIN-SUFFIX,fnac.be,PROXY
-DOMAIN-SUFFIX,fnac.com,PROXY
-DOMAIN-SUFFIX,funkyimg.com,PROXY
-DOMAIN-SUFFIX,fxnetworks.com,PROXY
-DOMAIN-SUFFIX,gettyimages.com,PROXY
-DOMAIN-SUFFIX,go.com,PROXY
-DOMAIN-SUFFIX,here.com,PROXY
-DOMAIN-SUFFIX,jcpenney.com,PROXY
-DOMAIN-SUFFIX,jiehua.tv,PROXY
-DOMAIN-SUFFIX,mailfence.com,PROXY
-DOMAIN-SUFFIX,nationwide.com,PROXY
-DOMAIN-SUFFIX,nbc.com,PROXY
-DOMAIN-SUFFIX,nexon.com,PROXY
-DOMAIN-SUFFIX,nordstrom.com,PROXY
-DOMAIN-SUFFIX,nordstromimage.com,PROXY
-DOMAIN-SUFFIX,nordstromrack.com,PROXY
-DOMAIN-SUFFIX,superpages.com,PROXY
-DOMAIN-SUFFIX,target.com,PROXY
-DOMAIN-SUFFIX,thinkgeek.com,PROXY
-DOMAIN-SUFFIX,tracfone.com,PROXY
-DOMAIN-SUFFIX,unity3d.com,PROXY
-DOMAIN-SUFFIX,uploader.jp,PROXY
-DOMAIN-SUFFIX,vevo.com,PROXY
-DOMAIN-SUFFIX,viu.tv,PROXY
-DOMAIN-SUFFIX,vk.com,PROXY
-DOMAIN-SUFFIX,vsco.co,PROXY
-DOMAIN-SUFFIX,xfinity.com,PROXY
-DOMAIN-SUFFIX,zattoo.com,PROXY
-USER-AGENT,Roam*,PROXY
 
 # (IP Blackhole)
 # > Facebook
@@ -1196,71 +1148,39 @@ DOMAIN-SUFFIX,zaobao.com.sg,PROXY
 DOMAIN-SUFFIX,zeutch.com,PROXY
 DOMAIN-SUFFIX,zoom.us,PROXY
 DOMAIN-SUFFIX,zynamics.com,PROXY
+# > Others
+DOMAIN-SUFFIX,noxinfluencer.com,PROXY
+DOMAIN-SUFFIX,smartmailcloud.com,PROXY
+DOMAIN-SUFFIX,weebly.com,PROXY
+# (Region-Restricted Access Denied)
+# > Apple
+DOMAIN-SUFFIX,appsto.re,PROXY
+DOMAIN,books.itunes.apple.com,PROXY
+DOMAIN-SUFFIX,smoot.apple.com,PROXY
+DOMAIN,beta.music.apple.com,PROXY
+DOMAIN,lookup-api.apple.com,PROXY
+# > Web Preview
+DOMAIN,apps.apple.com,PROXY
+DOMAIN,itunes.apple.com,PROXY
+DOMAIN,tv.apple.com,PROXY
 # >Others
-DOMAIN-SUFFIX,0rz.tw,PROXY
-DOMAIN-SUFFIX,4bluestones.biz,PROXY
-DOMAIN-SUFFIX,9bis.net,PROXY
-DOMAIN-SUFFIX,allconnected.co,PROXY
-DOMAIN-SUFFIX,aol.com,PROXY
-DOMAIN-SUFFIX,bcc.com.tw,PROXY
-DOMAIN-SUFFIX,bitshare.com,PROXY
-DOMAIN-SUFFIX,blog.jp,PROXY
-DOMAIN-SUFFIX,blogimg.jp,PROXY
-DOMAIN-SUFFIX,blogtd.org,PROXY
-DOMAIN-SUFFIX,broadcast.co.nz,PROXY
-DOMAIN-SUFFIX,camfrog.com,PROXY
+DOMAIN-SUFFIX,aicoin.com,PROXY
+DOMAIN-SUFFIX,aimoon.com,PROXY
+DOMAIN-SUFFIX,bing.com,PROXY
 DOMAIN-SUFFIX,cccat.io,PROXY
-DOMAIN-SUFFIX,cfos.de,PROXY
-DOMAIN-SUFFIX,citypopulation.de,PROXY
-DOMAIN-SUFFIX,cloudfront.net,PROXY
-DOMAIN-SUFFIX,ctitv.com.tw,PROXY
-DOMAIN-SUFFIX,cuhk.edu.hk,PROXY
-DOMAIN-SUFFIX,cusu.hk,PROXY
-DOMAIN-SUFFIX,discord.gg,PROXY
-DOMAIN-SUFFIX,discuss.com.hk,PROXY
 DOMAIN-SUFFIX,dubox.com,PROXY
 DOMAIN-SUFFIX,duboxcdn.com,PROXY
-DOMAIN-SUFFIX,duolingo.cn,PROXY
-DOMAIN-SUFFIX,edditstatic.com,PROXY
-DOMAIN-SUFFIX,flickriver.com,PROXY
-DOMAIN-SUFFIX,focustaiwan.tw,PROXY
-DOMAIN-SUFFIX,free.fr,PROXY
-DOMAIN-SUFFIX,gigacircle.com,PROXY
-DOMAIN-SUFFIX,hk-pub.com,PROXY
-DOMAIN-SUFFIX,DOMAINing.co.uk,PROXY
-DOMAIN-SUFFIX,hwcdn.net,PROXY
 DOMAIN-SUFFIX,ifixit.com,PROXY
-DOMAIN-SUFFIX,iphone4hongkong.com,PROXY
-DOMAIN-SUFFIX,iphonetaiwan.org,PROXY
-DOMAIN-SUFFIX,iptvbin.com,PROXY
-DOMAIN-SUFFIX,linksalpha.com,PROXY
-DOMAIN-SUFFIX,manyvids.com,PROXY
 DOMAIN-SUFFIX,mangakakalot.com,PROXY
-DOMAIN-SUFFIX,myactimes.com,PROXY
-DOMAIN-SUFFIX,newsblur.com,PROXY
-DOMAIN-SUFFIX,now.im,PROXY
-DOMAIN-SUFFIX,nowe.com,PROXY
-DOMAIN-SUFFIX,redditlist.com,PROXY
-DOMAIN-SUFFIX,s3.amazonaws.com,PROXY
 DOMAIN-SUFFIX,shopeemobile.com,PROXY
-DOMAIN-SUFFIX,signal.org,PROXY
-DOMAIN-SUFFIX,smartmailcloud.com,PROXY
-DOMAIN-SUFFIX,sparknotes.com,PROXY
-DOMAIN-SUFFIX,streetvoice.com,PROXY
-DOMAIN-SUFFIX,supertop.co,PROXY
-DOMAIN-SUFFIX,tv.com,PROXY
-DOMAIN-SUFFIX,typepad.com,PROXY
-DOMAIN-SUFFIX,udnbkk.com,PROXY
-DOMAIN-SUFFIX,urbanairship.com,PROXY
-DOMAIN-SUFFIX,whispersystems.org,PROXY
-DOMAIN-SUFFIX,wikia.com,PROXY
-DOMAIN-SUFFIX,wolframalpha.com,PROXY
-DOMAIN-SUFFIX,x-art.com,PROXY
-DOMAIN-SUFFIX,yimg.com,PROXY
-DOMAIN,api.steampowered.com,PROXY
-DOMAIN,store.steampowered.com,PROXY
-
+DOMAIN-SUFFIX,sushi.com,PROXY
+# URL-REGEX,http:\/\/img\.sina\.com\/usweibo\/
 # (Network Jitter)
+# > Apple
+DOMAIN,appleid.apple.com,PROXY
+DOMAIN,developer.apple.com,PROXY
+DOMAIN,www.icloud.com,PROXY
+DOMAIN,ocsp.apple.com,PROXY
 # > DigiCert
 DOMAIN,cacerts.digicert.com,PROXY
 DOMAIN,crl3.digicert.com,PROXY
