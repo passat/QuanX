@@ -1184,6 +1184,15 @@ DOMAIN,tv.apple.com,PROXY
 # > Podcasts
 DOMAIN,amp-api.podcasts.apple.com,PROXY
 DOMAIN,bookkeeper.itunes.apple.com,PROXY
+# > News
+DOMAIN,gateway.icloud.com,PROXY
+DOMAIN-SUFFIX,apple.news,PROXY
+DOMAIN,news-assets.apple.com,PROXY
+DOMAIN,news-client.apple.com,PROXY
+DOMAIN,news-client-search.apple.com,PROXY
+DOMAIN,news-edge.apple.com,PROXY
+DOMAIN,news-events.apple.com,PROXY
+DOMAIN,apple.comscoreresearch.com,PROXY
 # >Others
 DOMAIN-SUFFIX,aicoin.com,PROXY
 DOMAIN-SUFFIX,aimoon.com,PROXY
