@@ -1,4 +1,4 @@
-const scriptName = "知乎助手"
+const scriptName = "知乎助手";
 const blockedUsersKey = "zhihu_blocked_users";
 const currentUserInfoKey = "zhihu_current_userinfo";
 const keywordBlockKey = "zhihu_keyword_block";
