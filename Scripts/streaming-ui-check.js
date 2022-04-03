@@ -7,6 +7,7 @@ Thanks to & modified from
 
 
 For Quantumult-X 598+ ONLY!!
+2022-02-22 - 14:20
 
 [task_local]
 
@@ -23,8 +24,10 @@ const BASE_URL_YTB = "https://www.youtube.com/premium";
 const BASE_URL_DISNEY = 'https://www.disneyplus.com';
 const BASE_URL_Dazn = "https://startup.core.indazn.com/misl/v5/Startup";
 const BASE_URL_Param = "https://www.paramountplus.com/"
-
 const FILM_ID = 81215567
+const BASE_URL_Discovery_token = "https://us1-prod-direct.discoveryplus.com/token?deviceId=d1a4a5d25212400d1e6985984604d740&realm=go&shortlived=true"
+const BASE_URL_Discovery = "https://us1-prod-direct.discoveryplus.com/users/me"
+
 const link = { "media-url": "https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/img/southpark/7.png" } 
 const policy_name = "Netflix" //填入你的 netflix 策略组名
 
@@ -52,16 +55,17 @@ var opts1 = {
   redirection: false
 };
 
-var flags = new Map([[ "AC" , "🇦🇨" ] ,["AE","🇦🇪"], [ "AF" , "🇦🇫" ] , [ "AI" , "🇦🇮" ] , [ "AL" , "🇦🇱" ] , [ "AM" , "🇦🇲" ] , [ "AQ" , "🇦🇶" ] , [ "AR" , "🇦🇷" ] , [ "AS" , "🇦🇸" ] , [ "AT" , "🇦🇹" ] , [ "AU" , "🇦🇺" ] , [ "AW" , "🇦🇼" ] , [ "AX" , "🇦🇽" ] , [ "AZ" , "🇦🇿" ] , ["BA", "🇧🇦"], [ "BB" , "🇧🇧" ] , [ "BD" , "🇧🇩" ] , [ "BE" , "🇧🇪" ] , [ "BF" , "🇧🇫" ] , [ "BG" , "🇧🇬" ] , [ "BH" , "🇧🇭" ] , [ "BI" , "🇧🇮" ] , [ "BJ" , "🇧🇯" ] , [ "BM" , "🇧🇲" ] , [ "BN" , "🇧🇳" ] , [ "BO" , "🇧🇴" ] , [ "BR" , "🇧🇷" ] , [ "BS" , "🇧🇸" ] , [ "BT" , "🇧🇹" ] , [ "BV" , "🇧🇻" ] , [ "BW" , "🇧🇼" ] , [ "BY" , "🇧🇾" ] , [ "BZ" , "🇧🇿" ] , [ "CA" , "🇨🇦" ] , [ "CF" , "🇨🇫" ] , [ "CH" , "🇨🇭" ] , [ "CK" , "🇨🇰" ] , [ "CL" , "🇨🇱" ] , [ "CM" , "🇨🇲" ] , [ "CN" , "🇨🇳" ] , [ "CO" , "🇨🇴" ] , [ "CP" , "🇨🇵" ] , [ "CR" , "🇨🇷" ] , [ "CU" , "🇨🇺" ] , [ "CV" , "🇨🇻" ] , [ "CW" , "🇨🇼" ] , [ "CX" , "🇨🇽" ] , [ "CY" , "🇨🇾" ] , [ "CZ" , "🇨🇿" ] , [ "DE" , "🇩🇪" ] , [ "DG" , "🇩🇬" ] , [ "DJ" , "🇩🇯" ] , [ "DK" , "🇩🇰" ] , [ "DM" , "🇩🇲" ] , [ "DO" , "🇩🇴" ] , [ "DZ" , "🇩🇿" ] , [ "EA" , "🇪🇦" ] , [ "EC" , "🇪🇨" ] , [ "EE" , "🇪🇪" ] , [ "EG" , "🇪🇬" ] , [ "EH" , "🇪🇭" ] , [ "ER" , "🇪🇷" ] , [ "ES" , "🇪🇸" ] , [ "ET" , "🇪🇹" ] , [ "EU" , "🇪🇺" ] , [ "FI" , "🇫🇮" ] , [ "FJ" , "🇫🇯" ] , [ "FK" , "🇫🇰" ] , [ "FM" , "🇫🇲" ] , [ "FO" , "🇫🇴" ] , [ "FR" , "🇫🇷" ] , [ "GA" , "🇬🇦" ] , [ "GB" , "🇬🇧" ] , [ "HK" , "🇭🇰" ] ,["HU","🇭🇺"], [ "ID" , "🇮🇩" ] , [ "IE" , "🇮🇪" ] , [ "IL" , "🇮🇱" ] , [ "IM" , "🇮🇲" ] , [ "IN" , "🇮🇳" ] , [ "IS" , "🇮🇸" ] , [ "IT" , "🇮🇹" ] , [ "JP" , "🇯🇵" ] , [ "KR" , "🇰🇷" ] , [ "LU" , "🇱🇺" ] , [ "MO" , "🇲🇴" ] , [ "MX" , "🇲🇽" ] , [ "MY" , "🇲🇾" ] , [ "NL" , "🇳🇱" ] , [ "PH" , "🇵🇭" ] , [ "RO" , "🇷🇴" ] , [ "RS" , "🇷🇸" ] , [ "RU" , "🇷🇺" ] , [ "RW" , "🇷🇼" ] , [ "SA" , "🇸🇦" ] , [ "SB" , "🇸🇧" ] , [ "SC" , "🇸🇨" ] , [ "SD" , "🇸🇩" ] , [ "SE" , "🇸🇪" ] , [ "SG" , "🇸🇬" ] , [ "TH" , "🇹🇭" ] , [ "TN" , "🇹🇳" ] , [ "TO" , "🇹🇴" ] , [ "TR" , "🇹🇷" ] , [ "TV" , "🇹🇻" ] , [ "TW" , "🇨🇳" ] , [ "UK" , "🇬🇧" ] , [ "UM" , "🇺🇲" ] , [ "US" , "🇺🇸" ] , [ "UY" , "🇺🇾" ] , [ "UZ" , "🇺🇿" ] , [ "VA" , "🇻🇦" ] , [ "VE" , "🇻🇪" ] , [ "VG" , "🇻🇬" ] , [ "VI" , "🇻🇮" ] , [ "VN" , "🇻🇳" ] , [ "ZA" , "🇿🇦"]])
 
+var flags = new Map([[ "AC" , "🇦🇨" ] ,["AE","🇦🇪"], [ "AF" , "🇦🇫" ] , [ "AI" , "🇦🇮" ] , [ "AL" , "🇦🇱" ] , [ "AM" , "🇦🇲" ] , [ "AQ" , "🇦🇶" ] , [ "AR" , "🇦🇷" ] , [ "AS" , "🇦🇸" ] , [ "AT" , "🇦🇹" ] , [ "AU" , "🇦🇺" ] , [ "AW" , "🇦🇼" ] , [ "AX" , "🇦🇽" ] , [ "AZ" , "🇦🇿" ] , ["BA", "🇧🇦"], [ "BB" , "🇧🇧" ] , [ "BD" , "🇧🇩" ] , [ "BE" , "🇧🇪" ] , [ "BF" , "🇧🇫" ] , [ "BG" , "🇧🇬" ] , [ "BH" , "🇧🇭" ] , [ "BI" , "🇧🇮" ] , [ "BJ" , "🇧🇯" ] , [ "BM" , "🇧🇲" ] , [ "BN" , "🇧🇳" ] , [ "BO" , "🇧🇴" ] , [ "BR" , "🇧🇷" ] , [ "BS" , "🇧🇸" ] , [ "BT" , "🇧🇹" ] , [ "BV" , "🇧🇻" ] , [ "BW" , "🇧🇼" ] , [ "BY" , "🇧🇾" ] , [ "BZ" , "🇧🇿" ] , [ "CA" , "🇨🇦" ] , [ "CF" , "🇨🇫" ] , [ "CH" , "🇨🇭" ] , [ "CK" , "🇨🇰" ] , [ "CL" , "🇨🇱" ] , [ "CM" , "🇨🇲" ] , [ "CN" , "🇨🇳" ] , [ "CO" , "🇨🇴" ] , [ "CP" , "🇨🇵" ] , [ "CR" , "🇨🇷" ] , [ "CU" , "🇨🇺" ] , [ "CV" , "🇨🇻" ] , [ "CW" , "🇨🇼" ] , [ "CX" , "🇨🇽" ] , [ "CY" , "🇨🇾" ] , [ "CZ" , "🇨🇿" ] , [ "DE" , "🇩🇪" ] , [ "DG" , "🇩🇬" ] , [ "DJ" , "🇩🇯" ] , [ "DK" , "🇩🇰" ] , [ "DM" , "🇩🇲" ] , [ "DO" , "🇩🇴" ] , [ "DZ" , "🇩🇿" ] , [ "EA" , "🇪🇦" ] , [ "EC" , "🇪🇨" ] , [ "EE" , "🇪🇪" ] , [ "EG" , "🇪🇬" ] , [ "EH" , "🇪🇭" ] , [ "ER" , "🇪🇷" ] , [ "ES" , "🇪🇸" ] , [ "ET" , "🇪🇹" ] , [ "EU" , "🇪🇺" ] , [ "FI" , "🇫🇮" ] , [ "FJ" , "🇫🇯" ] , [ "FK" , "🇫🇰" ] , [ "FM" , "🇫🇲" ] , [ "FO" , "🇫" ] , [ "FR" , "🇫🇷" ] , [ "GA" , "🇬🇦" ] , [ "GB" , "🇬🇧" ] , [ "HK" , "🇭🇰" ] ,["HU","🇭🇺"], [ "ID" , "🇮🇩" ] , [ "IE" , "🇮🇪" ] , [ "IL" , "🇮🇱" ] , [ "IM" , "🇮🇲" ] , [ "IN" , "🇮🇳" ] , [ "IS" , "🇮🇸" ] , [ "IT" , "🇮🇹" ] , [ "JP" , "🇯🇵" ] , [ "KR" , "🇰🇷" ] , [ "LU" , "🇱🇺" ] , [ "MO" , "🇲🇴" ] , [ "MX" , "🇲🇽" ] , [ "MY" , "🇲🇾" ] , [ "NL" , "🇳🇱" ] , [ "PH" , "🇵🇭" ] , [ "RO" , "🇷🇴" ] , [ "RS" , "🇷🇸" ] , [ "RU" , "🇷🇺" ] , [ "RW" , "🇷🇼" ] , [ "SA" , "🇸🇦" ] , [ "SB" , "🇧" ] , [ "SC" , "🇸🇨" ] , [ "SD" , "🇸🇩" ] , [ "SE" , "🇸🇪" ] , [ "SG" , "🇸🇬" ] , [ "TH" , "🇹🇭" ] , [ "TN" , "🇹🇳" ] , [ "TO" , "🇹🇴" ] , [ "TR" , "🇹🇷" ] , [ "TV" , "🇹🇻" ] , [ "TW" , "🇨🇳" ] , [ "UK" , "🇬🇧" ] , [ "UM" , "🇺🇲" ] , [ "US" , "🇺🇸" ] , [ "UY" , "🇺🇾" ] , [ "UZ" , "🇺🇿" ] , [ "VA" , "🇻🇦" ] , [ "VE" , "🇻🇪" ] , [ "VG" , "🇻🇬" ] , [ "VI" , "🇻🇮" ] , [ "VN" , "🇻🇳" ] , [ "ZA" , "🇿🇦"]])
 
 let result = {
-  "title": '   流媒体服务查询',
-  "YouTube": '<b>YouTube: </b>检测失败，请重试',
-  "Netflix": '<b>Netflix: </b>检测失败，请重试',
-  "Dazn": "<b>Dazn: </b>检测失败，请重试",
-  "Disney": "<b>Disney⁺: </b>检测失败，请重试",
-  "Paramount" : "<b>Paramount⁺: </b>检测失败，请重试",
+  "title": '    📺  流媒体服务查询',
+  "YouTube": '<b>YouTube: </b>检测失败，请重试 ❗️',
+  "Netflix": '<b>Netflix: </b>检测失败，请重试 ❗️',
+  "Dazn": "<b>Dazn: </b>检测失败，请重试 ❗️",
+  "Disney": "<b>Disneyᐩ: </b>检测失败，请重试 ❗️",
+  "Paramount" : "<b>Paramountᐩ: </b>检测失败，请重试 ❗️",
+  "Discovery" : "<b>Discoveryᐩ: </b>检测失败，请重试 ❗️",
   //"Google": "Google 定位: 检测失败，请重试"
 
 }
@@ -74,31 +78,27 @@ const message = {
   testYTB()
   testDazn()
   testParam()
-  let [{ region, status }] = await Promise.all([testDisneyPlus(),testNf(FILM_ID)])
+  let [{ region, status }] = await Promise.all([testDisneyPlus(),testNf(FILM_ID),testDiscovery()])
   console.log(result["Netflix"])
   console.log(`testDisneyPlus: region=${region}, status=${status}`)
   if (status==STATUS_COMING) {
     //console.log(1)
-    result["Disney"] = "<b>Disney⁺:</b> 即将登陆 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧"
+    result["Disney"] = "<b>Disneyᐩ:</b> 即将登陆 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧ ⚠️"
   } else if (status==STATUS_AVAILABLE){
     //console.log(2)
-    result["Disney"] = "<b>Disney⁺:</b> 已支持 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧"
+    result["Disney"] = "<b>Disneyᐩ:</b> 支持 ➟ "+'⟦'+flags.get(region.toUpperCase())+"⟧ 🎉"
     console.log(result["Disney"])
   } else if (status==STATUS_NOT_AVAILABLE) {
     //console.log(3)
-    result["Disney"] = "<b>Disney⁺:</b> 未支持 "
+    result["Disney"] = "<b>Disneyᐩ:</b> 未支持 🚫 "
   } else if (status==STATUS_TIMEOUT) {
-    result["Disney"] = "<b>Disney⁺:</b> 测试超时 "
+    result["Disney"] = "<b>Disneyᐩ:</b> 检测超时 🚦 "
   }
-  
-  let content = "------------------------------"+"</br>"+([result["YouTube"],result["Netflix"],result["Disney"],result["Dazn"]]).join("</br></br>")
-  content = content + "</br>------------------------------</br>"+"<font color=#6959CD>"+"<b>节点</b> ➟ " + $environment.params+ "</font>"
-  content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
-  
-  
-//  cnt = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` +'----------------------</br></br>'+result["Disney"]+'</br></br>----------------------</br>'+$environment.params + `</p>`
 
-  
+  let content = "------------------------------"+"</br>"+([result["YouTube"],result["Netflix"],result["Disney"],result["Dazn"],result["Paramount"],result["Discovery"]]).join("</br></br>")
+  content = content + "</br>------------------------------</br>"+"<font color=#CD5C5C >"+"<b>节点</b> ➟ " + $environment.params+ "</font>"
+  content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
+//  cnt = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` +'----------------------</br></br>'+result["Disney"]+'</br></br>----------------------</br>'+$environment.params + `</p>`
 $configuration.sendMessage(message).then(resolve => {
     if (resolve.error) {
       console.log(resolve.error);
@@ -106,8 +106,8 @@ $configuration.sendMessage(message).then(resolve => {
     }
     if (resolve.ret) {
       let output=JSON.stringify(resolve.ret[message.content])? JSON.stringify(resolve.ret[message.content]).replace(/\"|\[|\]/g,"").replace(/\,/g," ➟ ") : $environment.params
-      let content = "------------------------------"+"</br>"+([result["YouTube"],result["Netflix"],result["Disney"],result["Dazn"],result["Paramount"]]).join("</br></br>")
-      content = content + "</br>------------------------------</br>"+"<font color=#6959CD>"+"<b>节点</b> ➟ " + output+ "</font>"
+      let content = "--------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["YouTube"]]).join("</br></br>")
+      content = content + "</br>--------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➟ " + output+ "</font>"
       content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
       //$notify(typeof(output),output)
       console.log(output);
@@ -119,7 +119,6 @@ $configuration.sendMessage(message).then(resolve => {
     // Normally will never happen.
     $done();
   });  
-  
   //$done({"title":result["title"],"htmlMessage":content})
 })()
 .finally(() => {
@@ -131,8 +130,8 @@ $configuration.sendMessage(message).then(resolve => {
     }
     if (resolve.ret) {
       let output=JSON.stringify(resolve.ret[message.content])? JSON.stringify(resolve.ret[message.content]).replace(/\"|\[|\]/g,"").replace(/\,/g," ➟ ") : $environment.params
-      let content = "------------------------------"+"</br>"+([result["YouTube"],result["Netflix"],result["Disney"],result["Dazn"],,result["Paramount"]]).join("</br></br>")
-      content = content + "</br>------------------------------</br>"+"<font color=#6959CD>"+"<b>节点</b> ➟ " + output+ "</font>"
+      let content = "--------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["YouTube"]]).join("</br></br>")
+      content = content + "</br>--------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➟ " + output+ "</font>"
       content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
       //$notify(typeof(output),output)
       console.log(output);
@@ -293,7 +292,7 @@ function testNf(filmId) {
     let option = {
       url: BASE_URL + filmId,
       opts: opts,
-      timeout: 3200,
+      timeout: 5200,
       headers: {
         'User-Agent':
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
@@ -304,14 +303,14 @@ function testNf(filmId) {
       console.log("nf:"+response.statusCode)
       if (response.statusCode === 404) {
         
-        result["Netflix"] = "<b>Netflix: </b>支持自制剧集"
+        result["Netflix"] = "<b>Netflix: </b>支持自制剧集 ⚠️"
         console.log("nf:"+result["Netflix"])
         resolve('Not Found')
         return 
       } else if (response.statusCode === 403) {
         
         //console.log("nfnf")
-        result["Netflix"] = "<b>Netflix: </b>未支持"
+        result["Netflix"] = "<b>Netflix: </b>未支持 🚫"
         console.log("nf:"+result["Netflix"])
         //$notify("nf:"+result["Netflix"])
         resolve('Not Available')
@@ -324,13 +323,13 @@ function testNf(filmId) {
           region = 'us'
         }
         console.log("nf:"+region)
-        result["Netflix"] = "<b>Netflix: </b>完整支持"+arrow+ "⟦"+flags.get(region.toUpperCase())+"⟧"
+        result["Netflix"] = "<b>Netflix: </b>完整支持"+arrow+ "⟦"+flags.get(region.toUpperCase())+"⟧ 🎉"
         //$notify("nf:"+result["Netflix"])
         resolve("nf:"+result["Netflix"])
         return 
       }
     }, reason => {
-      result["Netflix"] = "<b>Netflix: </b>检测超时"
+      result["Netflix"] = "<b>Netflix: </b>检测超时 🚦"
       console.log(result["Netflix"])
       resolve("timeout")
     }
@@ -354,10 +353,10 @@ function testYTB() {
       console.log("ytb:"+response.statusCode)
       if (response.statusCode !== 200) {
         //reject('Error')
-        result["YouTube"] = "<b>YouTube Premium: </b>检测失败"
+        result["YouTube"] = "<b>YouTube Premium: </b>检测失败 ❗️"
       } else if (data.indexOf('Premium is not available in your country') !== -1) {
           //resolve('Not Available')
-        result["YouTube"] = "<b>YouTube Premium: </b>未支持"
+        result["YouTube"] = "<b>YouTube Premium: </b>未支持 🚫"
       } else if (data.indexOf('Premium is not available in your country') == -1) {//console.log(data.split("countryCode")[1])
       let region = ''
       let re = new RegExp('"GL":"(.*?)"', 'gm')
@@ -370,11 +369,11 @@ function testYTB() {
         region = 'US'
       }
       //resolve(region)
-      result["YouTube"] = "<b>YouTube Premium: </b>支持"+arrow+ "⟦"+flags.get(region.toUpperCase())+"⟧"
+      result["YouTube"] = "<b>YouTube Premium: </b>支持 "+arrow+ "⟦"+flags.get(region.toUpperCase())+"⟧ 🎉"
       console.log("ytb:"+region+ result["YouTube"])
       }
     }, reason => {
-      result["YouTube"] = "<b>YouTube Premium: </b>检测超时"
+      result["YouTube"] = "<b>YouTube Premium: </b>检测超时 🚦"
       //resolve("timeout")
     })
 }
@@ -411,7 +410,7 @@ function testDazn() {
     //$done(data)
     if (response.statusCode !== 200) {
       //reject('Error')
-      result["Dazn"] = "<b>Dazn: </b>检测失败"
+      result["Dazn"] = "<b>Dazn: </b>检测失败 ❗️"
     } else if (response.statusCode == 200) {//console.log(data.split("countryCode")[1])
       //console.log(data)
       let region = ''
@@ -419,16 +418,16 @@ function testDazn() {
       let ret = re.exec(data)
       if (ret != null && ret.length === 2) {
         region = ret[1]
-        result["Dazn"] = "<b>Dazn: </b>支持"+arrow+ "⟦"+flags.get(region.toUpperCase())+"⟧"
+        result["Dazn"] = "<b>Dazn: </b>支持 "+arrow+ "⟦"+flags.get(region.toUpperCase())+"⟧ 🎉"
       } else {
-        result["Dazn"] = "<b>Dazn: </b>未支持"
+        result["Dazn"] = "<b>Dazn: </b>未支持 🚫"
 
       }
       //resolve(region)
             console.log("Dazn:"+region+ result["Dazn"])
     }
   }, reason => {
-    result["Dazn"] = "<b>Dazn: </b>检测超时"
+    result["Dazn"] = "<b>Dazn: </b>检测超时 🚦"
     //resolve("timeout")
   })
 }
@@ -445,17 +444,78 @@ function testParam() {
   }
   $task.fetch(option).then(response=> {
     //let data = response.body
-    console.log("Paramount⁺:"+response.statusCode)
+    console.log("Paramountᐩ:"+response.statusCode)
     if (response.statusCode == 200) {
       //reject('Error')
-      result["Paramount"] = "<b>Paramount⁺: </b>支持"
+      result["Paramount"] = "<b>Paramountᐩ: </b>支持 🎉 "
     } else if (response.statusCode == 302) {
       //resolve('Not Available')
-      result["Paramount"] = "<b>Pramount⁺: </b>未支持"
+      result["Paramount"] = "<b>Paramountᐩ: </b>未支持 🚫"
     } 
-      console.log("Paramount⁺:"+ result["Paramount"])
+      console.log("Paramountᐩ:"+ result["Paramount"])
   }, reason => {
-    result["Paramount"] = "<b>Paramount⁺: </b>检测超时"
+    result["Paramount"] = "<b>Paramountᐩ: </b>检测超时 🚦"
     //resolve("timeout")
   })
 }
+
+
+
+function testDiscovery() {
+  return new Promise((resolve, reject) =>{
+    let option = {
+      url: BASE_URL_Discovery_token,
+      opts: opts1,
+      timeout: 2800,
+      headers: {
+        'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36'
+      },
+      verify: false
+    }
+    $task.fetch(option).then(response=> {
+      console.log("GetToken:"+response.statusCode)
+      if(response.statusCode == 200) {
+      let data = JSON.parse(response.body)
+      console.log(data)
+      let token = data["data"]["attributes"]["token"]
+      const cookievalid =`_gcl_au=1.1.858579665.1632206782; _rdt_uuid=1632206782474.6a9ad4f2-8ef7-4a49-9d60-e071bce45e88; _scid=d154b864-8b7e-4f46-90e0-8b56cff67d05; _pin_unauth=dWlkPU1qWTRNR1ZoTlRBdE1tSXdNaTAwTW1Nd0xUbGxORFV0WWpZMU0yVXdPV1l6WldFeQ; _sctr=1|1632153600000; aam_fw=aam%3D9354365%3Baam%3D9040990; aam_uuid=24382050115125439381416006538140778858; st=${token}; gi_ls=0; _uetvid=a25161a01aa711ec92d47775379d5e4d; AMCV_BC501253513148ED0A490D45%40AdobeOrg=-1124106680%7CMCIDTS%7C18894%7CMCMID%7C24223296309793747161435877577673078228%7CMCAAMLH-1633011393%7C9%7CMCAAMB-1633011393%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1632413793s%7CNONE%7CvVersion%7C5.2.0; ass=19ef15da-95d6-4b1d-8fa2-e9e099c9cc38.1632408400.1632406594`
+      let option1 = {
+        url: BASE_URL_Discovery,
+        opts: opts1,
+        timeout: 2800,
+        headers: {
+          'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36',
+          "Cookie": cookievalid,
+        },
+        ciphers: "DEFAULT@SECLEVEL=1",
+        verify: false
+      }
+      $task.fetch(option1).then(response=> {
+        console.log("Check:"+response.statusCode)
+        let data = JSON.parse(response.body)
+        let locationd = data["data"]["attributes"]["currentLocationTerritory"]
+        if (locationd == "us") {
+          result["Discovery"] = "<b>Discoveryᐩ: </b>支持 🎉 "
+          console.log("支持Discoveryᐩ")
+          resolve("支持Discoveryᐩ")
+          return
+        } else {
+          result["Discovery"] = "<b>Discoveryᐩ: </b>未支持 🚫"
+          console.log("不支持Discoveryᐩ")
+          resolve("不支持Discoveryᐩ")
+          return
+        }
+      }, reason => {
+        console.log("Check-Error"+reason)
+        resolve("discovery failed")
+      })
+    } else {
+      console.log("GetToken-Error"+reason)
+      resolve("discovery failed")
+    }
+    }, reason => {
+      console.log("GetToken-Error"+reason)
+      resolve("discovery failed")
+    })})}
