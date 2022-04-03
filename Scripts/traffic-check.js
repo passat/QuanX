@@ -1,4 +1,4 @@
-/***00
+/***
 
 For Quantumult-X 631+ ONLY!!
 
