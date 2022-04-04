@@ -1,4 +1,9 @@
 # > China Area Network
+DOMAIN-SUFFIX,flyert.com,DIRECT
+DOMAIN-SUFFIX,gandi.net,DIRECT
+DOMAIN-SUFFIX,snapdrop.net,DIRECT
+DOMAIN,download.jetbrains.com,DIRECT
+DOMAIN,origin-a.akamaihd.ne,DIRECT
 # > UA
 USER-AGENT,hide*,DIRECT
 USER-AGENT,MicroMessenger*,DIRECT
@@ -154,19 +159,12 @@ DOMAIN-SUFFIX,v-56.com,DIRECT
 DOMAIN-SUFFIX,sogo.com,DIRECT
 DOMAIN-SUFFIX,sogou.com,DIRECT
 DOMAIN-SUFFIX,sogoucdn.com,DIRECT
-# > Speedtest 
-DOMAIN-SUFFIX,fast.com,DIRECT
-USER-AGENT,SpeedTest*,DIRECT
-DOMAIN-KEYWORD,speedtest,DIRECT
-DOMAIN-SUFFIX,ooklaserver.net,DIRECT
-DOMAIN-SUFFIX,speed.cloudflare.com,DIRECT
-# DOMAIN-SUFFIX,speedtest.net,DIRECT
-DOMAIN-SUFFIX,netspeedtestmaster.com,DIRECT
-DOMAIN,speedtest.macpaw.com,DIRECT
 # > Steam
 DOMAIN-SUFFIX,steamcontent.com,DIRECT
 DOMAIN-SUFFIX,steampowered.com,DIRECT
 DOMAIN-SUFFIX,steamstatic.com,DIRECT
+DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
+DOMAIN,api.steampowered.com,DIRECT
 # > Tencent
 USER-AGENT,MicroMessenger*,DIRECT
 USER-AGENT,WeChat*,DIRECT
@@ -184,6 +182,9 @@ DOMAIN-SUFFIX,tencent-cloud.com,DIRECT
 DOMAIN-SUFFIX,tencent-cloud.net,DIRECT
 DOMAIN-SUFFIX,tenpay.com,DIRECT
 DOMAIN-SUFFIX,wechat.com,DIRECT
+IP-CIDR,182.254.116.0/24,DIRECT
+IP-CIDR,203.205.238.0/23,DIRECT
+IP-CIDR,203.205.254.0/23,DIRECT
 # >> PUBG Mobile
 DOMAIN,file-igamecj.akamaized.net,DIRECT
 IP-CIDR,101.32.104.4/32,DIRECT
@@ -201,6 +202,14 @@ IP-CIDR,203.205.254.0/23,DIRECT
 DOMAIN-suffix, byteoversea.com, DIRECT
 DOMAIN-suffix, faceu.mobi, DIRECT
 DOMAIN-suffix, ibytedtos.com, DIRECT
+# > Windows Server Update Services
+DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com,DIRECT
+DOMAIN-SUFFIX,update.microsoft.com,DIRECT
+DOMAIN-SUFFIX,windowsupdate.com,DIRECT
+DOMAIN-SUFFIX,windowsupdate.microsoft.com,DIRECT
+DOMAIN,download.microsoft.com,DIRECT
+DOMAIN,wustat.windows.com,DIRECT
+DOMAIN,ntservicepack.microsoft.com,DIRECT
 # > Content Delivery Network
 DOMAIN-SUFFIX,ccgslb.com,DIRECT
 DOMAIN-SUFFIX,ccgslb.net,DIRECT
@@ -220,6 +229,15 @@ DOMAIN-SUFFIX,test-ipv6.com,DIRECT
 DOMAIN-SUFFIX,whatismyip.com,DIRECT
 DOMAIN,ip.istatmenus.app,DIRECT
 DOMAIN,sms.imagetasks.com,DIRECT
+# > Speed Test
+DOMAIN-SUFFIX,netspeedtestmaster.com,DIRECT
+DOMAIN,speedtest.macpaw.com,DIRECT
+DOMAIN-SUFFIX,fast.com,DIRECT
+USER-AGENT,SpeedTest*,DIRECT
+DOMAIN-KEYWORD,speedtest,DIRECT
+DOMAIN-SUFFIX,ooklaserver.net,DIRECT
+DOMAIN-SUFFIX,speed.cloudflare.com,DIRECT
+# DOMAIN-SUFFIX,speedtest.net,DIRECT
 # > Private Tracker
 DOMAIN-SUFFIX,acg.rip,DIRECT
 DOMAIN-SUFFIX,animebytes.tv,DIRECT
@@ -253,16 +271,11 @@ DOMAIN-SUFFIX,redacted.ch,DIRECT
 DOMAIN-SUFFIX,springsunday.net,DIRECT
 DOMAIN-SUFFIX,tjupt.org,DIRECT
 DOMAIN-SUFFIX,totheglory.im,DIRECT
-
 # > TeamViewer
 IP-CIDR,185.188.32.0/24,DIRECT
 IP-CIDR,185.188.33.0/24,DIRECT
 IP-CIDR,185.188.34.0/24,DIRECT
 IP-CIDR,185.188.35.0/24,DIRECT
-# > Tencent
-IP-CIDR,119.28.28.28/32,DIRECT
-IP-CIDR,182.254.116.0/24,DIRECT
-
 # > Other
 DOMAIN-SUFFIX,10010.com,DIRECT
 DOMAIN-SUFFIX,10089.cn,DIRECT
