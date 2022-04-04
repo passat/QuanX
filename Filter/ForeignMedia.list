@@ -1,10 +1,12 @@
 # ForeignMedia
-
-# (Podcast)
-# > Himalaya
-USER-AGENT,Himalaya*,ForeignMedia
-DOMAIN-SUFFIX,himalaya.com,ForeignMedia
-
+# (Live)
+# > Twitch
+DOMAIN-SUFFIX,ext-twitch.tv,ForeignMedia
+DOMAIN-SUFFIX,jtvnw.net,ForeignMedia
+DOMAIN-SUFFIX,ttvnw.net,ForeignMedia
+DOMAIN-SUFFIX,twitch.tv,ForeignMedia
+DOMAIN-SUFFIX,twitchcdn.net,ForeignMedia
+DOMAIN-SUFFIX,twitch-ext.rootonline.de,ForeignMedia
 # (Music)
 # > Deezer
 USER-AGENT,Deezer*,ForeignMedia
@@ -33,7 +35,13 @@ DOMAIN-SUFFIX,tidal.com,ForeignMedia
 # > Youtube Music
 USER-AGENT,com.google.ios.youtubemusic*,ForeignMedia
 USER-AGENT,YouTubeMusic*,ForeignMedia
-
+# (Podcast)
+# > Himalaya
+USER-AGENT,Himalaya*,ForeignMedia
+DOMAIN-SUFFIX,himalaya.com,ForeignMedia
+# > Overcast
+USER-AGENT,Overcast*,ForeignMedia
+DOMAIN-SUFFIX,overcast.fm,ForeignMedia
 # (Video)
 # > ABC
 HOST-SUFFIX,edgedatg.com,ForeignMedia
@@ -58,8 +66,9 @@ USER-AGENT,Prime%20Video*,ForeignMedia
 DOMAIN-SUFFIX,aiv-cdn.net,ForeignMedia
 DOMAIN-SUFFIX,aiv-delivery.net,ForeignMedia
 DOMAIN-SUFFIX,amazonvideo.com,ForeignMedia
-DOMAIN-SUFFIX,primevideo.com,ForeignMedia
 DOMAIN-SUFFIX,media-amazon.com,ForeignMedia
+DOMAIN-SUFFIX,primevideo.com,ForeignMedia
+DOMAIN-SUFFIX,pv-cdn.net,ForeignMedia
 DOMAIN,atv-ps.amazon.com,ForeignMedia
 DOMAIN,fls-na.amazon.com,ForeignMedia
 DOMAIN,avodmp4s3ww-a.akamaihd.net,ForeignMedia
@@ -69,17 +78,19 @@ DOMAIN,dmqdd6hw24ucf.cloudfront.net,ForeignMedia
 DOMAIN,d22qjgkvxw22r6.cloudfront.net,ForeignMedia
 DOMAIN,d1v5ir2lpwr8os.cloudfront.net,ForeignMedia
 DOMAIN,d27xxe7juh1us6.cloudfront.net,ForeignMedia
+# DOMAIN,www.amazon.com,ForeignMedia
 DOMAIN-KEYWORD,avoddashs,ForeignMedia
-HOST-SUFFIX,amazonaws.co.uk,ForeignMedia
-HOST-SUFFIX,amazonaws.com,ForeignMedia
-HOST-SUFFIX,llnwd.net,ForeignMedia
+# > Apple Music TV
+DOMAIN,tv.applemusic.com,ForeignMedia
 # > Apple TV
 DOMAIN,linear.tv.apple.com,ForeignMedia
 DOMAIN,play-edge.itunes.apple.com,ForeignMedia
+DOMAIN,uts-api.itunes.apple.com,ForeignMedia
 # > Bahamut
 USER-AGENT,Anime*,ForeignMedia
 DOMAIN-SUFFIX,bahamut.com.tw,ForeignMedia
 DOMAIN-SUFFIX,gamer.com.tw,ForeignMedia
+DOMAIN,bahamut.akamaized.net,ForeignMedia
 DOMAIN,gamer-cds.cdn.hinet.net,ForeignMedia
 DOMAIN,gamer2-cds.cdn.hinet.net,ForeignMedia
 # > BBC iPlayer
@@ -101,6 +112,13 @@ HOST-SUFFIX,bbci.co.uk,ForeignMedia
 # > CHOCO TV
 USER-AGENT,TwDramas*,ForeignMedia
 HOST-SUFFIX,chocotv.com.tw,ForeignMedia
+# > bilibili Intl
+DOMAIN-SUFFIX,biliintl.com,ForeignMedia
+DOMAIN,apm-misaka.biliapi.net,ForeignMedia
+DOMAIN,p.bstarstatic.com,ForeignMedia
+DOMAIN,p-bstarstatic.akamaized.net,ForeignMedia
+DOMAIN,upos-bstar-mirrorakam.akamaized.net,ForeignMedia
+DOMAIN,upos-bstar1-mirrorakam.akamaized.net,ForeignMedia
 # > DAZN
 USER-AGENT,DAZN*,ForeignMedia
 DOMAIN-SUFFIX,dazn.com,ForeignMedia
@@ -121,12 +139,15 @@ DOMAIN-SUFFIX,discoveryplus.co.uk,ForeignMedia
 DOMAIN-SUFFIX,discoveryplus.com,ForeignMedia
 DOMAIN-SUFFIX,discoveryplus.in,ForeignMedia
 DOMAIN-SUFFIX,dnitv.com,ForeignMedia
+# DOMAIN,go-prod-vz.akamaized.net,ForeignMedia
+DOMAIN,x-default-stgec.uplynk.com,ForeignMedia
+DOMAIN-KEYWORD,discovery.uplynk.com,ForeignMedia
 # > Disney+
 USER-AGENT,Disney+*,ForeignMedia
 DOMAIN-SUFFIX,bamgrid.com,ForeignMedia
 DOMAIN-SUFFIX,disneyplus.com,ForeignMedia
 DOMAIN-SUFFIX,disney-plus.net,ForeignMedia
-DOMAIN-SUFFIX,disneyForeignMedia.com,ForeignMedia
+DOMAIN-SUFFIX,disneystreaming.com,ForeignMedia
 DOMAIN-SUFFIX,dssott.com,ForeignMedia
 DOMAIN,cdn.registerdisney.go.com,ForeignMedia
 DOMAIN,global.edge.bamgrid.com,ForeignMedia
@@ -230,6 +251,26 @@ HOST-SUFFIX,japronx.vip,ForeignMedia
 HOST-SUFFIX,kkbox.com,ForeignMedia
 HOST-SUFFIX,kkbox.com.tw,ForeignMedia
 HOST-SUFFIX,kfs.io,ForeignMedia
+# > iQIYI
+DOMAIN-SUFFIX,iq.com,ForeignMedia
+DOMAIN,intl.iqiyi.com,ForeignMedia
+DOMAIN,intl-rcd.iqiyi.com,ForeignMedia
+DOMAIN,intl-subscription.iqiyi.com,ForeignMedia
+IP-CIDR,23.53.32.88/32,ForeignMedia
+IP-CIDR,23.211.15.99/32,ForeignMedia
+IP-CIDR,103.5.34.153/32,ForeignMedia
+IP-CIDR,104.109.129.153/32,ForeignMedia
+IP-CIDR,110.238.107.47/32,ForeignMedia
+IP-CIDR,118.26.32.178/32,ForeignMedia
+IP-CIDR,203.74.95.131/32,ForeignMedia
+IP-CIDR,203.74.95.139/32,ForeignMedia
+IP-CIDR,203.74.95.153/32,ForeignMedia
+IP-CIDR,203.211.4.169/32,ForeignMedia
+IP-CIDR,203.211.4.193/32,ForeignMedia
+IP-CIDR,210.71.227.200/32,ForeignMedia
+IP-CIDR,210.71.227.202/32,ForeignMedia
+IP-CIDR,210.201.32.8/32,ForeignMedia
+IP-CIDR,210.201.32.11/32,ForeignMedia
 # > KKTV
 USER-AGENT,KKTV*,ForeignMedia
 USER-AGENT,com.kktv.ios.kktv*,ForeignMedia
@@ -257,7 +298,7 @@ USER-AGENT,Naver%20TV*,ForeignMedia
 DOMAIN-SUFFIX,naver.com,ForeignMedia
 DOMAIN-SUFFIX,smartmediarep.com,ForeignMedia
 # > Netflix
-USER-AGENT,Argo*,ForeignMedia
+SER-AGENT,Argo*,ForeignMedia
 DOMAIN-SUFFIX,netflix.com,ForeignMedia
 DOMAIN-SUFFIX,netflix.net,ForeignMedia
 DOMAIN-SUFFIX,nflxext.com,ForeignMedia
@@ -265,30 +306,9 @@ DOMAIN-SUFFIX,nflximg.com,ForeignMedia
 DOMAIN-SUFFIX,nflximg.net,ForeignMedia
 DOMAIN-SUFFIX,nflxso.net,ForeignMedia
 DOMAIN-SUFFIX,nflxvideo.net,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest0.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest1.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest2.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest3.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest4.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest5.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest6.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest7.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest8.com,ForeignMedia
-DOMAIN-SUFFIX,netflixdnstest9.com,ForeignMedia
+DOMAIN-KEYWORD,netflixdnstest,ForeignMedia
+DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,ForeignMedia
 DOMAIN-KEYWORD,dualstack.apiproxy-,ForeignMedia
-DOMAIN-KEYWORD,dualstack.ichnaea-web-,ForeignMedia
-IP-CIDR,23.246.0.0/18,ForeignMedia
-IP-CIDR,37.77.184.0/21,ForeignMedia
-IP-CIDR,45.57.0.0/17,ForeignMedia
-IP-CIDR,64.120.128.0/17,ForeignMedia
-IP-CIDR,66.197.128.0/17,ForeignMedia
-IP-CIDR,108.175.32.0/20,ForeignMedia
-IP-CIDR,192.173.64.0/18,ForeignMedia
-IP-CIDR,198.38.96.0/19,ForeignMedia
-IP-CIDR,198.45.48.0/20,ForeignMedia
-IP-CIDR,34.210.42.111/32,ForeignMedia
-IP-CIDR,52.89.124.203/32,ForeignMedia
-IP-CIDR,54.148.37.5/32,ForeignMedia
 # > Niconico
 USER-AGENT,Niconico*,ForeignMedia
 DOMAIN-SUFFIX,dmc.nico,ForeignMedia
@@ -311,6 +331,9 @@ DOMAIN,link.theplatform.com,ForeignMedia
 # > PBS
 USER-AGENT,PBS*,ForeignMedia
 DOMAIN-SUFFIX,pbs.org,ForeignMedia
+# > Peacock
+USER-AGENT,PeacockMobile*,ForeignMedia
+DOMAIN-SUFFIX,peacocktv.com,ForeignMedia
 # > Pornhub
 DOMAIN-SUFFIX,phncdn.com,ForeignMedia
 DOMAIN-SUFFIX,phprcdn.com,ForeignMedia
@@ -338,16 +361,11 @@ DOMAIN-SUFFIX,tiktok.com,ForeignMedia
 DOMAIN-SUFFIX,tik-tokapi.com,ForeignMedia
 DOMAIN-SUFFIX,tiktokcdn.com,ForeignMedia
 DOMAIN-SUFFIX,tiktokv.com,ForeignMedia
-DOMAIN-KEYWORD,-tiktokcdn-com,ForeignMedia
+DOMAIN-KEYWORD,tiktokcdn-,ForeignMedia
 # > TVer
 USER-AGENT,TVer-Release*,ForeignMedia
 DOMAIN-SUFFIX,tver.jp,ForeignMedia
 DOMAIN,edge.api.brightcove.com,ForeignMedia
-# > Twitch
-DOMAIN-SUFFIX,jtvnw.net,ForeignMedia
-DOMAIN-SUFFIX,ttvnw.net,ForeignMedia
-DOMAIN-SUFFIX,twitch.tv,ForeignMedia
-DOMAIN-SUFFIX,twitchcdn.net,ForeignMedia
 # > ViuTV
 USER-AGENT,Viu*,ForeignMedia
 DOMAIN-SUFFIX,viu.com,ForeignMedia
@@ -364,6 +382,11 @@ HOST-SUFFIX,jwpcdn.com,ForeignMedia
 HOST-SUFFIX,jwplayer.com,ForeignMedia
 HOST-SUFFIX,mobileanalytics.us-east-1.amazonaws.com,ForeignMedia
 HOST-SUFFIX,nowe.com,ForeignMedia
+# > WeTV
+USER-AGENT,WeTV*,ForeignMedia
+DOMAIN-SUFFIX,wetv.vip,ForeignMedia
+DOMAIN-SUFFIX,wetvinfo.com,ForeignMedia
+IP-CIDR,150.109.28.51/32,ForeignMedia
 # > YouTube
 USER-AGENT,com.google.ios.youtube*,ForeignMedia
 USER-AGENT,YouTube*,ForeignMedia
@@ -373,6 +396,6 @@ DOMAIN-SUFFIX,ytimg.com,ForeignMedia
 DOMAIN,youtubei.googleapis.com,ForeignMedia
 DOMAIN,yt3.ggpht.com,ForeignMedia
 USER-AGENT,*youtube*,ForeignMedia
-HOST-KEYWORD,youtube,ForeignMedia
-HOST-SUFFIX,gvt2.com,ForeignMedia
-HOST-SUFFIX,youtu.be,ForeignMedia
+DOMAIN-KEYWORD,youtube,ForeignMedia
+DOMAIN-SUFFIX,gvt2.com,ForeignMedia
+DOMAIN-SUFFIX,youtu.be,ForeignMedia
