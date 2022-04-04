@@ -99,19 +99,19 @@ DOMAIN-SUFFIX,bbc.co.uk,ForeignMedia
 DOMAIN-SUFFIX,bbci.co.uk,ForeignMedia
 DOMAIN-KEYWORD,bbcfmt,ForeignMedia
 DOMAIN-KEYWORD,uk-live,ForeignMedia
-HOST,aod-dash-uk-live.akamaized.net,ForeignMedia
-HOST,aod-hls-uk-live.akamaized.net,ForeignMedia
-HOST,vod-dash-uk-live.akamaized.net,ForeignMedia
-HOST,vod-thumb-uk-live.akamaized.net,ForeignMedia
-HOST-SUFFIX,bbc.co,ForeignMedia
-HOST-SUFFIX,bbc.co.uk,ForeignMedia
-HOST-SUFFIX,bbc.com,ForeignMedia
-HOST-SUFFIX,bbcfmt.hs.llnwd.net,ForeignMedia
-HOST-SUFFIX,bbci.co,ForeignMedia
-HOST-SUFFIX,bbci.co.uk,ForeignMedia
+DOMAIN,aod-dash-uk-live.akamaized.net,ForeignMedia
+DOMAIN,aod-hls-uk-live.akamaized.net,ForeignMedia
+DOMAIN,vod-dash-uk-live.akamaized.net,ForeignMedia
+DOMAIN,vod-thumb-uk-live.akamaized.net,ForeignMedia
+DOMAIN-SUFFIX,bbc.co,ForeignMedia
+DOMAIN-SUFFIX,bbc.co.uk,ForeignMedia
+DOMAIN-SUFFIX,bbc.com,ForeignMedia
+DOMAIN-SUFFIX,bbcfmt.hs.llnwd.net,ForeignMedia
+DOMAIN-SUFFIX,bbci.co,ForeignMedia
+DOMAIN-SUFFIX,bbci.co.uk,ForeignMedia
 # > CHOCO TV
 USER-AGENT,TwDramas*,ForeignMedia
-HOST-SUFFIX,chocotv.com.tw,ForeignMedia
+DOMAIN-SUFFIX,chocotv.com.tw,ForeignMedia
 # > bilibili Intl
 DOMAIN-SUFFIX,biliintl.com,ForeignMedia
 DOMAIN,apm-misaka.biliapi.net,ForeignMedia
@@ -127,10 +127,10 @@ DOMAIN-SUFFIX,dazndn.com,ForeignMedia
 DOMAIN-SUFFIX,indazn.com,ForeignMedia
 DOMAIN,d151l6v8er5bdm.cloudfront.net,ForeignMedia
 DOMAIN-KEYWORD,voddazn,ForeignMedia
-HOST-SUFFIX,d151l6v8er5bdm.cloudfront.net,ForeignMedia
-HOST-SUFFIX,dazndn.com,ForeignMedia
-HOST-SUFFIX,indazn.com,ForeignMedia
-HOST-SUFFIX,intercom.io,ForeignMedia
+DOMAIN-SUFFIX,d151l6v8er5bdm.cloudfront.net,ForeignMedia
+DOMAIN-SUFFIX,dazndn.com,ForeignMedia
+DOMAIN-SUFFIX,indazn.com,ForeignMedia
+DOMAIN-SUFFIX,intercom.io,ForeignMedia
 # > discovery+
 USER-AGENT,DPlus*,ForeignMedia
 USER-AGENT,discovery+*,ForeignMedia
@@ -298,7 +298,7 @@ USER-AGENT,Naver%20TV*,ForeignMedia
 DOMAIN-SUFFIX,naver.com,ForeignMedia
 DOMAIN-SUFFIX,smartmediarep.com,ForeignMedia
 # > Netflix
-SER-AGENT,Argo*,ForeignMedia
+USER-AGENT,Argo*,ForeignMedia
 DOMAIN-SUFFIX,netflix.com,ForeignMedia
 DOMAIN-SUFFIX,netflix.net,ForeignMedia
 DOMAIN-SUFFIX,nflxext.com,ForeignMedia
