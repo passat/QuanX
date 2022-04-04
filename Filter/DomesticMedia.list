@@ -2,10 +2,10 @@
 # (Video)
 # > AcFun
 USER-AGENT,AcFun*,DomesticMedia
-HOST-SUFFIX,acfun.cn,DomesticMedia
-HOST-SUFFIX,acfun.com,DomesticMedia
-HOST-SUFFIX,acfun.tv,DomesticMedia
-HOST-SUFFIX,aixifan.com,DomesticMedia
+DOMAIN-SUFFIX,acfun.cn,DomesticMedia
+DOMAIN-SUFFIX,acfun.com,DomesticMedia
+DOMAIN-SUFFIX,acfun.tv,DomesticMedia
+DOMAIN-SUFFIX,aixifan.com,DomesticMedia
 # > Bilibili
 DOMAIN,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com,DomesticMedia
 DOMAIN,0gr4uqmtt8y41hcjsgrzdrc3s.ourdvsss.com,DomesticMedia
@@ -124,11 +124,17 @@ IP-CIDR,203.107.1.34/32,DomesticMedia
 IP-CIDR,203.107.1.65/32,DomesticMedia
 IP-CIDR,203.107.1.66/32,DomesticMedia
 IP-CIDR,45.43.32.234/32,DomesticMedia
-# > HunanTV
-DOMAIN-SUFFIX,hitv.com,DomesticMedia
-DOMAIN-SUFFIX,hunantv.com,DomesticMedia
-DOMAIN-SUFFIX,mgtv.com,DomesticMedia
-USER-AGENT, MGTV*, DomesticMedia
+# > Tencent Video
+USER-AGENT,MOO*,DomesticMedia
+USER-AGENT,live4iphone*,DomesticMedia
+USER-AGENT,qqlive4iphone*,DomesticMedia
+USER-AGENT,TencentMidasConnect*,DomesticMedia
+DOMAIN-SUFFIX,video.qq.com,DomesticMedia
+DOMAIN-SUFFIX,i.qq.com,DomesticMedia
+DOMAIN-SUFFIX,v.qq.com,DomesticMedia
+DOMAIN-SUFFIX,mfm.video.qq.com,DomesticMedia
+DOMAIN-SUFFIX,v.smtcdns.com,DomesticMedia
+DOMAIN-SUFFIX,vv.video.qq.com,DomesticMedia
 # > iQiyi
 DOMAIN,cache.video.iqiyi.com,DomesticMedia
 DOMAIN-keyword,qiyi,DomesticMedia
@@ -195,6 +201,20 @@ IP-CIDR,23.211.15.99/32,DomesticMedia
 IP-CIDR,23.40.241.251/32,DomesticMedia
 IP-CIDR,23.40.242.10/32,DomesticMedia
 IP-CIDR,23.53.32.88/32,DomesticMedia
+# > Youku
+DOMAIN-SUFFIX,soku.com,DomesticMedia
+DOMAIN-SUFFIX,youku.com,DomesticMedia
+DOMAIN-SUFFIX,ykimg.com,DomesticMedia
+USER-AGENT, Youku*, DomesticMedia
+USER-AGENT, %E4%BC%98%E9%85%B7*,DomesticMedia
+# > XiGua
+DOMAIN-SUFFIX,ixigua.com,DomesticMedia
+DOMAIN-SUFFIX,snssdk.com,DomesticMedia
+# > HunanTV
+DOMAIN-SUFFIX,hitv.com,DomesticMedia
+DOMAIN-SUFFIX,hunantv.com,DomesticMedia
+DOMAIN-SUFFIX,mgtv.com,DomesticMedia
+USER-AGENT, MGTV*, DomesticMedia
 # > LeTV
 DOMAIN-SUFFIX,le.com,DomesticMedia
 HOST-SUFFIX,api.mob.app.letv.com,DomesticMedia
@@ -203,46 +223,22 @@ USER-AGENT,MGTV*,DomesticMedia
 HOST-SUFFIX,hitv.com,DomesticMedia
 HOST-SUFFIX,hunantv.com,DomesticMedia
 HOST-SUFFIX,mgtv.com,DomesticMedia
-# > Migu Video
-DOMAIN-SUFFIX,cmvideo.cn,DomesticMedia
-DOMAIN-SUFFIX,miguvideo.com,DomesticMedia
-USER-AGENT,MiguVideo*,DomesticMedia
-USER-AGENT,%E5%92%AA%E5%92%95%E8%A7%86%E9%A2%91,DomesticMedia
-HOST-SUFFIX,migu.cn,DomesticMedia
 # > PPLive
 DOMAIN-SUFFIX,pplive.cn,DomesticMedia
 DOMAIN-SUFFIX,pptv.com,DomesticMedia
 # > Sohu Video
 DOMAIN-SUFFIX,itc.cn,DomesticMedia
 DOMAIN-SUFFIX,sohu.com,DomesticMedia
-# > Tencent Video
-USER-AGENT,MOO*,DomesticMedia
-USER-AGENT,live4iphone*,DomesticMedia
-USER-AGENT,qqlive4iphone*,DomesticMedia
-USER-AGENT,TencentMidasConnect*,DomesticMedia
-DOMAIN-SUFFIX,video.qq.com,DomesticMedia
-DOMAIN-SUFFIX,i.qq.com,DomesticMedia
-DOMAIN-SUFFIX,v.qq.com,DomesticMedia
-DOMAIN-SUFFIX,mfm.video.qq.com,DomesticMedia
-DOMAIN-SUFFIX,v.smtcdns.com,DomesticMedia
-DOMAIN-SUFFIX,vv.video.qq.com,DomesticMedia
-# > XiGua
-DOMAIN-SUFFIX,ixigua.com,DomesticMedia
-DOMAIN-SUFFIX,snssdk.com,DomesticMedia
-# > Youku
-DOMAIN-SUFFIX,soku.com,DomesticMedia
-DOMAIN-SUFFIX,youku.com,DomesticMedia
-DOMAIN-SUFFIX,ykimg.com,DomesticMedia
-USER-AGENT, Youku*, DomesticMedia
-USER-AGENT, %E4%BC%98%E9%85%B7*,DomesticMedia
-
+# > Migu Video
+DOMAIN-SUFFIX,cmvideo.cn,DomesticMedia
+DOMAIN-SUFFIX,miguvideo.com,DomesticMedia
+USER-AGENT,MiguVideo*,DomesticMedia
+USER-AGENT,%E5%92%AA%E5%92%95%E8%A7%86%E9%A2%91,DomesticMedia
+HOST-SUFFIX,migu.cn,DomesticMedia
 # (Music)
-# > Baidu
+# > Baidu Music
 USER-AGENT,baiduyinyue,DomesticMedia
 HOST-SUFFIX,qianqian.com,DomesticMedia
-# > China Music Corp
-DOMAIN-SUFFIX,kuwo.cn,DomesticMedia
-DOMAIN-SUFFIX,kugou.com,DomesticMedia
 # > Kugou and Kuwo
 DOMAIN-SUFFIX,2496.cn,DomesticMedia
 DOMAIN-SUFFIX,gouwo.com,DomesticMedia
@@ -353,8 +349,6 @@ IP-CIDR,61.243.144.0/24,DomesticMedia
 IP-CIDR,61.48.115.0/24,DomesticMedia
 IP-CIDR,61.54.121.0/24,DomesticMedia
 IP-CIDR,61.54.7.0/24,DomesticMedia
-# > Migu Music
-DOMAIN-SUFFIX,migu.cn,DomesticMedia
 # > NetEase Music
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,DomesticMedia
 DOMAIN,mam.netease.com,DomesticMedia
@@ -403,9 +397,6 @@ IP-CIDR,59.111.160.197/32,DomesticMedia
 IP-CIDR,59.111.181.35/32,DomesticMedia
 IP-CIDR,59.111.181.38/32,DomesticMedia
 IP-CIDR,59.111.181.60/32,DomesticMedia
-# > Qianqian Music
-DOMAIN-SUFFIX,qianqian.com,DomesticMedia
-DOMAIN-SUFFIX,taihe.com,DomesticMedia
 # > QQ Music
 DOMAIN-SUFFIX,music.qq.com,DomesticMedia
 DOMAIN-SUFFIX,music.tc.qq.com,DomesticMedia
@@ -418,18 +409,23 @@ USER-AGENT,MOO%E9%9F%B3%E4%B9%90*,DomesticMedia
 USER-AGENT,QQ%E9%9F%B3%E4%B9%90,DomesticMedia
 HOST,aqqmusic.tc.qq.com,DomesticMedia
 HOST-SUFFIX,*music.qq.com,DomesticMedia
-# > Sohu
+# > Qianqian Music
+DOMAIN-SUFFIX,qianqian.com,DomesticMedia
+DOMAIN-SUFFIX,taihe.com,DomesticMedia
+# > Sohu Music
 HOST-SUFFIX,56.com,DomesticMedia
 HOST-SUFFIX,sohu.com,DomesticMedia
 HOST-SUFFIX,sohu.com.cn,DomesticMedia
 HOST-SUFFIX,itc.cn,DomesticMedia
 HOST-SUFFIX,v-56.com,DomesticMedia
-# > Xiami 
+# > Migu Music
+DOMAIN-SUFFIX,migu.cn,DomesticMedia
+# > Xiami Music
 USER-AGENT,walkman*,DomesticMedia
 USER-AGENT,xiami*,DomesticMedia
 HOST-SUFFIX,xiami.com,DomesticMedia
 HOST-SUFFIX,xiami.net,DomesticMedia
-# > Xiaomi
+# > Xiaomi Music
 DOMAIN-SUFFIX,ai.xiaomi.com,DomesticMedia
 DOMAIN-SUFFIX,music.xiaomi.com,DomesticMedia
 DOMAIN-SUFFIX,dmhmusic.com,DomesticMedia
