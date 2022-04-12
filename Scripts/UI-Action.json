@@ -1,5 +1,5 @@
 {
-    "name":"UI 脚本合集"
+    "name":"UI 脚本合集",
     "description":"UI-Interaction Script Gallery by Shawn",
     "task":[
         "event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体-解锁查询, img-url=checkmark.seal.system, enabled=true",
