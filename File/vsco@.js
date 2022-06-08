@@ -1,4 +1,4 @@
-/* @
+/* 
  * Membership unlock for vsco & filebox
  * Please note that you may need to reinstall app to make it work.
  * 
