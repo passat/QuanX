@@ -1,4 +1,4 @@
-# > Apple00
+# > Apple
 USER-AGENT,AppStore*,Apple
 USER-AGENT,*com.apple.mobileme.fmip1,Apple
 USER-AGENT,*WeatherFoundation*,Apple
