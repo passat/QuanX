@@ -1,5 +1,5 @@
 /* 
- * Membership unlock for vsco & fileboxa
+ * Membership unlock for vsco & filebox
  * Please note that you may need to reinstall app to make it work.
  * 
  * Type: http-response (requires body)
