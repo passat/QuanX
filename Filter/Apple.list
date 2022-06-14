@@ -71,7 +71,7 @@ DOMAIN,iosapps-ssl.itunes.apple.com,Apple
 DOMAIN,itcmobile.itunes.apple.com,Apple
 
 # > TestFlight
-DOMAIN,p14-buy.itunes.apple.com,Apple
+#DOMAIN,p14-buy.itunes.apple.com,Apple
 DOMAIN,beta.apple.com,Apple
 DOMAIN,testflight.apple.com,Apple
 DOMAIN-KEYWORD,testflight,Apple
