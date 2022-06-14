@@ -23,7 +23,6 @@ DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
 DOMAIN,apple-events.akamaized.net,Apple
 DOMAIN,api.smoot.apple.cn,Apple
 DOMAIN,api-glb-sea.smoot.apple.com,Apple
-DOMAIN,books.itunes.apple.com,Apple
 DOMAIN,cvws.icloud-content.com,Apple
 DOMAIN,developer.apple.com,Apple
 DOMAIN,gs-loc-cn.apple.com,Apple
@@ -72,6 +71,7 @@ DOMAIN,iosapps-ssl.itunes.apple.com,Apple
 DOMAIN,itcmobile.itunes.apple.com,Apple
 
 # > TestFlight
+DOMAIN,p14-buy.itunes.apple.com,Apple
 DOMAIN,beta.apple.com,Apple
 DOMAIN,testflight.apple.com,Apple
 DOMAIN-KEYWORD,testflight,Apple
@@ -138,6 +138,13 @@ DOMAIN-SUFFIX,apple-icloud.cn,Apple
 DOMAIN-SUFFIX,appleicloud.cn,Apple
 DOMAIN-SUFFIX,applemx-icloud.com,Apple
 DOMAIN-SUFFIX,applemxicloud.com,Apple
+
+# Apple Books
+DOMAIN,buy.itunes.apple.com,Apple
+DOMAIN-SUFFIX,books.apple.com,Apple
+DOMAIN,books.itunes.apple.com,Apple
+DOMAIN,bookkeeper.itunes.apple.com,Apple
+DOMAIN,books-analytics-events.apple.com,Apple
 
 # > Apple Music
 USER-AGENT,Music*,Apple
