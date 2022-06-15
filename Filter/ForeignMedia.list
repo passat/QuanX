@@ -334,11 +334,6 @@ DOMAIN-SUFFIX,pbs.org,ForeignMedia
 # > Peacock
 USER-AGENT,PeacockMobile*,ForeignMedia
 DOMAIN-SUFFIX,peacocktv.com,ForeignMedia
-# > Pornhub
-DOMAIN-SUFFIX,phncdn.com,ForeignMedia
-DOMAIN-SUFFIX,phprcdn.com,ForeignMedia
-DOMAIN-SUFFIX,pornhub.com,ForeignMedia
-DOMAIN-SUFFIX,pornhubpremium.com,ForeignMedia
 # > Sky GO
 USER-AGENT,skygo*,ForeignMedia
 HOST-SUFFIX,sky.com,ForeignMedia
