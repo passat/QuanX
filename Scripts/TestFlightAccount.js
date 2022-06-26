@@ -1,5 +1,5 @@
 /********************************
-TestFlight账户管理脚本0
+TestFlight账户管理脚本
 
 脚本作者: @NobyDa 
 脚本兼容: Surge4、QuantumultX、Loon(2.1.20 413+)
