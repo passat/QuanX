@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-06-23 16:30⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-06-27 14:10⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -92,7 +92,7 @@
 ⦿ 类型参数 type=domain-set/rule/module/list/nodes
   ❖ 当解析器未能正确识别类型时, 可尝试使用此参数强制指定
 ⦿ 隐藏参数 hide=0, 禁用筛除的分流/重写，默认方式为删除
-
+⦿ profile=111 , URL-Scheme 添加配置中远程资源
 ----------------------------------------------------------
 */
 
@@ -208,8 +208,48 @@ var PcheckU = mark0 && para1.indexOf("checkurl=") != -1 ? decodeURIComponent(par
 typeQ = PRelay!=""? "server":typeQ
 var typec="" //check result type
 var Pflow=mark0 && para1.indexOf("flow=") != -1 ? para1.split("flow=")[1].split("&")[0] : 0; // 流量时间等参数
+var PProfile = mark0 && para1.indexOf("profile=") != -1 ? para1.split("profile=")[1].split("&")[0] : 0; // 通过URL-Scheme导入完整配置参数
 
+// URL-Scheme 增加配置
+var ADDres = `quantumult-x:///add-resource?remote-resource=url-encoded-json`
+var RLink = `{
+  "server_remote": [
+    sremoteposition
+  ],
+  "filter_remote": [
+    fremoteposition
+  ],
+  "rewrite_remote": [
+    rremoteposition
+  ]
+}`
 
+var ProfileInfo = {
+  "server":"",
+  "filter":"",
+  "rewrite":""
+}
+
+function VCheck(cnt) {
+  cnts=cnt.split("\n").filter(Boolean).map(item=>item.trim()).filter(item => /^http/.test(item)).map(item=>"\""+item+"\"")
+  cnts=cnts.join(",\n")
+  //console.log(cnts)
+  return  cnts
+  }
+
+function Profile_Handle() {
+  let a = content0
+  PProfile= PProfile==1? "001":PProfile
+  PProfile= PProfile==8? "010": PProfile
+  PProfile= PProfile==9? "011": PProfile
+  srm = a.split("[server_remote]")[1] && String(PProfile)[0]=="1"? VCheck(a.split("[server_remote]")[1].split("[")[0]) : ""
+  frm = a.split("[filter_remote]")[1] && String(PProfile)[1]=="1"? VCheck(a.split("[filter_remote]")[1].split("[")[0]) : ""
+  rrm = a.split("[rewrite_remote]")[1] && String(PProfile)[2]=="1"? VCheck(a.split("[rewrite_remote]")[1].split("[")[0]) : ""
+  RLink=RLink.replace("sremoteposition",srm).replace("fremoteposition",frm).replace("rremoteposition",rrm)
+  ADDres=ADDres.replace("url-encoded-json",encodeURIComponent(RLink))
+}
+
+//
 //流量信息
 //{bytes_used: 1073741824, bytes_remaining: 2147483648, expire_date: 1653193966}}
 var Finfo={}
@@ -292,9 +332,19 @@ function Parser() {
     $done({ content: total });
 }
 
-if (typeof($resource)!=="undefined") {
+if (typeof($resource)!=="undefined" && PProfile == 0) {
   Parser()
   $done({ content: total, info: Finfo })
+} else if (PProfile != 0) {
+  try {
+    Profile_Handle()
+  } catch (err) {
+      $notify("❌ 解析出现错误", "⚠️ 请点击发送链接反馈", err, bug_link);
+    }
+  openlink = {"open-url": ADDres}
+  $notify("⚠️请忽略报错提示, 点击此通知跳转", "添加配置中的有效远程资源👇 ["+ PProfile+"]", ADDres, openlink)
+  total = ProfileInfo[typeQ]
+  $done({content:total})
 }
 
 
@@ -2131,12 +2181,12 @@ function get_emoji(emojip, sname) {
     "🇰🇿": ["哈萨克斯坦"],
     "🇭🇺": ["匈牙利", "Hungary"],
     "🇱🇹": ["立陶宛"],
+    "🇱🇰": ["斯里兰卡"],
     "🇧🇾": ["BY","白俄罗斯","白俄羅斯"],
     "🇷🇺": ["RU ","RUS", "Russia", "俄罗斯", "毛子", "俄国", "俄羅斯", "伯力", "莫斯科", "圣彼得堡", "西伯利亚", "新西伯利亚", "京俄", "杭俄","廣俄","滬俄","广俄","沪俄"],
     "🇸🇬": ["SG", "Singapore","SINGAPORE", "新加坡", "狮城", "沪新", "京新", "泉新", "穗新", "深新", "杭新", "广新","廣新","滬新"],
     "🇺🇸": ["US", "USA", "America", "United States", "美国", "美", "京美", "波特兰", "达拉斯", "俄勒冈", "凤凰城", "费利蒙", "硅谷", "矽谷", "拉斯维加斯", "洛杉矶", "圣何塞", "圣克拉拉", "西雅图", "芝加哥", "沪美", "哥伦布", "纽约"],
     "🇹🇼": ["TW", "Taiwan","TAIWAN", "台湾", "台北", "台中", "新北", "彰化", "CHT", "台", "HINET"],
-    "🇭🇰": ["HK", "Hongkong", "Hong Kong", "HongKong", "HONG KONG","香港", "深港", "沪港", "呼港", "HKT", "HKBN", "HGC", "WTT", "CMI", "穗港", "京港", "港"],
     "🇮🇩": ["ID", "Indonesia", "印尼", "印度尼西亚", "雅加达"],
     "🇮🇪": ["Ireland", "IRELAND", "爱尔兰", "愛爾蘭", "都柏林"],
     "🇮🇱": ["Israel", "以色列"],
@@ -2195,8 +2245,9 @@ function get_emoji(emojip, sname) {
     "🇲🇦": ["摩洛哥"],
     "🇪🇨": ["厄瓜多尔","EC"],
     "🇵🇷": ["波多黎各", "PR"],
-    "🇱🇧": ["黎巴嫩","LB"],
+    "🇭🇰": ["HK", "Hongkong", "Hong Kong", "HongKong", "HONG KONG","香港", "深港", "沪港", "呼港", "HKT", "HKBN", "HGC", "WTT", "CMI", "穗港", "京港", "港"],
     "🇨🇳": ["CN", "China", "回国", "中国","中國", "江苏", "北京", "上海", "广州", "深圳", "杭州", "徐州", "青岛", "宁波", "镇江", "back"],
+    "🇱🇧": ["黎巴嫩","LB"],
     "🌏": ["亚洲"]
   }
     str1 = JSON.stringify(Lmoji)
