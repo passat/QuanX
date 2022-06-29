@@ -1,6 +1,6 @@
 /*
 #Flex3解锁ban设备 
-https://api2.getflex.co url script-request-body https://raw.githubusercontent.com/photonmang/quantumultX/master/Flex3.js
+https://api2.getflex.co url script-request-body https://raw.githubusercontent.com/passat/QuanX/main/Scripts/Flex3.js
 
 MITM = api2.getflex.co
 */
