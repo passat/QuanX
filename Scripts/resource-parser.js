@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-07-07 13:05⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-07-10 08:25⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -565,7 +565,7 @@ function Type_Check(subs) {
     } else if ( (((ModuleK.some(RewriteCheck) || para1.indexOf("dst=rewrite") != -1) && (para1.indexOf("dst=filter") == -1) && subs.indexOf("[Proxy]") == -1) || typeU == "module") && typeU != "nodes" && typeU != "rule" && typeQ !="filter") { // Surge 类型 module /rule-set(含url-regex) 类型
       typec="rewrite"
       type = (typeQ == "unsupported" || typeQ =="rewrite")? "sgmodule" : "wrong-field"
-    } else if (((RuleK.some(RuleCheck) && subs.indexOf(html) == -1 && !/\[(Proxy|server_local)\]/.test(subs)) || typeU == "rule" || para1.indexOf("dst=filter")!=-1) && typeU != "nodes") {
+    } else if (((RuleK.some(RuleCheck) && subs.indexOf(html) == -1 && !/\[(Proxy|server_local)\]/.test(subs)) || typeU == "rule" || para1.indexOf("dst=filter")!=-1) && typeU != "nodes" && !(typeQ == "server" && QuanXK.some(NodeCheck))) {
       // rule/filter类型
       typec = "filter"
       type = (typeQ == "unsupported" || typeQ =="filter")? "Rule":"wrong-field";
@@ -877,8 +877,8 @@ function HOST_Handle(cnt,phost) {
     cnt = cnt.replace(/host\s*\=(.*?)\,/,phost)
   } else { // 为已有的替换，为没有的增加 obfs-host\tls-host
     phost=phost.split("☠️")[0]
-    if (/-host\s*\=/.test(cnt)) {// 如已有host参数
-      cnt = cnt.replace(/host\s*\=(.*?)\,/,phost)
+    if (/-host\s*\=/.test(cnt)) {// 如已有 host 参数
+      cnt = cnt.replace(/host\s*\=(.*?)\,/,phost+", ")
     } else if (/over-tls\s*\=\s*true/.test(cnt)) { // 如无host，但可以增加
       cnt = cnt+", tls-"+phost
     } else if (/obfs\s*\=/.test(cnt)) {
