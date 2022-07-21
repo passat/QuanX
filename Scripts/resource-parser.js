@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-07-17 17:30⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-07-20 12:00⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -570,14 +570,16 @@ function Type_Check(subs) {
       type = (typeQ == "unsupported" || typeQ =="server")? "Clash":"wrong-field";
       typec = "server"
       content0 = Clash2QX(subs)
-    } else if ((/^hostname\s*\=|pattern\=/.test(subi) || RewriteK.some(RewriteCheck)) && !/\[(Proxy|filter_local)\]/.test(subs) && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1 && !/module|nodes|rule/.test(typeU) ) {
+    } else if ((/^hostname\s*\=|pattern\=/.test(subi) || RewriteK.some(RewriteCheck))  && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1 && !/module|nodes|rule/.test(typeU) && !(RuleK.some(RuleCheck) && typeQ == "filter")) {
+      // 2022-07-20 remove constrain && !/\[(Proxy|filter_local)\]/.test(subs)
       typec = "rewrite"
       type = (typeQ == "unsupported" || typeQ =="rewrite")? "rewrite":"wrong-field" //Quantumult X 类型 rewrite/ Surge Script/
     } else if ( (((ModuleK.some(RewriteCheck) || para1.indexOf("dst=rewrite") != -1) && (para1.indexOf("dst=filter") == -1) && subs.indexOf("[Proxy]") == -1) || typeU == "module") && typeU != "nodes" && typeU != "rule" && typeQ !="filter") { // Surge 类型 module /rule-set(含url-regex) 类型
       typec="rewrite"
       type = (typeQ == "unsupported" || typeQ =="rewrite")? "sgmodule" : "wrong-field"
-    } else if (((RuleK.some(RuleCheck) && subs.indexOf(html) == -1 && !/\[(Proxy|server_local)\]/.test(subs)) || typeU == "rule" || para1.indexOf("dst=filter")!=-1) && typeU != "nodes" && !(typeQ == "server" && QuanXK.some(NodeCheck))) {
+    } else if (((RuleK.some(RuleCheck) && subs.indexOf(html) == -1 ) || typeU == "rule" || para1.indexOf("dst=filter")!=-1) && typeU != "nodes" && !(typeQ == "server" && QuanXK.some(NodeCheck))) {
       // rule/filter类型
+      // 2022-07-20 remove constrain && !/\[(Proxy|server_local)\]/.test(subs) adter html
       typec = "filter"
       type = (typeQ == "unsupported" || typeQ =="filter")? "Rule":"wrong-field";
     } else if (typeU == "domain-set") {// 仅限用户指定为 domain-set；((DomainK.some(RuleCheck) || typeU == "domain-set") && subs.indexOf("[Proxy]") == -1 && typeU != "nodes") {
@@ -2200,10 +2202,10 @@ function get_emoji(emojip, sname) {
     "🇨🇭": ["瑞士", "苏黎世", "Switzerland"],
     "🇳🇬": ["尼日利亚", "NG", "尼日利亞","拉各斯"],
     "🇨🇿": ["Czechia", "捷克"],
-    "🇸🇰": ["斯洛伐克", "SK"],
-    "🇸🇮": ["斯洛文尼亚"],
-    "🇦🇲": ["亚美尼亚"],
-    "🇷🇸": ["RS ","RS_", "塞尔维亚"],
+    "🇸🇰": ["斯洛伐克", "SK" ],
+    "🇸🇮": ["斯洛文尼亚", "斯洛文尼亞"],
+    "🇦🇲": ["亚美尼亚", "亞美尼亞"],
+    "🇷🇸": ["RS ","RS_", "塞尔维亚", "塞爾維亞"],
     "🇲🇩": ["摩爾多瓦","MD","摩尔多瓦"],
     "🇩🇪": [" DE ", "German", "GERMAN", "德国", "德國", "法兰克福","京德","滬德","廣德","沪德","广德"],
     "🇩🇰": ["DK","DNK","丹麦","丹麥"],
@@ -2211,13 +2213,14 @@ function get_emoji(emojip, sname) {
     "🇪🇺": ["EU", "欧盟", "欧罗巴","欧洲"],
     "🇫🇮": ["Finland", "芬兰","芬蘭","赫尔辛基"],
     "🇫🇷": ["FR", "France", "法国", "法國", "巴黎"],
-    "🇷🇪": ["留尼汪"],
+    "🇷🇪": ["留尼汪", "留尼旺"],
+    "🇨🇼": ["库拉索", "庫拉索"],
     "🇬🇧": ["UK", "GB ", "England", "United Kingdom", "英国", "伦敦", "英"],
     "🇲🇴": ["MO", "Macao","Macau", "MAC", "澳门", "澳門", "CTM"],
-    "🇰🇿": ["哈萨克斯坦"],
-    "🇭🇺": ["匈牙利", "Hungary"],
+    "🇰🇿": ["哈萨克斯坦", "哈薩克斯坦"],
+    "🇭🇺": ["匈牙利", "Hungary",],
     "🇱🇹": ["立陶宛"],
-    "🇱🇰": ["斯里兰卡"],
+    "🇱🇰": ["斯里兰卡", "斯里蘭卡"],
     "🇧🇾": ["BY","白俄罗斯","白俄羅斯"],
     "🇷🇺": ["RU ","RU_", "RUS", "Russia", "俄罗斯", "毛子", "俄国", "俄羅斯", "伯力", "莫斯科", "圣彼得堡", "西伯利亚", "新西伯利亚", "京俄", "杭俄","廣俄","滬俄","广俄","沪俄"],
     "🇸🇬": ["SG", "Singapore","SINGAPORE", "新加坡", "狮城", "沪新", "京新", "泉新", "穗新", "深新", "杭新", "广新","廣新","滬新"],
@@ -2272,9 +2275,9 @@ function get_emoji(emojip, sname) {
     "🇹🇳": ["突尼斯"],
     "🇵🇦": ["巴拿马","巴拿馬"],
     "🇮🇷": ["伊朗"],
-    "🇯🇴": ["约旦"],
-    "🇺🇾": ["乌拉圭"],
-    "🇰🇪": ["肯尼亚"],
+    "🇯🇴": ["约旦", "約旦"],
+    "🇺🇾": ["乌拉圭" , "烏拉圭"],
+    "🇰🇪": ["肯尼亚", "肯尼亞"],
     "🇰🇬": ["吉尔吉斯坦","吉尔吉斯斯坦"],
     "🇳🇵": ["尼泊尔"],
     "🇽🇰": ["科索沃"],
