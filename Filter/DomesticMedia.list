@@ -408,7 +408,6 @@ DOMAIN,moo.qq.com,DomesticMedia
 USER-AGENT,MOO%E9%9F%B3%E4%B9%90*,DomesticMedia
 USER-AGENT,QQ%E9%9F%B3%E4%B9%90,DomesticMedia
 HOST,aqqmusic.tc.qq.com,DomesticMedia
-HOST-SUFFIX,*music.qq.com,DomesticMedia
 # > Qianqian Music
 DOMAIN-SUFFIX,qianqian.com,DomesticMedia
 DOMAIN-SUFFIX,taihe.com,DomesticMedia
