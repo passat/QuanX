@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-08-11 18:35⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-08-19 13:15⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -547,7 +547,7 @@ function Type_Check(subs) {
     var QuanXK = ["shadowsocks=", "trojan=", "vmess=", "http=", "socks5="];
     var SurgeK = ["=ss,", "=vmess,", "=trojan,", "=http,", "=custom,", "=https,", "=shadowsocks", "=shadowsocksr", "=sock5", "=sock5-tls"];
     var ClashK = ["proxies:"]
-    var SubK = ["dm1lc3M", "c3NyOi8v", "CnNzOi8", "dHJvamFu", "c3M6Ly", "c3NkOi8v", "c2hhZG93", "aHR0cDovLw", "aHR0cHM6L", "CnRyb2phbjo"];
+    var SubK = ["dm1lc3M", "c3NyOi8v", "CnNzOi8", "dHJvamFu", "c3M6Ly", "c3NkOi8v", "c2hhZG93", "aHR0cDovLw", "aHR0cHM6L", "CnRyb2phbjo", "aHR0cD0", "aHR0cCA"];
     var RewriteK = [" url 302", " url 307", " url reject", " url script", " url req", " url res", " url echo"] // quantumult X 类型 rewrite
     var SubK2 = ["ss://", "vmess://", "ssr://", "trojan://", "ssd://", "https://"];
     var ModuleK = ["[Script]", "[Rule]", "[URL Rewrite]", "[Map Local]", "[MITM]", "\nhttp-r"]
@@ -1872,7 +1872,7 @@ function TJ2QX(subs, Pudp, Ptfo, Pcert0, PTls13) {
     obfs = cnt.indexOf("obfs=websocket") != -1? "obfs=wss" : obfs 
     thost=cnt.indexOf("obfs-host=") == -1? thost : "obfs-host=" + decodeURIComponent(cnt.split("obfs-host=")[1].split(";")[0].split("#")[0])
     puri = cnt.indexOf("obfs-uri=") == -1? puri : ", obfs-uri=" + decodeURIComponent(cnt.split("obfs-uri=")[1].split(";")[0].split("#")[0])
-    } else if (cnt.indexOf("&type=ws")!=-1) {//v2rayN uri
+    } else if (cnt.indexOf("&type=ws")!=-1 || cnt.indexOf("?type=ws")!=-1) {//v2rayN uri
       obfs = cnt.indexOf("security=tls") != -1? "obfs=wss" : obfs 
       thost=cnt.indexOf("&host=") == -1? thost : "obfs-host=" + decodeURIComponent(cnt.split("&host=")[1].split("&")[0].split("#")[0])
       puri = cnt.indexOf("&path=") == -1? puri : ", obfs-uri=" + decodeURIComponent(cnt.split("&path=")[1].split("&")[0].split("#")[0])
@@ -2282,6 +2282,7 @@ function get_emoji(emojip, sname) {
     "🇵🇪": ["秘鲁","祕魯", "Peru"],
     "🇨🇴": ["哥伦比亚", "Colombia"],
     "🇪🇪": ["爱沙尼亚", "Estonia"],
+    "🇱🇾": ["利比亚","Libya"],
     "🇲🇰": ["马其顿","馬其頓", "Macedonia"],
     "🇲🇹": ["马耳他", "Malta"],
     "🇻🇪": ["委内瑞拉", "Venezuela"],
