@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-08-29 14:15⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2022-08-31 10:15⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -570,7 +570,7 @@ function Type_Check(subs) {
       type = (typeQ == "unsupported" || typeQ =="server")? "Clash":"wrong-field";
       typec = "server"
       content0 = Clash2QX(subs)
-    } else if ((/^hostname\s*\=|pattern\=/.test(subi) || RewriteK.some(RewriteCheck))  && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1 && !/module|nodes|rule/.test(typeU) && !(RuleK.some(RuleCheck) && typeQ == "filter")) {
+    } else if ((/^hostname\s*\=/.test(subi) || RewriteK.some(RewriteCheck))  && para1.indexOf("dst=filter")==-1 && subi.indexOf("securehostname") == -1 && !/module|nodes|rule/.test(typeU) && !(RuleK.some(RuleCheck) && typeQ == "filter")) {
       // 2022-07-20 remove constrain && !/\[(Proxy|filter_local)\]/.test(subs)
       typec = "rewrite"
       type = (typeQ == "unsupported" || typeQ =="rewrite")? "rewrite":"wrong-field" //Quantumult X 类型 rewrite/ Surge Script/
@@ -984,11 +984,15 @@ function SCP2QX(subs) {
             rw = ptn + " url " + type + js
             nrw.push(rw)
           }
-        } else if (/\s30(7|2)$/.test(subs[i])) { //rewrite 302&307 复写
+        } else if (/\s30(7|2)$/.test(subs[i])) { //rewrite 302&307 复写(Surge)
           //tpe = subs[i].indexOf(" 302") != -1? "302":"307"
           //$notify("307/2",subs[i])
           rw = subs[i].split(" ")[0] + " url " + subs[i].split(" ")[2] + " " + subs[i].split(" ")[1].trim()
           //if(rw.indexOf("307")!=-1) {$notify("XX",subs[i],rw.split(" "))}
+          nrw.push(rw)
+        } else if (/\s\-\s30(2|7)\s/.test(subs[i])) { //rewrite 302&307 复写(Shadowrocket)
+          //xx - 302 $1$2$3
+          rw = subs[i].replace(" - "," url ")
           nrw.push(rw)
         } else if(subs[i].split(" ")[2] == "header") { // rewrite header 类型
           var pget = subs[i].split(" ")[0].split(".com")[1]
@@ -1002,8 +1006,11 @@ function SCP2QX(subs) {
           var pgetn = subs[i].split("header-replace")[1].trim()
           rw = subs[i].split(" ")[0] + " url request-header " +"(.+\\r\\n)"+pget+":.+(\\r\\n) request-header " + "$1" + pgetn + "$2"
           nrw.push(rw)
-        } else if(subs[i].indexOf(" - reject") != -1) { // rewrite reject 类型
+        } else if(subs[i].indexOf(" _ reject") != -1) { // rewrite reject 类型(surge)
           rw = subs[i].split(" ")[0] + " url reject-200"
+          nrw.push(rw)
+        } else if(subs[i].indexOf(" - reject") != -1 ) { //shadowrocket reject
+          rw = subs[i].replace(" - ", " url ")
           nrw.push(rw)
         } else if (subs[i].indexOf("script-path") != -1) { //surge js 旧写法
           type = subs[i].replace(/\s+/g," ").split(" ")[0]
