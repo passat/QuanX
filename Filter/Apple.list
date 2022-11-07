@@ -633,17 +633,6 @@ IP-CIDR,192.35.50.0/24,Apple
 IP-CIDR,198.183.17.0/24,Apple
 IP-CIDR,205.180.175.0/24,Apple
 
-HOST-SUFFIX,cdn.applemapkit.com,Apple
-HOST-SUFFIX,cdn1.applemapkit.com,Apple
-HOST-SUFFIX,cdn2.applemapkit.com,Apple
-HOST-SUFFIX,cdn3.applemapkit.com,Apple
-HOST-SUFFIX,cdn4.applemapkit.com,Apple
-HOST-SUFFIX,cdncn1.applemapkit.com,Apple
-HOST-SUFFIX,cdncn2.applemapkit.com,Apple
-HOST-SUFFIX,cdncn3.applemapkit.com,Apple
-HOST-SUFFIX,cdncn4.applemapkit.com,Apple
-HOST-SUFFIX,updates.cdnapple.com,Apple
-HOST-SUFFIX,updateshttp.cdnapple.com,Apple
 
 HOST-SUFFIX,12diasdepresentesdeitunes.com,Apple
 HOST-SUFFIX,12diasderegalosdeitunes.cl,Apple
@@ -661,3 +650,29 @@ HOST-SUFFIX,12diasderegalosdeitunes.gt,Apple
 HOST-SUFFIX,12diasderegalosdeitunes.hn,Apple
 HOST-SUFFIX,12diasderegalosdeitunes.pe,Apple
 HOST-SUFFIX,12joursdecadeauxdeitunes.com,Apple
+
+
+# 推送服务
+host-keyword, push.apple.com, Apple
+# 时间同步
+host, time.apple.com, Apple
+# 天气服务
+host-keyword, weather-edge.apple.com, Apple
+host-keyword, weather-adge.apple.com, Apple
+# 内购服务
+host-keyword, buy.itunes.apple.com, Apple
+# icloud
+host-keyword, icloud.com, Apple
+# 输入法相关服务
+host-keyword, api.smoot.apple.com, Apple
+host-keyword, api.smoot.apple.cn, Apple
+# iMessage服务
+host, init.ess.apple.com, Apple
+# 其他服务
+host-keyword, ssl.apple.com, Apple
+host-keyword, humb.apple.com, Apple
+host, smp-device-content.apple.com, Apple
+host-keyword, api-adservices.apple.com, Apple
+host-keyword, ls.apple.com, Apple
+host-keyword, gsa.apple.com, Apple
+host-keyword, ess.apple.com, Apple
