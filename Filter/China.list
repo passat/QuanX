@@ -160,11 +160,9 @@ DOMAIN-SUFFIX,sogo.com,DIRECT
 DOMAIN-SUFFIX,sogou.com,DIRECT
 DOMAIN-SUFFIX,sogoucdn.com,DIRECT
 # > Steam
-DOMAIN-SUFFIX,steamcontent.com,DIRECT
-DOMAIN-SUFFIX,steampowered.com,DIRECT
-DOMAIN-SUFFIX,steamstatic.com,DIRECT
 DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
 DOMAIN,api.steampowered.com,DIRECT
+DOMAIN-SUFFIX,steamserver.net,DIRECT
 # > Tencent
 USER-AGENT,MicroMessenger*,DIRECT
 USER-AGENT,WeChat*,DIRECT
