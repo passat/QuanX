@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-03-06 17:00⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-03-13 16:00⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -1541,9 +1541,9 @@ function Subs2QX(subs, Pudp, Ptfo, Pcert0, PTls13) {
                     if (listi.indexOf("@") != -1) {
                         node = HPS2QX(list0[i], Ptfo, Pcert0, PTls13)
                         node = tag0 != "" ? URI_TAG(node, tag0) : node
-                    } else { // b64 类型
-                        var listh = Base64.decode(listi.split(type+"://")[1].split("#")[0])
-                        listh = type+"://" + listh + "#" + listi.split(type+"://")[1].split("#")[1]
+                    } else { // b64 类型 http/https
+                        var listh = Base64.decode(listi.split(type+"://")[1].split("#")[0].split("?")[0])
+                        listh = list0[i].replace(listi.split(type+"://")[1].split("#")[0].split("?")[0],listh) //type+"://" + listh + "#" + listi.split(type+"://")[1].split("#")[1]
                         node = HPS2QX(listh, Ptfo, Pcert0, PTls13)
                         node = tag0 != "" ? URI_TAG(node, tag0) : node
                     }
@@ -1667,14 +1667,15 @@ function HPS2QX(subs, Ptfo, Pcert0, PTls13) {
     var nss = []
     if (server != "") {
       if (server.indexOf("@")!=-1) {
-        var ipport = "http=" + server.split("@")[1].split("#")[0].split("/")[0];
+        var ipport = "http=" + server.split("@")[1].split("#")[0].split("/")[0].split("?")[0];
         var uname = "username=" + server.split(":")[0];
         var pwd = "password=" + server.split("@")[0].split(":")[1];
       } else {
-        var ipport = server.split("#")[0].indexOf(":")==-1? "http=" + Base64.decode(server.split("#")[0]) : "http=" + server.split("#")[0]; // https://b64(ipport)
+        var ipport = server.split("#")[0].indexOf(":")==-1? "http=" + Base64.decode(server.split("#")[0].split("?")[0]) : "http=" + server.split("#")[0].split("?")[0]; // https://b64(ipport)
       }
         var tag = "tag=" + decodeURIComponent(server.split("#")[1]);
         var tls = type == "https"? "over-tls=true": "";
+        var thost = subs.indexOf("peer=")!= -1? "tls-host=" + subs.split("peer=")[1].split("#")[0].split("&")[0] : "" // 存在peers参数时 https://b64(ipport)?peer=xxx#server-remarks
         var cert = Pcert0 != 0 ? "tls-verification=true" : "tls-verification=false";
         var tfo = Ptfo == 1 ? "fast-open=true" : "fast-open=false";
         var tls13 = PTls13 == 1 ? "tls13=true" : "tls13=false";
@@ -1682,7 +1683,7 @@ function HPS2QX(subs, Ptfo, Pcert0, PTls13) {
           cert=""
           tls13=""
         }
-        nss.push(ipport, uname, pwd, tls, cert, tfo, tls13, tag)
+        nss.push(ipport, uname, pwd, tls, thost, cert, tfo, tls13, tag)
     }
     var QX = nss.filter(Boolean).join(",");
     return QX
@@ -1749,9 +1750,11 @@ function VR2QX(subs, Pudp, Ptfo, Pcert0, PTls13) {
     }
     host = host!="{}" && host ? "obfs-host=" + host + ", " : ""
     obfs = obfs + host
-  } else if (obfs=="grpc") {
+  } else if (obfs=="grpc" || obfs =="h2") {
     Perror = 1 // 不需要反馈的类型
-    $notify("⚠️ Quantumult X 暂不支持 grpc 类型 vmess节点，已忽略此条", "", subs)
+    if (Pntf0!=0) {
+    $notify( "⚠️ Quantumult X 暂不支持该类型节点", "已忽略以下 grpc|h2 vmess 节点",subs)
+  }
     pdrop = 1
   }
   if (obfs.indexOf("obfs=over-tls") != -1 || obfs.indexOf("obfs=wss") != -1) {
@@ -1798,9 +1801,9 @@ function V2QX(subs, Pudp, Ptfo, Pcert0, PTls13) {
   var nss = [];
   if (server != "") {
     ss = JSON.parse(server);
+    if(Pdbg) {$notify("Vmess-URI","",JSON.stringify(ss))}
     ip = "vmess=" + ss.add + ":" + ss.port;
     pwd = "password=" + ss.id;
-    
     mtd = "method=aes-128-gcm"
     try {
       tag = "tag=" + decodeURIComponent(ss.ps);
@@ -1859,7 +1862,7 @@ function Fobfs(jsonl, Pcert0, PTls13) {
     Perror = 1
     $notify("⚠️ Quantumult X 不支持该类型节点", "vmess + " + jsonl.net, JSON.stringify(jsonl))
     return "NOT-SUPPORTTED"
-  } else if (jsonl.net =="tcp" && jsonl.type != "none" && jsonl.type != "") {
+  } else if (jsonl.net =="tcp" && jsonl.type != "none" && jsonl.type != "" && jsonl.type != "vmess") {
     return "NOT-SUPPORTTED"
   } else {return ""}
 }
@@ -2178,7 +2181,6 @@ function isQuanXRewrite(content) {
   cnt = content
   cnt0=[]
   var RuleK = ["host,", "-suffix,", "domain,", "-keyword,", "ip-cidr,", "ip-cidr6,",  "geoip,", "user-agent,", "ip6-cidr,","force-http", "ip-asn"];
-  
   for (var i = 0; i< cnt.length; i++){
     if(cnt[i]){
       var cnti = cnt[i].trim()
@@ -2189,11 +2191,13 @@ function isQuanXRewrite(content) {
       }else if ((cnti.indexOf(" 302")!=-1 || cnti.indexOf(" 307")!=-1) && cnti.indexOf(" url ")==-1){
         cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
         //console.log("sss",cnti)
+      }else if(cnti.indexOf(" data=")!=-1){
+        cnti = SGMD2QX("[Map Local]\n"+cnti)[0]? SGMD2QX("[Map Local]\n"+cnti)[0]:""
+        //cnti=cnti.replace(/ /g, "").split("data=")[0] + " url " + "reject-dict"
       }else if(cnti.indexOf("URL-REGEX")!=-1 || cnti.indexOf(" header")!=-1 || cnti.replace(/ /g,"").indexOf("hostname=")!=-1){
         cnti=SGMD2QX(cnti)[0]? SGMD2QX(cnti)[0]:""
-      }else if(cnti.indexOf(" data=")!=-1){
-        cnti=cnti.replace(/ /g, "").split("data=")[0] + " url " + "reject-dict"
-      } else if (cnti.indexOf(" url ")!=-1 ){
+      }else if (cnti.indexOf(" url ")!=-1 && cnti.indexOf(" simple-response ")==-1 && cnti.indexOf(" url = ")==-1){ // 2023-03-09 去掉 quan类型的 simple- response
+        cnti = cnti.replace("^http","http") // 去掉 ^ 以去重
         cnti= cnti.split(" ")[1] == "url" ? cnti : ""
       } else if (cnti.indexOf(" url-and-header ")!=-1 ){ // url-and-header : ^https:xxx.com header-content url-and-header type-rule content
         cnti= cnti //cnti.split(" ")[2] == "url-and-header" ? cnti : ""
