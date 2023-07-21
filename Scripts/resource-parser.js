@@ -1,5 +1,5 @@
 /** 
-☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-07-09 16:10⟧
+☑️ 资源解析器 ©𝐒𝐡𝐚𝐰𝐧  ⟦2023-07-18 17:05⟧
 ----------------------------------------------------------
 🛠 发现 𝐁𝐔𝐆 请反馈: https://t.me/Shawn_Parser_Bot
 ⛳️ 关注 🆃🅶 相关频道: https://t.me/QuanX_API
@@ -294,7 +294,7 @@ patn[3] = [ '⓪', '⓵', '⓶', '⓷', '⓸', '⓹', '⓺', '⓼', '⓻', '⓽'
 patn[4] = [ '𝟘', '𝟙', '𝟚', '𝟛', '𝟜', '𝟝', '𝟞', '𝟟', '𝟠', '𝟡' ]
 patn[5] = [ '⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹' ]
 patn[6] = [ '₀', '₁', '₂', '₃', '₄', '₅', '₆', '₇', '₈', '₉' ]
-patn[7] = ["𝟎","𝟏","𝟐","𝟑","𝟒","𝟓","𝟔","𝟖","𝟗"]
+patn[7] = ["𝟎","𝟏","𝟐","𝟑","𝟒","𝟓","𝟔","𝟳","𝟖","𝟗"]
 patn[8] = ["𝟶","𝟷","𝟸","𝟹","𝟺","𝟻","𝟼","𝟽","𝟾","𝟿"]
 
 //避免json undefined错误的 函数
@@ -466,7 +466,7 @@ function ResourceParse() {
       Prn = Prrname;
       total = total.map(Rename);
     }
-    if (Pemoji) { total = emoji_handle(total, Pemoji); }
+    //if (Pemoji) { total = emoji_handle(total, Pemoji); }
     if (Pregdel) {
       delreg = Pregdel
       total = total.map(DelReg)
@@ -480,6 +480,8 @@ function ResourceParse() {
       Prn = Prname;
       total = total.map(Rename);
     }
+    //2023-07-10 调整emoji操作顺序
+    if (Pemoji) { total = emoji_handle(total, Pemoji); }
     if (total.length > 0){
       if (Psuffix==1 || Psuffix==-1) {total = Psuffix == 1? total.map(type_suffix):total.map(type_prefix)
       }
@@ -1892,25 +1894,25 @@ function Fobfs(jsonl, Pcert0, PTls13) {
     host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + jsonl.host + ", " : "";
     obfsi.push(obfs0, host0 + uri0);
     return obfsi.join(", ")
-  } else if (jsonl.tls == "tls" && jsonl.net == "tcp") { // 过滤掉 h2/http 等类型 
+  } else if (jsonl.tls == "tls" && (jsonl.net == "tcp" || jsonl.net == "none")) { // 过滤掉 h2/http 等类型 
     obfs0 = "obfs=over-tls, " + tcert + ", " + tls13;
     uri0 = jsonl.path && jsonl.path != "" ? "obfs-uri=" + jsonl.path : "";
     uri0 = uri0.indexOf("uri=/")!=-1 ? uri0:uri0.replace("uri=","uri=/")
     host0 = jsonl.host && jsonl.host != "" ? ", obfs-host=" + jsonl.host : "";
     obfsi.push(obfs0 + host0)
     return obfsi.join(", ")
-  } else if (jsonl.net == "tcp" && jsonl.type == "http"){
+  } else if ((jsonl.net == "tcp" || jsonl.net == "none") && jsonl.type == "http"){
     obfs0 = "obfs=http";
     uri0 = jsonl.path && jsonl.path != "" ? "obfs-uri=" + jsonl.path : "obfs-uri=/";
     uri0 = uri0.indexOf("uri=/")!=-1 ? uri0:uri0.replace("uri=","uri=/")
     host0 = jsonl.host && jsonl.host != "" ? "obfs-host=" + jsonl.host + ", " : "";
     obfsi.push(obfs0, host0 + uri0);
     return obfsi.join(", ")
-  } else if (jsonl.net !="tcp"){ // 过滤掉 h2/http 等类型
+  } else if (jsonl.net !="tcp" && jsonl.net !="none"){ // 过滤掉 h2/http 等类型
     Perror = 1
     $notify("⚠️ Quantumult X 不支持该类型节点", "vmess + " + jsonl.net, JSON.stringify(jsonl))
     return "NOT-SUPPORTTED"
-  } else if (jsonl.net =="tcp" && jsonl.type != "none" && jsonl.type != "" && jsonl.type != "vmess") {
+  } else if ((jsonl.net == "tcp" || jsonl.net == "none") && jsonl.type != undefined && jsonl.type != "none" && jsonl.type != "" && jsonl.type != "vmess") {
     return "NOT-SUPPORTTED"
   } else {return ""}
 }
