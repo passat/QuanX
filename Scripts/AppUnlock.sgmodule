@@ -8,10 +8,7 @@
 # 彩云天气去广告
 ^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
 
-
 [Map Local]
-# 屏蔽提示更新
-^https?:\/\/firestore\.googleapis\.com data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
 [Script]
 # iTunes 解锁系列
@@ -38,6 +35,5 @@ WPS = type=http-response,pattern=^https?:\/\/(vas|account|drive)\.wps\.cn\/(quer
 # hostname = backend.getdrafts.com
 Drafts = type=http-response,pattern=^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification\/(account_status|verify_receipt),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Drafts.js
 
-
 [MITM]
-hostname = %APPEND% backend.getdrafts.com, *.wps.cn, drive*.quark.cn, *.aliyundrive.com, *.alipan.com, pan.baidu.com, buy.itunes.apple.com, firestore.googleapis.com
+hostname = %APPEND% backend.getdrafts.com, *.wps.cn, drive*.quark.cn, *.aliyundrive.com, *.alipan.com, pan.baidu.com, buy.itunes.apple.com
