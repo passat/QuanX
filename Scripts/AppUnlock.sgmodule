@@ -13,7 +13,7 @@
 [Script]
 # iTunes 解锁系列
 # hostname = buy.itunes.apple.com
-iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+# iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 
 # 百度网盘 视频倍率/清晰度
 # hostname = pan.baidu.com
@@ -22,6 +22,10 @@ iTunes = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyR
 # 阿里云盘 SVIP
 # hostname = *.aliyundrive.com, *.alipan.com
 阿里云盘 = type=http-response,pattern=^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
+
+# 计算器+ 
+# hostname = buy.itunes.apple.com
+计算器+ = type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/jisuanqi+.js
 
 # 夸克
 # hostname = drive*.quark.cn
