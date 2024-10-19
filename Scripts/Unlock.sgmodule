@@ -5,12 +5,8 @@
 
 
 [URL Rewrite]
-# 彩云天气去广告
-^https?:\/\/ad\.(caiyunapp|cyapi)\.(cn|com) - reject
-
 
 [Map Local]
-
 
 [Script]
 # 百度网盘 视频倍率/清晰度
